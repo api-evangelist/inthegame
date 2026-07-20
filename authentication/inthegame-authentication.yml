@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/inthegame-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: AdminToken
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/);
+    sent in the Authorization header.
+  sources:
+  - openapi/inthegame-openapi.yml
