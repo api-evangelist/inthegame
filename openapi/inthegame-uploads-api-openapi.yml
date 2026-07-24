@@ -1,0 +1,114 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin uploads API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: uploads
+paths:
+  /upload/scanDir/streamer:
+    post:
+      operationId: adminapiUploadsScandir
+      summary: ScanDir
+      tags:
+      - uploads
+      description: Load on screen saved image
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                uploadPath: /uploads/streamers
+                images: []
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /upload/uploadImage:
+    post:
+      operationId: adminapiUploadsUploadimage
+      summary: UploadImage
+      tags:
+      - uploads
+      description: 'Upload selected image to relevant directory on the server. Form data: file - file itself; terget: folder to upload'
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                target:
+                  type: string
+            example:
+              target: '{folder_to_upload}'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                filepath: /uploads/entities/ee456eadddd6b031e22ae6df1f849964.3f4427d78a721b6281b681a528fbf5fe.png
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /upload/uploadVideo:
+    post:
+      operationId: adminapiUploadsUploadvideo
+      summary: UploadVideo
+      tags:
+      - uploads
+      description: 'Upload selected video with form data: file - video format file binary; target - folder to upload'
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                target:
+                  type: string
+            example:
+              file: binary
+              target: folder
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                filepath: /uploads/videos/streamers/2aa7f0ca05f87f6a0e7b4ddbb614a23e.fba66777a7fade4c142dc97eb8895c0b.mp4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

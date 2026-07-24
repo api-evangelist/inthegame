@@ -1,0 +1,320 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin trivia API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: trivia
+paths:
+  /adminApi/trivia/create:
+    post:
+      operationId: adminapiTriviaCreate
+      summary: Create
+      tags:
+      - trivia
+      description: Create trivia in db and return new object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                question:
+                  type: string
+                category:
+                  type: string
+                correctAnswer:
+                  type: string
+                incorrectAnswers:
+                  type: string
+                pointsGiven:
+                  type: string
+                timePerQuestion:
+                  type: string
+                expoints:
+                  type: string
+                delayUntilAnswer:
+                  type: string
+            example:
+              type: ''
+              question: Test
+              category: ''
+              correctAnswer: '123'
+              incorrectAnswers: '[object Object],[object Object],[object Object]'
+              pointsGiven: '50'
+              timePerQuestion: '50'
+              expoints: '100'
+              delayUntilAnswer: '10'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                trivia:
+                  question: Test
+                  pointsGiven: 50
+                  timePerQuestion: 50
+                  delayUntilAnswer: 10
+                  category: ''
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  correctAnswer: '123'
+                  expoints: '100'
+                  incorrectAnswers:
+                  - '321'
+                  - '231'
+                  - '132'
+                  _id:
+                    $id: 5fbfad2a7fc1bb4f5411a114
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/trivia/delete/{triviaId}:
+    post:
+      operationId: adminapiTriviaDelete
+      summary: Delete
+      tags:
+      - trivia
+      description: Remove selected trivia from db
+      parameters:
+      - name: triviaId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/trivia/getAll:
+    get:
+      operationId: adminapiTriviaGetall
+      summary: GetAll
+      tags:
+      - trivia
+      description: Return trivia list with filter options
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                trivias:
+                - question: What does admin want?
+                  pointsGiven: 1500
+                  timePerQuestion: 20
+                  delayUntilAnswer: 0
+                  category: ''
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  correctAnswer: Tambourine
+                  expoints: '1500'
+                  incorrectAnswers:
+                  - Windows
+                  - Cry
+                  - Vacation
+                  _id:
+                    $id: 5fbd096648196740b75d323c
+                pagination:
+                  total: 1
+                  currentPage: '1'
+                  totalPages: 1
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/trivia/getById/{triviaId}:
+    get:
+      operationId: adminapiTriviaGetbyid
+      summary: GetById
+      tags:
+      - trivia
+      description: Return trivia by given id
+      parameters:
+      - name: triviaId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                trivia:
+                  question: What does admin want?
+                  pointsGiven: 1500
+                  timePerQuestion: 20
+                  delayUntilAnswer: 0
+                  category: ''
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  correctAnswer: Tambourine
+                  expoints: '1500'
+                  incorrectAnswers:
+                  - answer: Windows
+                  - answer: Cry
+                  - answer: Vacation
+                  _id:
+                    $id: 5fbd096648196740b75d323c
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/trivia/update/{triviaId}:
+    post:
+      operationId: adminapiTriviaUpdate
+      summary: Update
+      tags:
+      - trivia
+      description: Update trivia with given id
+      parameters:
+      - name: triviaId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                question:
+                  type: string
+                pointsGiven:
+                  type: string
+                timePerQuestion:
+                  type: string
+                delayUntilAnswer:
+                  type: string
+                category:
+                  type: string
+                user_id:
+                  type: string
+                correctAnswer:
+                  type: string
+                expoints:
+                  type: string
+                incorrectAnswers:
+                  type: string
+                _id:
+                  type: string
+                meta:
+                  type: string
+            example:
+              question: Test
+              pointsGiven: '50'
+              timePerQuestion: '50'
+              delayUntilAnswer: '10'
+              category: ''
+              user_id: 5fbce6c58703d05e5a73b6f4
+              correctAnswer: '123'
+              expoints: '100'
+              incorrectAnswers: '[object Object],[object Object],[object Object]'
+              _id: '[object Object]'
+              meta: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                trivia:
+                  question: Test
+                  category: ''
+                  pointsGiven: 50
+                  timePerQuestion: 50
+                  delayUntilAnswer: 10
+                  correctAnswer: '123'
+                  expoints: '100'
+                  incorrectAnswers:
+                  - '321'
+                  - '231'
+                  - '132'
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /userApi/trivia/answer/{questionId}:
+    post:
+      operationId: userapiTriviaAnswer
+      summary: Answer
+      tags:
+      - trivia
+      description: Sned user answer data and save it in db
+      parameters:
+      - name: questionId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                answer:
+                  userId: 5fbf866a3ba52a1ded3c0f2e
+                  questionId: 5fbd096648196740b75d323c
+                  pointsGiven: 1500
+                  answer: Vacation
+                  correctAnswer: Tambourine
+                  isCorrect: false
+                  expoints_given: '1500'
+                  points: 1500
+                  userLevel: 3
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

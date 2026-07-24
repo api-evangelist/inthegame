@@ -1,0 +1,258 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin entity API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: entity
+paths:
+  /adminApi/entity/create:
+    post:
+      operationId: adminapiEntityCreate
+      summary: Create
+      tags:
+      - entity
+      description: Send new entity object to save and return it as db object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                thumbnail:
+                  type: string
+            example:
+              name: Test Entity
+              thumbnail: ''
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                entity:
+                  name: Test Entity
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  thumbnail: ''
+                  _id:
+                    $id: 5fbd14d40174d8346b7cceb4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/entity/delete/{id}:
+    post:
+      operationId: adminapiEntityDelete
+      summary: Delete
+      tags:
+      - entity
+      description: Send entity id to delete it from db
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/entity/getAll:
+    get:
+      operationId: adminapiEntityGetall
+      summary: GetAll
+      tags:
+      - entity
+      description: Return entities list to admin panel
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                entities:
+                - name: Test entity
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  thumbnail: ''
+                  _id:
+                    $id: 5fbcf1b14ad5926a962b7f97
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/entity/getById/{id}:
+    get:
+      operationId: adminapiEntityGetbyid
+      summary: GetById
+      tags:
+      - entity
+      description: Return entity object selected by given id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                entity:
+                  name: Test entity
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  thumbnail: ''
+                  _id:
+                    $id: 5fbcf1b14ad5926a962b7f97
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/entity/update/{id}:
+    post:
+      operationId: adminapiEntityUpdate
+      summary: Update
+      tags:
+      - entity
+      description: Send entity object to update in db with given id and return updated entity
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                user_id:
+                  type: string
+                thumbnail:
+                  type: string
+                _id:
+                  type: string
+            example:
+              name: Test Entity
+              user_id: 5fbce6c58703d05e5a73b6f4
+              thumbnail: ''
+              _id: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                entity:
+                  name: Test Entity
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  thumbnail: ''
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /userApi/entity/add:
+    post:
+      operationId: userapiEntityAdd
+      summary: Add
+      tags:
+      - entity
+      description: Create entity by user choice
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: APITest
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                answer:
+                  userId: '***'
+                  entityId: '***'
+                  entityName: '***'
+                  isAdded: true
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/entity/remove:
+    post:
+      operationId: userapiEntityRemove
+      summary: Remove
+      tags:
+      - entity
+      description: Delete entity from user entities
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+            example:
+              data:
+                entityId: '***'
+                channelId: '***'
+                userToken: '***'
+      responses:
+        '200':
+          description: Default
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

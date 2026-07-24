@@ -1,0 +1,181 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin general API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: general
+paths:
+  /userApi/general/getGeneralData:
+    post:
+      operationId: userapiGeneralGetgeneraldata
+      summary: GetGeneralData
+      tags:
+      - general
+      description: "Loads the following general data:\n - translations\n - levels\n - expoints"
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                translations:
+                  language: en
+                  countryCode: US
+                  userIp: 172.31.248.118
+                extendedData:
+                  levels:
+                  - id: '1'
+                    name: '1'
+                    points: '700'
+                    nickname: Apprentice
+                    open_event_id: '0'
+                    give_prize_id: '7'
+                    static_bet_limit: '500'
+                  - id: '2'
+                    name: '2'
+                    points: '1000'
+                    nickname: Scorer
+                    open_event_id: '0'
+                    give_prize_id: '7'
+                    static_bet_limit: '700'
+                  - id: '3'
+                    name: '3'
+                    points: '2000'
+                    nickname: Hawk
+                    open_event_id: '0'
+                    give_prize_id: '7'
+                    static_bet_limit: '900'
+                  - id: '4'
+                    name: '4'
+                    points: '4000'
+                    nickname: Analyzer
+                    open_event_id: '0'
+                    give_prize_id: '5'
+                    static_bet_limit: '1000'
+                  - id: '5'
+                    name: '5'
+                    points: '7000'
+                    nickname: Strategist
+                    open_event_id: '0'
+                    give_prize_id: '4'
+                    static_bet_limit: '1200'
+                  - id: '6'
+                    name: '6'
+                    points: '10000'
+                    nickname: Expert
+                    open_event_id: '0'
+                    give_prize_id: '4'
+                    static_bet_limit: '1500'
+                  - id: '7'
+                    name: '7'
+                    points: '15000'
+                    nickname: Master
+                    open_event_id: '0'
+                    give_prize_id: '4'
+                    static_bet_limit: '3000'
+                  - id: '8'
+                    name: '8'
+                    points: '20000'
+                    nickname: Royal
+                    open_event_id: '0'
+                    give_prize_id: '3'
+                    static_bet_limit: '5000'
+                  - id: '9'
+                    name: '9'
+                    points: '30000'
+                    nickname: Guru
+                    open_event_id: '0'
+                    give_prize_id: '1'
+                    static_bet_limit: '10000'
+                  - id: '10'
+                    name: '10'
+                    points: '40000'
+                    nickname: Oracle
+                    open_event_id: '0'
+                    give_prize_id: '2'
+                    static_bet_limit: '20000'
+                  - id: '11'
+                    name: '11'
+                    points: '1000000'
+                    nickname: The Ninja
+                    open_event_id: '0'
+                    give_prize_id: '0'
+                    static_bet_limit: '50000'
+                  expointsPerActions:
+                    staticBet:
+                      id: '4'
+                      name: staticBet
+                      points: '100'
+                      status: active
+                    staticBet_1:
+                      id: '5'
+                      name: staticBet_1
+                      points: '100'
+                      status: active
+                    dynamicBet:
+                      id: '6'
+                      name: dynamicBet
+                      points: '10'
+                      status: active
+                    dynamicBet_1:
+                      id: '7'
+                      name: dynamicBet_1
+                      points: '1000'
+                      status: active
+                    matchAttendance:
+                      id: '8'
+                      name: matchAttendance
+                      points: '50'
+                      status: active
+                    matchAttendance_2:
+                      id: '9'
+                      name: matchAttendance_2
+                      points: '100'
+                      status: active
+                    openLoot:
+                      id: '11'
+                      name: openLoot
+                      points: '100'
+                      status: active
+                    finishedOnboarding:
+                      id: '12'
+                      name: finishedOnboarding
+                      points: '500'
+                      status: active
+                    creating_shout:
+                      id: '13'
+                      name: creating_shout
+                      points: '100'
+                      status: active
+                  lootFeatured: []
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

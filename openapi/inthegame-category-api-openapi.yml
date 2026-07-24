@@ -1,0 +1,214 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin category API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: category
+paths:
+  /adminApi/league/create_new:
+    post:
+      operationId: ratingCategoryCreate
+      summary: Create
+      tags:
+      - category
+      description: Send new category object to save and return it as db object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                shortcut:
+                  type: string
+                status:
+                  type: string
+                image:
+                  type: string
+            example:
+              name: New Category
+              shortcut: new
+              status: active
+              image: ''
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                league:
+                  name: New Category
+                  shortcut: new
+                  status: active
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  image: ''
+                  _id:
+                    $id: 5fbd1bb85424bf3aaf679678
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/league/delete_new/{id}:
+    post:
+      operationId: ratingCategoryDelete
+      summary: Delete
+      tags:
+      - category
+      description: Send category id to delete it from db
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/league/getActive_New:
+    get:
+      operationId: ratingCategoryGetactivecategories
+      summary: GetActiveCategories
+      tags:
+      - category
+      description: Send request to get categories list by filter options
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                leagues:
+                - name: Test category
+                  shortcut: test
+                  status: active
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  image: ''
+                  _id:
+                    $id: 5fbceda5636497107a1cbdf3
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/league/getById_New/{id}:
+    get:
+      operationId: ratingCategoryGetbyid
+      summary: GetById
+      tags:
+      - category
+      description: Return category object selected by given id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                league:
+                  name: Test category
+                  shortcut: test
+                  status: active
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  image: ''
+                  _id:
+                    $id: 5fbceda5636497107a1cbdf3
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/league/update_new/{id}:
+    post:
+      operationId: ratingCategoryUpdate
+      summary: Update
+      tags:
+      - category
+      description: Send category object to update in db with given id and return updated category
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                shortcut:
+                  type: string
+                status:
+                  type: string
+                user_id:
+                  type: string
+                image:
+                  type: string
+                _id:
+                  type: string
+            example:
+              name: New Category
+              shortcut: new
+              status: active
+              user_id: 5fbce6c58703d05e5a73b6f4
+              image: ''
+              _id: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                league:
+                  name: New Category
+                  shortcut: new
+                  status: active
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  image: ''
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

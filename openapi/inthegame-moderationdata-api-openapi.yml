@@ -1,0 +1,223 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin moderationData API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: moderationData
+paths:
+  /adminApi/moderatorData/getModeratorDataByUserIdOrCreate/{user_id}:
+    get:
+      operationId: adminapiModerationdataGetbyuseridorcreate
+      summary: GetByUserIdOrCreate
+      tags:
+      - moderationData
+      description: Get broadcaster settings moderation data by user id or create it if it doesn't exist in db
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                moderatorData:
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  banList: []
+                  profanityList: ''
+                  useCustomProfanity: true
+                  customCSS: ''
+                  levelsDefinition:
+                  - level: 1
+                    name: novice
+                    expoints: 50
+                  - level: 2
+                    name: advanced
+                    expoints: 300
+                  - level: 3
+                    name: pro
+                    expoints: 1000
+                  - level: 4
+                    name: legendary
+                    expoints: 5000
+                  streamer:
+                    chat_url: ''
+                    stream_url: ''
+                    registration_bonus: 0
+                    streamSourceType: ''
+                    game: ''
+                    game_id: null
+                    position: 0
+                    modules:
+                      logo: true
+                      predictions: true
+                      predictions_menu: true
+                      leaderboard: true
+                      leaderboard_menu: true
+                      account: true
+                      account_menu: true
+                      shouts: true
+                      shouts_menu: true
+                      quiz: true
+                      quiz_menu: true
+                      polls: true
+                      polls_menu: true
+                      contact: true
+                      contact_menu: true
+                      chat: true
+                      chat_menu: true
+                      wiki: false
+                      wiki_menu: false
+                      rating: false
+                      rating_menu: false
+                      retention: false
+                      close: false
+                      shop: true
+                      shop_menu: true
+                    clocks: []
+                    offersInterval: 0
+                    chatDelay: 0
+                    streamerLogo: ''
+                    wikiList: []
+                    additionalInfo:
+                      wikiTitle: Wiki
+                  broadcaster_name: api_tester
+                  _id:
+                    $id: 5fbcf1b4a759e61e0f7b0bc4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/moderatorData/getModeratorDataCurrentUser:
+    get:
+      operationId: adminapiModerationdataGetbycurrentuser
+      summary: GetByCurrentUser
+      tags:
+      - moderationData
+      description: Return moderation data of current broadcaster
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                moderatorData:
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  banList: []
+                  profanityList: ''
+                  useCustomProfanity: true
+                  customCSS: ''
+                  levelsDefinition:
+                  - level: 1
+                    name: novice
+                    expoints: 50
+                  - level: 2
+                    name: advanced
+                    expoints: 300
+                  - level: 3
+                    name: pro
+                    expoints: 1000
+                  - level: 4
+                    name: legendary
+                    expoints: 5000
+                  streamer:
+                    chat_url: ''
+                    stream_url: ''
+                    registration_bonus: 0
+                    streamSourceType: ''
+                    game: ''
+                    game_id: null
+                    position: 0
+                    modules:
+                      logo: true
+                      predictions: true
+                      predictions_menu: true
+                      leaderboard: true
+                      leaderboard_menu: true
+                      account: true
+                      account_menu: true
+                      shouts: true
+                      shouts_menu: true
+                      quiz: true
+                      quiz_menu: true
+                      polls: true
+                      polls_menu: true
+                      contact: true
+                      contact_menu: true
+                      chat: true
+                      chat_menu: true
+                      wiki: false
+                      wiki_menu: false
+                      rating: false
+                      rating_menu: false
+                      retention: false
+                      close: false
+                      shop: true
+                      shop_menu: true
+                    clocks: []
+                    offersInterval: 0
+                    chatDelay: 0
+                    streamerLogo: ''
+                    wikiList: []
+                    additionalInfo:
+                      wikiTitle: Wiki
+                  broadcaster_name: api_tester
+                  _id:
+                    $id: 5fbcf1b4a759e61e0f7b0bc4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/moderatorData/update/{dataId}:
+    post:
+      operationId: adminapiModerationdataUpdate
+      summary: Update
+      tags:
+      - moderationData
+      description: Send moderation data object to update in db with given id and return updated data
+      parameters:
+      - name: dataId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Default
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"moderatorData":{*****}}'
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

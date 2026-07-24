@@ -1,0 +1,287 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin item API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: item
+paths:
+  /adminApi/items/create:
+    post:
+      operationId: adminapiItemCreate
+      summary: Create
+      tags:
+      - item
+      description: Send new item object to save and return it as db object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                alias:
+                  type: string
+                status:
+                  type: string
+                category:
+                  type: string
+                type:
+                  type: string
+                image:
+                  type: string
+                shortcut:
+                  type: string
+                item_order:
+                  type: string
+                game_id:
+                  type: string
+                game:
+                  type: string
+            example:
+              name: Test
+              alias: ''
+              status: active
+              category: ''
+              type: thumbnail
+              image: '0'
+              shortcut: Test
+              item_order: '1'
+              game_id: 5fbceda5636497107a1cbdf3
+              game: Test category
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                item:
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  broadcaster_name: api_tester
+                  name: Test
+                  shortcut: Test
+                  item_order: 1
+                  status: active
+                  type: thumbnail
+                  game_id: 5fbceda5636497107a1cbdf3
+                  thumbnail: ''
+                  _id:
+                    $id: 5fbd171198ffc537f676f555
+                  id: 5fbd171198ffc537f676f555
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/items/delete/{id}:
+    get:
+      operationId: adminapiItemDelete
+      summary: Delete
+      tags:
+      - item
+      description: Send item id to delete it from db
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/items/getAll:
+    get:
+      operationId: adminapiItemGetall
+      summary: GetAll
+      tags:
+      - item
+      description: Send request to get items list by filter options
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                items:
+                - user_id: 5fbce6c58703d05e5a73b6f4
+                  broadcaster_name: api_tester
+                  name: zombie
+                  shortcut: zombie
+                  item_order: 1
+                  status: active
+                  type: thumbnail
+                  game_id: 0
+                  thumbnail: /uploads/products/rImage1123.png
+                  _id:
+                    $id: 5fbcee5aa759e61e0f7b0b87
+                pagination:
+                  total: 1
+                  currentPage: '1'
+                  totalPages: 1
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/items/getById/{id}:
+    get:
+      operationId: adminapiItemGetbyid
+      summary: GetById
+      tags:
+      - item
+      description: Return item object selected by given id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                item:
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  broadcaster_name: api_tester
+                  name: zombie
+                  shortcut: zombie
+                  item_order: 1
+                  status: active
+                  type: thumbnail
+                  game_id: 0
+                  thumbnail: /uploads/products/rImage1123.png
+                  _id:
+                    $id: 5fbcee5aa759e61e0f7b0b87
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/items/importDefaultAvatars:
+    post:
+      operationId: adminapiItemImportdefaultavatars
+      summary: ImportDefaultAvatars
+      tags:
+      - item
+      description: Return status success if default avatrs imported in db
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                added: success
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/items/update/{id}:
+    post:
+      operationId: adminapiItemUpdate
+      summary: Update
+      tags:
+      - item
+      description: Send item object to update in db with given id and return updated item
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                broadcaster_name:
+                  type: string
+                name:
+                  type: string
+                shortcut:
+                  type: string
+                item_order:
+                  type: string
+                status:
+                  type: string
+                type:
+                  type: string
+                game_id:
+                  type: string
+                thumbnail:
+                  type: string
+                _id:
+                  type: string
+            example:
+              user_id: 5fbce6c58703d05e5a73b6f4
+              broadcaster_name: api_tester
+              name: Test
+              shortcut: Test
+              item_order: '1'
+              status: active
+              type: thumbnail
+              game_id: 5fbceda5636497107a1cbdf3
+              thumbnail: ''
+              _id: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                item:
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  broadcaster_name: api_tester
+                  name: Test
+                  shortcut: Test
+                  item_order: 1
+                  status: active
+                  type: thumbnail
+                  game_id: 5fbceda5636497107a1cbdf3
+                  thumbnail: ''
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

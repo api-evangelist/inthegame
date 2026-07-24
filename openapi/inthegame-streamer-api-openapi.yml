@@ -1,0 +1,1856 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin streamer API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: streamer
+paths:
+  /adminApi/streamer/addPollEngagement/{channelId}:
+    post:
+      operationId: adminapiStreamerAddpollengagement
+      summary: AddPollEngagement
+      tags:
+      - streamer
+      description: Request to engage poll to streamer
+      parameters:
+      - name: channelId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                pollId:
+                  type: string
+                time:
+                  type: string
+            example:
+              pollId: 5fbd07fc48196740b75d323b
+              time: '25'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                poll:
+                  id: 5fbd07fc48196740b75d323b
+                  name: New Poll
+                  question: Test?
+                  questionType: poll
+                  type: streamer
+                  hideButtons: 0
+                  image: ''
+                  time_limit: 0
+                  items:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    name: test_channel
+                  viewType: percentage
+                  answers:
+                  - answer: Test
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Live
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  answers_statistic: []
+                  answers_total: 0
+                  prizes: []
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/addTriviaEngagement/{channelId}/1:
+    post:
+      operationId: adminapiStreamerAddtriviaquestionengagement
+      summary: AddTriviaQuestionEngagement
+      tags:
+      - streamer
+      description: Request to engage trivia to streamer
+      parameters:
+      - name: channelId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                triviaId:
+                  type: string
+                time:
+                  type: string
+            example:
+              triviaId: 5fbd096648196740b75d323c
+              time: '15'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                streamer:
+                  name: Test page
+                  useUrl: false
+                  channel_name: test_channel
+                  channel_id: test_channel
+                  broadcaster_id: api_tester
+                  pageUrl: ''
+                  additionalPageSettings: ''
+                  stream_url: https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4
+                  chat_url: ''
+                  registration_bonus: ''
+                  game: Test category
+                  game_id: 5fbceda5636497107a1cbdf3
+                  is_permanent: 1
+                  is_featured: 0
+                  status: 1
+                  modules:
+                    logo: true
+                    is_open_menu: false
+                    predictions: false
+                    predictions_menu: false
+                    leaderboard: true
+                    leaderboard_menu: true
+                    leaderboard_icon: false
+                    leaderboard_icon_image: ''
+                    account: true
+                    account_menu: true
+                    account_icon: false
+                    account_icon_image: ''
+                    shouts: false
+                    shouts_menu: false
+                    quiz: true
+                    polls: true
+                    polls_menu: true
+                    poll_icon: false
+                    poll_icon_image: ''
+                    contact: false
+                    contact_menu: false
+                    chat: true
+                    chat_menu: true
+                    wiki: true
+                    rating: true
+                    rating_menu: true
+                    rating_icon: false
+                    rating_icon_image: ''
+                    retention: false
+                    close: true
+                    shop: true
+                    shop_menu: true
+                  clocks:
+                  - id: 5fbd060eaec04b6e6943828b
+                    module: wiki
+                    timeToStay: '10'
+                    time: 0
+                    simpleModule: null
+                  - id: 5fbd07fc48196740b75d323b
+                    module: polls
+                    timeToStay: '10'
+                    time: '25'
+                  - id: 5fbd096648196740b75d323c
+                    simpleModule: null
+                    timeToStay: '10'
+                    module: quiz
+                    time: 15
+                  streamSourceType: file
+                  moderators: []
+                  banList: []
+                  offersInterval: 0
+                  direction: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  chatDelay: 0
+                  profanityList:
+                  - ''
+                  useCustomProfanity: false
+                  streamerLogo: ''
+                  wikiList: []
+                  additionalInfo:
+                    wikiTitle: Wiki
+                  languagesList: []
+                  customCSS: ''
+                  hide_on_smartphone_portrait_mode: true
+                  approvalMessageMode: timer
+                  broadcasterUseBlocks:
+                    chat:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    rating:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    polls:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                  position: 0
+                  moderator_data:
+                  - _id:
+                      $oid: 5fbcf1b4a759e61e0f7b0bc4
+                    user_id: 5fbce6c58703d05e5a73b6f4
+                    banList: []
+                    profanityList:
+                    - ''
+                    useCustomProfanity: true
+                    customCSS: ''
+                    levelsDefinition:
+                    - level: 1
+                      name: novice
+                      expoints: 50
+                    - level: 2
+                      name: advanced
+                      expoints: 300
+                    - level: 3
+                      name: pro
+                      expoints: 1000
+                    - level: 4
+                      name: legendary
+                      expoints: 5000
+                    streamer:
+                      chat_url: ''
+                      stream_url: ''
+                      registration_bonus: 0
+                      streamSourceType: ''
+                      game: ''
+                      game_id: null
+                      position: 0
+                      modules:
+                        logo: true
+                        predictions: true
+                        predictions_menu: true
+                        leaderboard: true
+                        leaderboard_menu: true
+                        account: true
+                        account_menu: true
+                        shouts: true
+                        shouts_menu: true
+                        quiz: true
+                        quiz_menu: true
+                        polls: true
+                        polls_menu: true
+                        contact: true
+                        contact_menu: true
+                        chat: true
+                        chat_menu: true
+                        wiki: false
+                        wiki_menu: false
+                        rating: false
+                        rating_menu: false
+                        retention: false
+                        close: false
+                        shop: true
+                        shop_menu: true
+                      clocks: []
+                      offersInterval: 0
+                      chatDelay: 0
+                      streamerLogo: ''
+                      wikiList: []
+                      additionalInfo:
+                        wikiTitle: Wiki
+                    broadcaster_name: api_tester
+                  _id:
+                    $id: 5fbcee2e636497107a1cbdf4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/addWikiEngagement/{channelId}:
+    post:
+      operationId: adminapiStreamerAddwikiengagement
+      summary: AddWikiEngagement
+      tags:
+      - streamer
+      description: Request to engage wiki to streamer
+      parameters:
+      - name: channelId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                wikiId:
+                  type: string
+                time:
+                  type: string
+            example:
+              wikiId: 5fbd09ff0174d8346b7cce86
+              time: '50'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                wiki:
+                  id: 5fbd09ff0174d8346b7cce86
+                  name: Whats Up
+                  showInMenu: false
+                  icon: ''
+                  content: '<h1>What&#39;s UP BRO?</h1>
+
+                    '
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  meta:
+                    left: 60px
+                    top: 60px
+                    width: 300px
+                    height: 300px
+                    expoints: '150'
+                  type: html
+                  tweetUrl: ''
+                  prizes: []
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/create:
+    post:
+      operationId: adminapiStreamerCreate
+      summary: Create
+      tags:
+      - streamer
+      description: Send new streamer object to save and return it as db object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                useUrl:
+                  type: string
+                channel_name:
+                  type: string
+                channel_id:
+                  type: string
+                pageUrl:
+                  type: string
+                is_permanent:
+                  type: string
+                is_featured:
+                  type: string
+                status:
+                  type: string
+                chat_url:
+                  type: string
+                stream_url:
+                  type: string
+                streamSourceType:
+                  type: string
+                game:
+                  type: string
+                game_id:
+                  type: string
+                user_id:
+                  type: string
+                position:
+                  type: string
+                modules:
+                  type: string
+                clocks:
+                  type: string
+                moderators:
+                  type: string
+                banList:
+                  type: string
+                offersInterval:
+                  type: string
+                chatDelay:
+                  type: string
+                profanityList:
+                  type: string
+                useCustomProfanity:
+                  type: string
+                streamerLogo:
+                  type: string
+                customCSS:
+                  type: string
+                hide_on_smartphone_portrait_mode:
+                  type: string
+                wikiList:
+                  type: string
+                additionalInfo:
+                  type: string
+                languagesList:
+                  type: string
+                approvalMessageMode:
+                  type: string
+            example:
+              name: Default Page
+              useUrl: 'false'
+              channel_name: new_page
+              channel_id: new_page
+              pageUrl: ''
+              is_permanent: '1'
+              is_featured: '0'
+              status: '1'
+              chat_url: ''
+              stream_url: ''
+              streamSourceType: ''
+              game: ''
+              game_id: ''
+              user_id: ''
+              position: '0'
+              modules: '[object Object]'
+              clocks: ''
+              moderators: ''
+              banList: ''
+              offersInterval: '0'
+              chatDelay: '0'
+              profanityList: ''
+              useCustomProfanity: 'false'
+              streamerLogo: ''
+              customCSS: ''
+              hide_on_smartphone_portrait_mode: 'true'
+              wikiList: ''
+              additionalInfo: '[object Object]'
+              languagesList: ''
+              approvalMessageMode: timer
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                streamer:
+                  name: Default Page
+                  useUrl: false
+                  channel_name: new_page
+                  channel_id: new_page
+                  broadcaster_id: api_tester
+                  pageUrl: ''
+                  additionalPageSettings: ''
+                  stream_url: ''
+                  chat_url: ''
+                  registration_bonus: ''
+                  game: ''
+                  game_id: ''
+                  is_permanent: 1
+                  is_featured: 0
+                  status: 1
+                  modules:
+                    logo: true
+                    is_open_menu: false
+                    predictions: false
+                    predictions_menu: false
+                    leaderboard: true
+                    leaderboard_menu: true
+                    leaderboard_icon: false
+                    leaderboard_icon_image: ''
+                    account: true
+                    account_menu: true
+                    account_icon: false
+                    account_icon_image: ''
+                    shouts: false
+                    shouts_menu: false
+                    quiz: true
+                    polls: true
+                    polls_menu: true
+                    poll_icon: false
+                    poll_icon_image: ''
+                    contact: false
+                    contact_menu: false
+                    chat: false
+                    chat_menu: false
+                    wiki: false
+                    rating: false
+                    rating_menu: false
+                    rating_icon: false
+                    rating_icon_image: ''
+                    retention: false
+                    close: false
+                    shop: true
+                    shop_menu: true
+                  clocks: []
+                  streamSourceType: ''
+                  moderators: []
+                  banList: []
+                  offersInterval: 0
+                  direction: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  chatDelay: 0
+                  profanityList:
+                  - ''
+                  useCustomProfanity: false
+                  streamerLogo: ''
+                  wikiList: []
+                  additionalInfo:
+                    wikiTitle: Wiki
+                  languagesList: []
+                  customCSS: ''
+                  hide_on_smartphone_portrait_mode: true
+                  approvalMessageMode: timer
+                  broadcasterUseBlocks:
+                    chat:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    rating:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    polls:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                  _id:
+                    $id: 5fbcf7a7ddbd2068304f33d6
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/delete/{streamerId}:
+    post:
+      operationId: adminapiStreamerDelete
+      summary: Delete
+      tags:
+      - streamer
+      description: Send streamer id to delete it from db
+      parameters:
+      - name: streamerId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: APi Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/getAll:
+    get:
+      operationId: adminapiStreamerGetall
+      summary: GetAll
+      tags:
+      - streamer
+      description: Send request to get streamers list
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                streamers:
+                - name: Test page
+                  useUrl: false
+                  channel_name: test_channel
+                  channel_id: test_channel
+                  broadcaster_id: api_tester
+                  pageUrl: ''
+                  additionalPageSettings: ''
+                  stream_url: https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4
+                  chat_url: ''
+                  registration_bonus: ''
+                  game: Test category
+                  game_id: 5fbceda5636497107a1cbdf3
+                  is_permanent: 1
+                  is_featured: 0
+                  status: 1
+                  modules:
+                    logo: true
+                    is_open_menu: false
+                    predictions: false
+                    predictions_menu: false
+                    leaderboard: true
+                    leaderboard_menu: true
+                    leaderboard_icon: false
+                    leaderboard_icon_image: ''
+                    account: true
+                    account_menu: true
+                    account_icon: false
+                    account_icon_image: ''
+                    shouts: false
+                    shouts_menu: false
+                    quiz: true
+                    polls: true
+                    polls_menu: true
+                    poll_icon: false
+                    poll_icon_image: ''
+                    contact: false
+                    contact_menu: false
+                    chat: true
+                    chat_menu: true
+                    wiki: false
+                    rating: false
+                    rating_menu: false
+                    rating_icon: false
+                    rating_icon_image: ''
+                    retention: false
+                    close: true
+                    shop: true
+                    shop_menu: true
+                  clocks: []
+                  streamSourceType: file
+                  moderators: []
+                  banList: []
+                  offersInterval: 0
+                  direction: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  chatDelay: 0
+                  profanityList:
+                  - ''
+                  useCustomProfanity: false
+                  streamerLogo: ''
+                  wikiList: []
+                  additionalInfo:
+                    wikiTitle: Wiki
+                  languagesList: []
+                  customCSS: ''
+                  hide_on_smartphone_portrait_mode: true
+                  approvalMessageMode: timer
+                  broadcasterUseBlocks:
+                    chat:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    rating:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    polls:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                  position: 0
+                  _id:
+                    $id: 5fbcee2e636497107a1cbdf4
+                pagination:
+                  total: 1
+                  currentPage: 1
+                  totalPages: 1
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/getById/{streamerId}:
+    get:
+      operationId: adminapiStreamerGetbyid
+      summary: GetById
+      tags:
+      - streamer
+      description: Return streamer object selected by given id
+      parameters:
+      - name: streamerId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                streamer:
+                  name: Test page
+                  useUrl: false
+                  channel_name: test_channel
+                  channel_id: test_channel
+                  broadcaster_id: api_tester
+                  pageUrl: ''
+                  additionalPageSettings: ''
+                  stream_url: https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4
+                  chat_url: ''
+                  registration_bonus: ''
+                  game: Test category
+                  game_id: 5fbceda5636497107a1cbdf3
+                  is_permanent: 1
+                  is_featured: 0
+                  status: 1
+                  modules:
+                    logo: true
+                    is_open_menu: false
+                    predictions: false
+                    predictions_menu: false
+                    leaderboard: true
+                    leaderboard_menu: true
+                    leaderboard_icon: false
+                    leaderboard_icon_image: ''
+                    account: true
+                    account_menu: true
+                    account_icon: false
+                    account_icon_image: ''
+                    shouts: false
+                    shouts_menu: false
+                    quiz: true
+                    polls: true
+                    polls_menu: true
+                    poll_icon: false
+                    poll_icon_image: ''
+                    contact: false
+                    contact_menu: false
+                    chat: true
+                    chat_menu: true
+                    wiki: false
+                    rating: false
+                    rating_menu: false
+                    rating_icon: false
+                    rating_icon_image: ''
+                    retention: false
+                    close: true
+                    shop: true
+                    shop_menu: true
+                  clocks: []
+                  streamSourceType: file
+                  moderators: []
+                  banList: []
+                  offersInterval: 0
+                  direction: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  chatDelay: 0
+                  profanityList: ''
+                  useCustomProfanity: false
+                  streamerLogo: ''
+                  wikiList: []
+                  additionalInfo:
+                    wikiTitle: Wiki
+                  languagesList: []
+                  customCSS: ''
+                  hide_on_smartphone_portrait_mode: true
+                  approvalMessageMode: timer
+                  broadcasterUseBlocks:
+                    chat:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    rating:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    polls:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                  position: 0
+                  _id:
+                    $id: 5fbcee2e636497107a1cbdf4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/injectModule/{channelId}:
+    post:
+      operationId: adminapiStreamerInjectmodule
+      summary: InjectModule
+      tags:
+      - streamer
+      description: Request to inject module
+      parameters:
+      - name: channelId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                moduleId: account
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/injectOffer/{channel_id}:
+    post:
+      operationId: adminapiStreamerInjectoffer
+      summary: InjectOffer
+      tags:
+      - streamer
+      description: Request to inject offer
+      parameters:
+      - name: channel_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: APi Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                offer:
+                  name: test promo
+                  place: ''
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  description: test
+                  url: test.com
+                  thumbnail: ''
+                  itemType: big
+                  items: []
+                  content: '<h1>Welcome to my channel</h1>
+
+                    '
+                  sponsor: 5fbcee9ce1a5930b1508c482
+                  type: offers
+                  viewType:
+                  - flip
+                  secondsDelay: 5
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  offersOptions:
+                    sendToChat: true
+                    chatMessage: Welcome!!!
+                    interval: '1'
+                  meta:
+                    left: 50px
+                    top: 50px
+                    width: 80px
+                    height: 80px
+                    expoints: '500'
+                  lastSentTime: 1606222769
+                  _id:
+                    $id: 5fbcef0cf2d31b5bc07df5cc
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/injectPoll/{channelId}:
+    post:
+      operationId: adminapiStreamerInjectpoll
+      summary: InjectPoll
+      tags:
+      - streamer
+      description: Request to inject a poll or a prediction
+      parameters:
+      - name: channelId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                poll:
+                  id: 5fbcf049f2d31b5bc07df5ce
+                  name: Test poll
+                  question: Filling good?
+                  questionType: poll
+                  type: streamer
+                  hideButtons: 0
+                  image: ''
+                  time_limit: 0
+                  items:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    name: test_channel
+                  viewType: numbers
+                  answers:
+                  - answer: 'Yes'
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: 'No'
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: So so
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  answers_statistic: []
+                  answers_total: 0
+                  prizes: []
+                streamer:
+                  name: Test page
+                  useUrl: false
+                  channel_name: test_channel
+                  channel_id: test_channel
+                  broadcaster_id: api_tester
+                  pageUrl: ''
+                  additionalPageSettings: ''
+                  stream_url: https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4
+                  chat_url: ''
+                  registration_bonus: ''
+                  game: Test category
+                  game_id: 5fbceda5636497107a1cbdf3
+                  is_permanent: 1
+                  is_featured: 0
+                  status: 1
+                  modules:
+                    logo: true
+                    is_open_menu: false
+                    predictions: false
+                    predictions_menu: false
+                    leaderboard: true
+                    leaderboard_menu: true
+                    leaderboard_icon: false
+                    leaderboard_icon_image: ''
+                    account: true
+                    account_menu: true
+                    account_icon: false
+                    account_icon_image: ''
+                    shouts: false
+                    shouts_menu: false
+                    quiz: true
+                    polls: true
+                    polls_menu: true
+                    poll_icon: false
+                    poll_icon_image: ''
+                    contact: false
+                    contact_menu: false
+                    chat: true
+                    chat_menu: true
+                    wiki: false
+                    rating: false
+                    rating_menu: false
+                    rating_icon: false
+                    rating_icon_image: ''
+                    retention: false
+                    close: true
+                    shop: true
+                    shop_menu: true
+                  clocks: []
+                  streamSourceType: file
+                  moderators: []
+                  banList: []
+                  offersInterval: 0
+                  direction: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  chatDelay: 0
+                  profanityList:
+                  - ''
+                  useCustomProfanity: false
+                  streamerLogo: ''
+                  wikiList: []
+                  additionalInfo:
+                    wikiTitle: Wiki
+                  languagesList: []
+                  customCSS: ''
+                  hide_on_smartphone_portrait_mode: true
+                  approvalMessageMode: timer
+                  broadcasterUseBlocks:
+                    chat:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    rating:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    polls:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                  position: 0
+                  moderator_data:
+                  - _id:
+                      $oid: 5fbcf1b4a759e61e0f7b0bc4
+                    user_id: 5fbce6c58703d05e5a73b6f4
+                    banList: []
+                    profanityList:
+                    - ''
+                    useCustomProfanity: true
+                    customCSS: ''
+                    levelsDefinition:
+                    - level: 1
+                      name: novice
+                      expoints: 50
+                    - level: 2
+                      name: advanced
+                      expoints: 300
+                    - level: 3
+                      name: pro
+                      expoints: 1000
+                    - level: 4
+                      name: legendary
+                      expoints: 5000
+                    streamer:
+                      chat_url: ''
+                      stream_url: ''
+                      registration_bonus: 0
+                      streamSourceType: ''
+                      game: ''
+                      game_id: null
+                      position: 0
+                      modules:
+                        logo: true
+                        predictions: true
+                        predictions_menu: true
+                        leaderboard: true
+                        leaderboard_menu: true
+                        account: true
+                        account_menu: true
+                        shouts: true
+                        shouts_menu: true
+                        quiz: true
+                        quiz_menu: true
+                        polls: true
+                        polls_menu: true
+                        contact: true
+                        contact_menu: true
+                        chat: true
+                        chat_menu: true
+                        wiki: false
+                        wiki_menu: false
+                        rating: false
+                        rating_menu: false
+                        retention: false
+                        close: false
+                        shop: true
+                        shop_menu: true
+                      clocks: []
+                      offersInterval: 0
+                      chatDelay: 0
+                      streamerLogo: ''
+                      wikiList: []
+                      additionalInfo:
+                        wikiTitle: Wiki
+                    broadcaster_name: api_tester
+                  _id:
+                    $id: 5fbcee2e636497107a1cbdf4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/injectRating/{channelId}:
+    post:
+      operationId: adminapiStreamerInjectrating
+      summary: InjectRating
+      tags:
+      - streamer
+      description: Request to inject rating
+      parameters:
+      - name: channelId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                ratingId:
+                  type: string
+                timeToStay:
+                  type: string
+                closePostInteraction:
+                  type: string
+                popOnChannel:
+                  type: string
+            example:
+              ratingId: 5fbcf1325e784e3816715935
+              timeToStay: '10'
+              closePostInteraction: 'true'
+              popOnChannel: 'true'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                rating:
+                  id: 5fbcf1325e784e3816715935
+                  name: Harry Potter
+                  description: film
+                  icon: ''
+                  optionsNumber: '5'
+                  answers: []
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  prizes: []
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/injectTrivia/{channelId}:
+    post:
+      operationId: adminapiStreamerInjecttrivia
+      summary: InjectTrivia
+      tags:
+      - streamer
+      description: Request to inject trivia
+      parameters:
+      - name: channelId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                questionId:
+                  type: string
+                timeToStay:
+                  type: string
+                closePostInteraction:
+                  type: string
+            example:
+              questionId: 5fbcf1055e784e3816715934
+              timeToStay: '10'
+              closePostInteraction: 'true'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: true
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/injectWiki/{channelId}:
+    post:
+      operationId: adminapiStreamerInjectwiki
+      summary: InjectWiki
+      tags:
+      - streamer
+      description: Request to inject wiki
+      parameters:
+      - name: channelId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                wikiId:
+                  type: string
+                timeToStay:
+                  type: string
+            example:
+              wikiId: 5fbd060eaec04b6e6943828b
+              timeToStay: '10'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                wiki:
+                  id: 5fbd060eaec04b6e6943828b
+                  name: Test Wiki
+                  showInMenu: false
+                  icon: ''
+                  content: '<p>Hello to all!!!</p>
+
+                    '
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  meta:
+                    left: 250px
+                    top: 50px
+                    width: 150px
+                    height: 150px
+                    expoints: '10'
+                  type: html
+                  tweetUrl: ''
+                  prizes: []
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/toggle/{streamerId}:
+    post:
+      operationId: adminapiStreamerToggleactivemode
+      summary: ToggleActiveMode
+      tags:
+      - streamer
+      description: Send streamer id to reflect active state
+      parameters:
+      - name: streamerId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/streamer/update:
+    post:
+      operationId: adminapiStreamerUpdate
+      summary: Update
+      tags:
+      - streamer
+      description: Send streamer object to update in db with given id and return updated streamer
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                useUrl:
+                  type: string
+                channel_name:
+                  type: string
+                channel_id:
+                  type: string
+                broadcaster_id:
+                  type: string
+                pageUrl:
+                  type: string
+                additionalPageSettings:
+                  type: string
+                stream_url:
+                  type: string
+                chat_url:
+                  type: string
+                registration_bonus:
+                  type: string
+                game:
+                  type: string
+                game_id:
+                  type: string
+                is_permanent:
+                  type: string
+                is_featured:
+                  type: string
+                status:
+                  type: string
+                modules:
+                  type: string
+                clocks:
+                  type: string
+                streamSourceType:
+                  type: string
+                moderators:
+                  type: string
+                banList:
+                  type: string
+                offersInterval:
+                  type: string
+                direction:
+                  type: string
+                user_id:
+                  type: string
+                chatDelay:
+                  type: string
+                profanityList:
+                  type: string
+                useCustomProfanity:
+                  type: string
+                streamerLogo:
+                  type: string
+                wikiList:
+                  type: string
+                additionalInfo:
+                  type: string
+                languagesList:
+                  type: string
+                customCSS:
+                  type: string
+                hide_on_smartphone_portrait_mode:
+                  type: string
+                approvalMessageMode:
+                  type: string
+                broadcasterUseBlocks:
+                  type: string
+                _id:
+                  type: string
+                position:
+                  type: string
+            example:
+              name: Default Page
+              useUrl: 'false'
+              channel_name: new_page
+              channel_id: new_page
+              broadcaster_id: api_tester
+              pageUrl: ''
+              additionalPageSettings: ''
+              stream_url: ''
+              chat_url: ''
+              registration_bonus: ''
+              game: ''
+              game_id: ''
+              is_permanent: '1'
+              is_featured: '0'
+              status: '1'
+              modules: '[object Object]'
+              clocks: ''
+              streamSourceType: ''
+              moderators: ''
+              banList: ''
+              offersInterval: '0'
+              direction: '0'
+              user_id: 5fbce6c58703d05e5a73b6f4
+              chatDelay: '0'
+              profanityList: ''
+              useCustomProfanity: 'false'
+              streamerLogo: ''
+              wikiList: ''
+              additionalInfo: '[object Object]'
+              languagesList: ''
+              customCSS: ''
+              hide_on_smartphone_portrait_mode: 'true'
+              approvalMessageMode: timer
+              broadcasterUseBlocks: '[object Object]'
+              _id: '[object Object]'
+              position: '0'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                streamer:
+                  name: Default Page
+                  useUrl: false
+                  channel_name: new_page
+                  channel_id: new_page
+                  broadcaster_id: api_tester
+                  pageUrl: ''
+                  additionalPageSettings: ''
+                  stream_url: ''
+                  chat_url: ''
+                  registration_bonus: ''
+                  game: ''
+                  game_id: ''
+                  is_permanent: 1
+                  is_featured: 0
+                  status: 1
+                  modules:
+                    logo: true
+                    is_open_menu: false
+                    predictions: false
+                    predictions_menu: false
+                    leaderboard: true
+                    leaderboard_menu: true
+                    leaderboard_icon: false
+                    leaderboard_icon_image: ''
+                    account: true
+                    account_menu: true
+                    account_icon: false
+                    account_icon_image: ''
+                    shouts: false
+                    shouts_menu: false
+                    quiz: true
+                    polls: true
+                    polls_menu: true
+                    poll_icon: false
+                    poll_icon_image: ''
+                    contact: false
+                    contact_menu: false
+                    chat: false
+                    chat_menu: false
+                    wiki: false
+                    rating: false
+                    rating_menu: false
+                    rating_icon: false
+                    rating_icon_image: ''
+                    retention: false
+                    close: false
+                    shop: true
+                    shop_menu: true
+                  clocks: []
+                  streamSourceType: ''
+                  moderators: []
+                  banList: []
+                  offersInterval: 0
+                  direction: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  chatDelay: 0
+                  profanityList: ''
+                  useCustomProfanity: false
+                  streamerLogo: ''
+                  wikiList: []
+                  additionalInfo:
+                    wikiTitle: Wiki
+                  languagesList: []
+                  customCSS: ''
+                  hide_on_smartphone_portrait_mode: true
+                  approvalMessageMode: timer
+                  broadcasterUseBlocks:
+                    chat:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    rating:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                    polls:
+                      customCoords:
+                        x: 0
+                        y: 0
+                      useCustomCoords: false
+                  position: 0
+                  _id:
+                    $id: 5fbcf7a7ddbd2068304f33d6
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /userApi/streamer/getInfo:
+    post:
+      operationId: userapiStreamerGetinfo
+      summary: GetInfo
+      tags:
+      - streamer
+      description: Load all related information about streamer
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                name: Test page
+                useUrl: false
+                channel_name: test_channel
+                channel_id: test_channel
+                broadcaster_id: api_tester
+                pageUrl: ''
+                additionalPageSettings: ''
+                stream_url: https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4
+                chat_url: ''
+                registration_bonus: ''
+                game: Test category
+                game_id: 5fbceda5636497107a1cbdf3
+                is_permanent: 1
+                is_featured: 0
+                status: 1
+                modules:
+                  logo: true
+                  is_open_menu: false
+                  predictions: false
+                  predictions_menu: false
+                  leaderboard: true
+                  leaderboard_menu: true
+                  leaderboard_icon: false
+                  leaderboard_icon_image: ''
+                  account: true
+                  account_menu: true
+                  account_icon: false
+                  account_icon_image: ''
+                  shouts: false
+                  shouts_menu: false
+                  quiz: true
+                  polls: true
+                  polls_menu: true
+                  poll_icon: false
+                  poll_icon_image: ''
+                  contact: false
+                  contact_menu: false
+                  chat: true
+                  chat_menu: true
+                  wiki: true
+                  rating: true
+                  rating_menu: true
+                  rating_icon: false
+                  rating_icon_image: ''
+                  retention: false
+                  close: true
+                  shop: true
+                  shop_menu: true
+                clocks:
+                - id: 5fbd060eaec04b6e6943828b
+                  module: wiki
+                  timeToStay: '10'
+                  time: 0
+                  simpleModule: null
+                - id: 5fbd07fc48196740b75d323b
+                  module: polls
+                  timeToStay: '10'
+                  time: '25'
+                - id: 5fbd096648196740b75d323c
+                  simpleModule: null
+                  timeToStay: '10'
+                  module: quiz
+                  time: 15
+                - id: 5fbd09ff0174d8346b7cce86
+                  module: wiki
+                  timeToStay: '10'
+                  time: '50'
+                streamSourceType: file
+                moderators: []
+                banList: []
+                offersInterval: 0
+                direction: 0
+                user_id: 5fbce6c58703d05e5a73b6f4
+                chatDelay: 0
+                profanityList:
+                - ''
+                useCustomProfanity: false
+                streamerLogo: ''
+                wikiList: []
+                additionalInfo:
+                  wikiTitle: Wiki
+                languagesList: []
+                customCSS: ''
+                hide_on_smartphone_portrait_mode: true
+                approvalMessageMode: timer
+                broadcasterUseBlocks:
+                  chat:
+                    customCoords:
+                      x: 0
+                      y: 0
+                    useCustomCoords: false
+                  rating:
+                    customCoords:
+                      x: 0
+                      y: 0
+                    useCustomCoords: false
+                  polls:
+                    customCoords:
+                      x: 0
+                      y: 0
+                    useCustomCoords: false
+                position: 0
+                moderator_data:
+                - _id:
+                    $oid: 5fbcf1b4a759e61e0f7b0bc4
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  banList: []
+                  profanityList:
+                  - ''
+                  useCustomProfanity: true
+                  customCSS: ''
+                  levelsDefinition:
+                  - level: 1
+                    name: novice
+                    expoints: 50
+                  - level: 2
+                    name: advanced
+                    expoints: 300
+                  - level: 3
+                    name: pro
+                    expoints: 1000
+                  - level: 4
+                    name: legendary
+                    expoints: 5000
+                  streamer:
+                    chat_url: ''
+                    stream_url: ''
+                    registration_bonus: 0
+                    streamSourceType: ''
+                    game: ''
+                    game_id: null
+                    position: 0
+                    modules:
+                      logo: true
+                      predictions: true
+                      predictions_menu: true
+                      leaderboard: true
+                      leaderboard_menu: true
+                      account: true
+                      account_menu: true
+                      shouts: true
+                      shouts_menu: true
+                      quiz: true
+                      quiz_menu: true
+                      polls: true
+                      polls_menu: true
+                      contact: true
+                      contact_menu: true
+                      chat: true
+                      chat_menu: true
+                      wiki: false
+                      wiki_menu: false
+                      rating: false
+                      rating_menu: false
+                      retention: false
+                      close: false
+                      shop: true
+                      shop_menu: true
+                    clocks: []
+                    offersInterval: 0
+                    chatDelay: 0
+                    streamerLogo: ''
+                    wikiList: []
+                    additionalInfo:
+                      wikiTitle: Wiki
+                  broadcaster_name: api_tester
+                id: 5fbcee2e636497107a1cbdf4
+                polls:
+                - id: 5fbcf049f2d31b5bc07df5ce
+                  name: Test poll
+                  question: Filling good?
+                  questionType: poll
+                  type: streamer
+                  hideButtons: 0
+                  image: ''
+                  time_limit: 0
+                  items:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    name: test_channel
+                  viewType: numbers
+                  answers:
+                  - answer: 'Yes'
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: 'No'
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: So so
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  expoints: '200'
+                  prizes: []
+                ratings:
+                - id: 5fbcf1325e784e3816715935
+                  name: Harry Potter
+                  description: film
+                  icon: ''
+                  optionsNumber: '5'
+                  averageRate: 0
+                  totalPeople: 0
+                  totalPoints: 0
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  expoints: '80'
+                  prizes: []
+                wikis:
+                - id: 5fbd060eaec04b6e6943828b
+                  name: Test Wiki
+                  showInMenu: false
+                  icon: ''
+                  content: '<p>Hello to all!!!</p>
+
+                    '
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  meta:
+                    left: 250px
+                    top: 50px
+                    width: 150px
+                    height: 150px
+                    expoints: '10'
+                  type: html
+                  tweetUrl: ''
+                  prizes: []
+                - id: 5fbd09ff0174d8346b7cce86
+                  name: Whats Up
+                  showInMenu: false
+                  icon: ''
+                  content: '<h1>What&#39;s UP BRO?</h1>
+
+                    '
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  meta:
+                    left: 60px
+                    top: 60px
+                    width: 300px
+                    height: 300px
+                    expoints: '150'
+                  type: html
+                  tweetUrl: ''
+                  prizes: []
+                advertising:
+                - name: test promo
+                  place: ''
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  description: test
+                  url: test.com
+                  thumbnail: ''
+                  itemType: big
+                  items: []
+                  content: '<h1>Welcome to my channel</h1>
+
+                    '
+                  sponsor: 5fbcee9ce1a5930b1508c482
+                  type: offers
+                  viewType:
+                  - flip
+                  secondsDelay: 5
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  offersOptions:
+                    sendToChat: true
+                    chatMessage: Welcome!!!
+                    interval: '1'
+                  meta:
+                    left: 50px
+                    top: 50px
+                    width: 80px
+                    height: 80px
+                    expoints: '500'
+                  lastSentTime: 1606401871
+                  sponsorLogo: ''
+                  _id:
+                    $id: 5fbcef0cf2d31b5bc07df5cc
+                offers:
+                - name: test promo
+                  place: ''
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  description: test
+                  url: test.com
+                  thumbnail: ''
+                  itemType: big
+                  items: []
+                  content: '<h1>Welcome to my channel</h1>
+
+                    '
+                  sponsor: 5fbcee9ce1a5930b1508c482
+                  type: offers
+                  viewType:
+                  - flip
+                  secondsDelay: 5
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  offersOptions:
+                    sendToChat: true
+                    chatMessage: Welcome!!!
+                    interval: '1'
+                  meta:
+                    left: 50px
+                    top: 50px
+                    width: 80px
+                    height: 80px
+                    expoints: '500'
+                  lastSentTime: 1606401871
+                  sponsorLogo: ''
+                  _id:
+                    $id: 5fbcef0cf2d31b5bc07df5cc
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

@@ -1,0 +1,271 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin rating API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: rating
+paths:
+  /adminApi/rating/create:
+    post:
+      operationId: adminapiRatingCreate
+      summary: Create
+      tags:
+      - rating
+      description: Send new rating object to save and return it as db object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                icon:
+                  type: string
+                optionsNumber:
+                  type: string
+                streamers:
+                  type: string
+                expoints:
+                  type: string
+            example:
+              name: New Rating
+              description: Test
+              icon: ''
+              optionsNumber: '3'
+              streamers: ''
+              expoints: '25'
+      responses:
+        '200':
+          description: Api Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                rating:
+                  name: New Rating
+                  description: Test
+                  optionsNumber: '3'
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  icon: ''
+                  streamers: []
+                  expoints: '25'
+                  _id:
+                    $id: 5fbf89dfb4f1c0219d147841
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/rating/delete/{ratingId}:
+    post:
+      operationId: adminapiRatingDelete
+      summary: Delete
+      tags:
+      - rating
+      description: Send rating id to delete it from db
+      parameters:
+      - name: ratingId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/rating/getAll:
+    get:
+      operationId: adminapiRatingGetall
+      summary: GetAll
+      tags:
+      - rating
+      description: Send request to get ratings list by filter options
+      responses:
+        '200':
+          description: Default
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '{"ratings":[****],"pagination":{"total":0,"currentPage":"1","totalPages":0}}'
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/rating/getById/{ratingId}:
+    get:
+      operationId: adminapiRatingGetbyid
+      summary: GetById
+      tags:
+      - rating
+      description: Return rating object selected by given id
+      parameters:
+      - name: ratingId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                rating:
+                  name: Harry Potter
+                  description: film
+                  optionsNumber: '5'
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  icon: ''
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  expoints: '80'
+                  _id:
+                    $id: 5fbcf1325e784e3816715935
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/rating/update/{ratingId}:
+    post:
+      operationId: adminapiRatingUpdate
+      summary: Update
+      tags:
+      - rating
+      description: Send rating object to update in db with given id and return updated rating
+      parameters:
+      - name: ratingId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                optionsNumber:
+                  type: string
+                user_id:
+                  type: string
+                icon:
+                  type: string
+                streamers:
+                  type: string
+                expoints:
+                  type: string
+                _id:
+                  type: string
+                meta:
+                  type: string
+            example:
+              name: New Rating
+              description: Test
+              optionsNumber: '3'
+              user_id: 5fbce6c58703d05e5a73b6f4
+              icon: ''
+              streamers: ''
+              expoints: '25'
+              _id: '[object Object]'
+              meta: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                rating:
+                  name: New Rating
+                  description: Test
+                  optionsNumber: '3'
+                  icon: ''
+                  streamers: []
+                  expoints: '25'
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /userApi/rating/answer_new/{questionId}:
+    post:
+      operationId: userapiRatingAnswer
+      summary: Answer
+      tags:
+      - rating
+      description: Send user answer data and save it in db
+      parameters:
+      - name: questionId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                answer:
+                  userId: 5fbfbf7b7938293c320ac1dc
+                  ratingId: 5fbcf1325e784e3816715935
+                  answer: 5
+                  channelId: test_channel
+                  isAnswered: true
+                  expoints_given: '80'
+                  userLevel: 2
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

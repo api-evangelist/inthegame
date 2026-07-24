@@ -1,0 +1,278 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin translations API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: translations
+paths:
+  /adminApi/show/{language}/{key}:
+    get:
+      operationId: adminapiTranslationsShow
+      summary: Show
+      tags:
+      - translations
+      description: Get translation data for selected item
+      parameters:
+      - name: language
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                user_id: 5fbce6c58703d05e5a73b6f4
+                language: ru
+                key: poll-5fbcf049f2d31b5bc07df5ce
+                values:
+                  name: Тестовый
+                  question: Вам хорошо?
+                  options:
+                  - Да
+                  - Нет
+                  - Не очень
+                _id:
+                  $id: 5fbfaa8cefd2bf3c6b5e7ae4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/translations/add/{key}/{language}:
+    post:
+      operationId: adminapiTranslationsAdd
+      summary: Add
+      tags:
+      - translations
+      description: Create translation item by generated key and language id
+      parameters:
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: language
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                question:
+                  type: string
+                options:
+                  type: string
+            example:
+              name: Тестовый
+              question: Вам хорошо?
+              options: Да,Нет,Не очень
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                translation:
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  language: ru
+                  key: poll-5fbcf049f2d31b5bc07df5ce
+                  values:
+                    name: Тестовый
+                    question: Вам хорошо?
+                    options:
+                    - Да
+                    - Нет
+                    - Не очень
+                  _id:
+                    $id: 5fbfaa8cefd2bf3c6b5e7ae4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/translations/destroy/{language}/{key}:
+    post:
+      operationId: adminapiTranslationsDelete
+      summary: Delete
+      tags:
+      - translations
+      description: Delete selected translation item
+      parameters:
+      - name: language
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/translations/languagesList:
+    get:
+      operationId: adminapiTranslationsGetlanguageslist
+      summary: GetLanguagesList
+      tags:
+      - translations
+      description: Return language codes list
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+              - he
+              - de
+              - ru
+              - ko
+              - jp
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/translations/list/{language}:
+    get:
+      operationId: adminapiTranslationsGetall
+      summary: GetAll
+      tags:
+      - translations
+      description: Get all translation for give language
+      parameters:
+      - name: language
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                language: ru
+                key: poll-5fbcf049f2d31b5bc07df5ce
+                values:
+                  name: Тестовый
+                  question: Вам хорошо?
+                  options:
+                  - Да
+                  - Нет
+                  - Не очень
+                _id:
+                  $id: 5fbfaa8cefd2bf3c6b5e7ae4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/translations/update/{key}/{language}:
+    post:
+      operationId: adminapiTranslationsUpdate
+      summary: Update
+      tags:
+      - translations
+      description: Update selected translation item
+      parameters:
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: language
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                question:
+                  type: string
+                options:
+                  type: string
+            example:
+              name: Тестовый
+              question: Вам хорошо?
+              options: Да,Нет,Не очень
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                translation:
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  values:
+                    name: Тестовый
+                    question: Вам хорошо?
+                    options:
+                    - Да
+                    - Нет
+                    - Не очень
+                  key: poll-5fbcf049f2d31b5bc07df5ce
+                  language: ru
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

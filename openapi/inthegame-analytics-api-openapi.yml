@@ -1,0 +1,188 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin analytics API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: analytics
+paths:
+  /adminApi/analytics/getParameters:
+    get:
+      operationId: adminapiAnalyticsGetparameters
+      summary: GetParameters
+      tags:
+      - analytics
+      description: Get help data for drop down in filter
+      parameters:
+      - name: per-page
+        in: query
+        required: false
+        schema:
+          type: string
+        example: '10000'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                devices:
+                - deviceName: Android
+                - deviceName: iPhone
+                - deviceName: iPad
+                - deviceName: BlackBerry
+                platforms:
+                - platformName: mobile
+                - platformName: web
+                countries:
+                - countryCode: US
+                  countryName: United States
+                - countryCode: IL
+                  countryName: Israel
+                browsers:
+                - browserName: Chrome
+                - browserName: Safari
+                - browserName: Firefox
+                - browserName: MSIE
+                type: new
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/analytics/getReport:
+    get:
+      operationId: adminapiAnalyticsGetreport
+      summary: GetReport
+      tags:
+      - analytics
+      description: Get report for analytics user actions from client (activities)
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                report:
+                - module: Rating
+                  impressions: 2
+                  engagements: 0
+                  engagementRatio: 0
+                  clicks: 0
+                  ctr: 0
+                  subModules:
+                  - module: Harry Potter
+                    impressions: 2
+                    engagements: 0
+                    ctr: 0
+                    clicks: 0
+                    engagementRatio: 0
+                - module: Polls
+                  impressions: 2
+                  engagements: 0
+                  engagementRatio: 0
+                  clicks: 0
+                  ctr: 0
+                  subModules:
+                  - module: Test poll
+                    impressions: 2
+                    engagements: 0
+                    ctr: 0
+                    clicks: 0
+                    engagementRatio: 0
+                - module: Quiz
+                  impressions: 1
+                  engagements: 0
+                  engagementRatio: 0
+                  clicks: 0
+                  ctr: 0
+                  subModules:
+                  - module: Which year Harry Potter was born?
+                    impressions: 1
+                    engagements: 0
+                    ctr: 0
+                    clicks: 0
+                    engagementRatio: 0
+                - module: Wiki
+                  impressions: 5
+                  engagements: 0
+                  engagementRatio: 0
+                  clicks: 0
+                  ctr: 0
+                  subModules:
+                  - module: Test Wiki
+                    impressions: 5
+                    engagements: 0
+                    ctr: 0
+                    clicks: 0
+                    engagementRatio: 0
+                - module: Chat
+                  impressions: 1
+                  engagements: 1
+                  engagementRatio: 1
+                  clicks: 0
+                  ctr: 0
+                  subModules: []
+                - module: Account
+                  impressions: 1
+                  engagements: 1
+                  engagementRatio: 1
+                  clicks: 0
+                  ctr: 0
+                  subModules: []
+                type: new
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /userApi/analytics/add:
+    post:
+      operationId: userapiAnalyticsAdd
+      summary: Add
+      tags:
+      - analytics
+      description: add user activity to db
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

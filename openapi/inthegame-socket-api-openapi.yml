@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin socket API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: socket
+paths:
+  /leaderboards/leaderboardEngine_new_2:
+    get:
+      operationId: socketLeaderboard
+      summary: Leaderboard
+      tags:
+      - socket
+      description: Socket message returns winners array with info about won points, current streak
+      responses:
+        '200':
+          description: SocketTest
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: "{\r\n    \"0\": \"leaderboard\",\r\n    \"1\": {\r\n        \"winners\": [{\r\n            \"amount_of_credits\": \"15\",\r\n            \"amount_of_credits_won\": \"1500\",\r\n            \"amount_of_credits_won_temp\": \"1500\",\r\n            \"available_points\": \"1500\",\r\n            \"available_shouts\": \"0\",\r\n            \"broadcaster_id\": \"api_tester\",\r\n            \"email\": \"\",\r\n            \"expirience_points\": \"1500\",\r\n            \"level\": \"3\",\r\n            \"name\": \"Guest_0655shb1078\",\r\n            \"password\": \"3c940a3a0e7a30"
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

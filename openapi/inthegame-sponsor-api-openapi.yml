@@ -1,0 +1,210 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin sponsor API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: sponsor
+paths:
+  /adminApi/sponsor/create:
+    post:
+      operationId: adminapiSponsorCreate
+      summary: Create
+      tags:
+      - sponsor
+      description: Send new sponsor object to save and return it as db object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+            example:
+              name: Test
+              description: Test
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                sponsor:
+                  login: ''
+                  password: ''
+                  name: Test
+                  description: Test
+                  url: ''
+                  logo: ''
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  _id:
+                    $id: 5fbfa823a943a01e1029b4a3
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/sponsor/delete/{id}:
+    post:
+      operationId: adminapiSponsorDelete
+      summary: Delete
+      tags:
+      - sponsor
+      description: Send sposnor id to delete it from db
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/sponsor/getAll:
+    get:
+      operationId: adminapiSponsorGetall
+      summary: GetAll
+      tags:
+      - sponsor
+      description: Send request to get sponsors list by filter options
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                sponsors:
+                - login: ''
+                  password: ''
+                  name: test sponsor
+                  description: test
+                  url: ''
+                  logo: ''
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  _id:
+                    $id: 5fbcee9ce1a5930b1508c482
+                pagination:
+                  total: 1
+                  currentPage: '1'
+                  totalPages: 1
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/sponsor/getById/{id}:
+    get:
+      operationId: adminapiSponsorGetbyid
+      summary: GetById
+      tags:
+      - sponsor
+      description: Return sponsor object selected by given id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                sponsor:
+                  login: ''
+                  password: ''
+                  name: Test
+                  description: Test
+                  url: ''
+                  logo: ''
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  _id:
+                    $id: 5fbfa823a943a01e1029b4a3
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/sponsor/update/{sponsorId}:
+    post:
+      operationId: adminapiSponsorUpdate
+      summary: Update
+      tags:
+      - sponsor
+      description: Send sponsor object to update in db with given id and return updated sponsor
+      parameters:
+      - name: sponsorId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+            example:
+              name: Test
+              description: Test
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                sponsor:
+                  login: ''
+                  password: ''
+                  name: Test
+                  description: Test
+                  url: ''
+                  logo: ''
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  _id:
+                    $id: 5fbfa823a943a01e1029b4a3
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

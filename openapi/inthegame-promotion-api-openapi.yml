@@ -1,0 +1,428 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin promotion API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: promotion
+paths:
+  /adminApi/prize/create:
+    post:
+      operationId: adminapiPromotionCreate
+      summary: Create
+      tags:
+      - promotion
+      description: Send new promotion object to save and return it as db object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                url:
+                  type: string
+                streamers:
+                  type: string
+                type:
+                  type: string
+                itemType:
+                  type: string
+                viewType:
+                  type: string
+                secondsDelay:
+                  type: string
+                items:
+                  type: string
+                content:
+                  type: string
+                sponsor:
+                  type: string
+                offersOptions:
+                  type: string
+                meta:
+                  type: string
+            example:
+              name: Ads
+              description: test
+              url: ''
+              streamers: ''
+              type: ''
+              itemType: ''
+              viewType: ''
+              secondsDelay: '0'
+              items: ''
+              content: <p>Wow</p>
+              sponsor: 5fbcee9ce1a5930b1508c482
+              offersOptions: '[object Object]'
+              meta: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                prize:
+                  name: Ads
+                  place: ''
+                  streamers: []
+                  description: test
+                  url: ''
+                  thumbnail: ''
+                  itemType: null
+                  items: []
+                  content: '<p>Wow</p>
+
+                    '
+                  sponsor: 5fbcee9ce1a5930b1508c482
+                  type: null
+                  viewType: []
+                  secondsDelay: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  offersOptions:
+                    sendToChat: false
+                    chatMessage: ''
+                    interval: 0
+                  meta:
+                    left: 0
+                    top: 0
+                    width: 0
+                    height: 0
+                    expoints: 0
+                  _id:
+                    $id: 5fbd0f4baec04b6e69438292
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/prize/delete/{prizeId}:
+    post:
+      operationId: adminapiPromotionDelete
+      summary: Delete
+      tags:
+      - promotion
+      description: Send promotion id to delete it from db
+      parameters:
+      - name: prizeId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/prize/getAll:
+    get:
+      operationId: adminapiPromotionGetall
+      summary: GetAll
+      tags:
+      - promotion
+      description: Send request to get promotions list
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                prizes:
+                - name: test promo
+                  place: ''
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  description: test
+                  url: test.com
+                  thumbnail: ''
+                  itemType: big
+                  items: []
+                  content: '<h1>Welcome to my channel</h1>
+
+                    '
+                  sponsor: 5fbcee9ce1a5930b1508c482
+                  type: offers
+                  viewType:
+                  - flip
+                  secondsDelay: 5
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  offersOptions:
+                    sendToChat: true
+                    chatMessage: Welcome!!!
+                    interval: '1'
+                  meta:
+                    left: 50px
+                    top: 50px
+                    width: 80px
+                    height: 80px
+                    expoints: '500'
+                  lastSentTime: 1606225889
+                  _id:
+                    $id: 5fbcef0cf2d31b5bc07df5cc
+                - name: Test promo
+                  place: ''
+                  streamers: []
+                  description: test
+                  url: ''
+                  thumbnail: ''
+                  itemType: null
+                  items: []
+                  content: '<p>Test promo</p>
+
+                    '
+                  sponsor: 5fbcee9ce1a5930b1508c482
+                  type: null
+                  viewType: []
+                  secondsDelay: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  offersOptions:
+                    sendToChat: false
+                    chatMessage: ''
+                    interval: 0
+                  meta:
+                    left: 0
+                    top: 0
+                    width: 0
+                    height: 0
+                    expoints: '10'
+                  _id:
+                    $id: 5fbd0f2898ffc537f676f529
+                - name: Ads
+                  place: ''
+                  streamers: []
+                  description: test
+                  url: ''
+                  thumbnail: ''
+                  itemType: null
+                  items: []
+                  content: '<p>Wow</p>
+
+                    '
+                  sponsor: 5fbcee9ce1a5930b1508c482
+                  type: null
+                  viewType: []
+                  secondsDelay: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  offersOptions:
+                    sendToChat: false
+                    chatMessage: ''
+                    interval: 0
+                  meta:
+                    left: 0
+                    top: 0
+                    width: 0
+                    height: 0
+                    expoints: 0
+                  _id:
+                    $id: 5fbd0f4baec04b6e69438292
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/prize/getById/{id}:
+    get:
+      operationId: adminapiPromotionGetbyid
+      summary: GetById
+      tags:
+      - promotion
+      description: Return promotion object selected by given id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                prize:
+                  name: test promo
+                  place: ''
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  description: test
+                  url: test.com
+                  thumbnail: ''
+                  itemType: big
+                  items: []
+                  content: '<h1>Welcome to my channel</h1>
+
+                    '
+                  sponsor: 5fbcee9ce1a5930b1508c482
+                  type: offers
+                  viewType:
+                  - flip
+                  secondsDelay: 5
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  offersOptions:
+                    sendToChat: true
+                    chatMessage: Welcome!!!
+                    interval: '1'
+                  meta:
+                    left: 50px
+                    top: 50px
+                    width: 80px
+                    height: 80px
+                    expoints: '500'
+                  lastSentTime: 1606225889
+                  _id:
+                    $id: 5fbcef0cf2d31b5bc07df5cc
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/prize/update/{prizeId}:
+    post:
+      operationId: adminapiPromotionUpdate
+      summary: Update
+      tags:
+      - promotion
+      description: Send promotion object to update in db with given id and return updated promotion
+      parameters:
+      - name: prizeId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                place:
+                  type: string
+                streamers:
+                  type: string
+                description:
+                  type: string
+                url:
+                  type: string
+                thumbnail:
+                  type: string
+                itemType:
+                  type: string
+                items:
+                  type: string
+                content:
+                  type: string
+                sponsor:
+                  type: string
+                type:
+                  type: string
+                viewType:
+                  type: string
+                secondsDelay:
+                  type: string
+                user_id:
+                  type: string
+                offersOptions:
+                  type: string
+                meta:
+                  type: string
+                lastSentTime:
+                  type: string
+                _id:
+                  type: string
+            example:
+              name: test promo
+              place: ''
+              streamers: '[object Object]'
+              description: test
+              url: test.com
+              thumbnail: ''
+              itemType: big
+              items: ''
+              content: <h1>Welcome to my channel</h1>
+              sponsor: 5fbcee9ce1a5930b1508c482
+              type: offers
+              viewType: flip
+              secondsDelay: '5'
+              user_id: 5fbce6c58703d05e5a73b6f4
+              offersOptions: '[object Object]'
+              meta: '[object Object]'
+              lastSentTime: '1606225889'
+              _id: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                prize:
+                  name: test promo
+                  place: ''
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  description: test
+                  url: test.com
+                  thumbnail: ''
+                  sponsorLogo: ''
+                  itemType: big
+                  items: []
+                  content: '<h1>Welcome to my channel</h1>
+
+                    '
+                  sponsor: 5fbcee9ce1a5930b1508c482
+                  type: offers
+                  viewType:
+                  - flip
+                  secondsDelay: 5
+                  offersOptions:
+                    sendToChat: true
+                    chatMessage: Welcome!!!
+                    interval: '1'
+                  meta:
+                    left: 50px
+                    top: 50px
+                    width: 80px
+                    height: 80px
+                    expoints: '500'
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

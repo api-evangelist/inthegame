@@ -1,0 +1,249 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin wiki API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: wiki
+paths:
+  /adminApi/wiki/create:
+    post:
+      operationId: adminapiWikiCreate
+      summary: Create
+      tags:
+      - wiki
+      description: Create new wiki
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                icon:
+                  type: string
+                showInMenu:
+                  type: string
+                content:
+                  type: string
+                streamers:
+                  type: string
+                type:
+                  type: string
+                tweetUrl:
+                  type: string
+                meta:
+                  type: string
+            example:
+              name: Title
+              icon: ''
+              showInMenu: 'false'
+              content: <p>header</p>
+              streamers: ''
+              type: html
+              tweetUrl: ''
+              meta: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                name: Title
+                icon: ''
+                showInMenu: false
+                content: '<p>header</p>
+
+                  '
+                streamers: []
+                type: html
+                tweetUrl: ''
+                meta:
+                  left: 50px
+                  top: 50px
+                  width: 50px
+                  height: 50px
+                  expoints: '500'
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/wiki/delete/{wikiId}:
+    post:
+      operationId: adminapiWikiDelete
+      summary: Delete
+      tags:
+      - wiki
+      description: Remove selected wiki
+      parameters:
+      - name: wikiId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/wiki/getAll:
+    get:
+      operationId: adminapiWikiGetall
+      summary: GetAll
+      tags:
+      - wiki
+      description: Return wiki list
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                wikis:
+                - name: Test Wiki
+                  showInMenu: false
+                  icon: ''
+                  content: '<p>Hello to all!!!</p>
+
+                    '
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  meta:
+                    left: 250px
+                    top: 50px
+                    width: 150px
+                    height: 150px
+                    expoints: '10'
+                  type: html
+                  tweetUrl: ''
+                  _id:
+                    $id: 5fbd060eaec04b6e6943828b
+                pagination:
+                  total: 1
+                  currentPage: '1'
+                  totalPages: 1
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/wiki/getById/{wikiId}:
+    get:
+      operationId: adminapiWikiGetbyid
+      summary: GetById
+      tags:
+      - wiki
+      description: Return wiki with given id
+      parameters:
+      - name: wikiId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                wiki:
+                  name: Test Wiki
+                  showInMenu: false
+                  icon: ''
+                  content: '<p>Hello to all!!!</p>
+
+                    '
+                  streamers:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    channel_name: test_channel
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  meta:
+                    left: 250px
+                    top: 50px
+                    width: 150px
+                    height: 150px
+                    expoints: '10'
+                  type: html
+                  tweetUrl: ''
+                  _id:
+                    $id: 5fbd060eaec04b6e6943828b
+                  incorrectAnswers: []
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/wiki/update/{wikiId}:
+    post:
+      operationId: adminapiWikiUpdate
+      summary: Update
+      tags:
+      - wiki
+      description: Update selected wiki
+      parameters:
+      - name: wikiId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                wiki:
+                  name: Title
+                  showInMenu: false
+                  icon: ''
+                  content: '<p>header</p>
+
+                    '
+                  streamers: []
+                  meta:
+                    left: 50px
+                    top: 50px
+                    width: 50px
+                    height: 50px
+                    expoints: '500'
+                  type: html
+                  tweetUrl: ''
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

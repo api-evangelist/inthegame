@@ -1,0 +1,1267 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin user API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: user
+paths:
+  /adminApi/user/getAll:
+    get:
+      operationId: adminapiUserGetall
+      summary: GetAll
+      tags:
+      - user
+      description: Return channel users list registered in app
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                users:
+                - name: API Tester
+                  email: ''
+                  password: 0f79fd51905ba6398c8a7a19201e5b23
+                  type: registered
+                  thumbnail: /uploads/users/avatars/df9d28dc86881e76006be92ddcf67b63.png
+                  broadcaster_id: api_tester
+                  token: a9f27e5dca47b90f8e679221f83976bc
+                  amount_of_credits: 15
+                  amount_of_credits_won: 0
+                  available_shouts: 0
+                  expirience_points: 1570
+                  level: 3
+                  stats:
+                    winsCount: 0
+                    betsCount: 2
+                    currentStreak: 0
+                  status: 1
+                  updated: true
+                  available_points: 1570
+                  about: ''
+                  _id:
+                    $id: 5fbf866a3ba52a1ded3c0f2e
+                - name: Cool User
+                  email: ''
+                  password: 9ef66123f15844a765df3edbf9e0d33e
+                  type: registered
+                  thumbnail: /uploads/default_avatar.png
+                  broadcaster_id: api_tester
+                  token: f857f0b284ad18779a8855304da069ed
+                  amount_of_credits: 15
+                  amount_of_credits_won: 50
+                  available_shouts: 0
+                  expirience_points: 300
+                  level: 2
+                  stats:
+                    winsCount: 1
+                    betsCount: 1
+                    currentStreak: 1
+                  status: 1
+                  updated: true
+                  amount_of_credits_won_temp: 50
+                  available_points: 300
+                  active: true
+                  polls:
+                    5fbd1fc904e3c324c21aed48: Inception
+                  ratings:
+                    5fbcf1325e784e3816715935: '5'
+                  about: ''
+                  _id:
+                    $id: 5fbfbf7b7938293c320ac1dc
+                - name: UserForBan
+                  email: banner@ban.com
+                  password: 16be0bcb0d7dbd781c5ca5ae01a2ad8c
+                  type: registered
+                  thumbnail: /uploads/default_avatar.png
+                  broadcaster_id: api_tester
+                  token: f4c2ad1894bed34ae47b7a00df40dc84
+                  amount_of_credits: 15
+                  amount_of_credits_won: 0
+                  available_shouts: 0
+                  expirience_points: 0
+                  level: 1
+                  stats:
+                    winsCount: 0
+                    betsCount: 0
+                    currentStreak: 0
+                  status: 1
+                  updated: true
+                  about: Banned
+                  _id:
+                    $id: 5fbff72dda6e9d2d691e0953
+                pagination:
+                  total: 3
+                  currentPage: 1
+                  totalPages: 1
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/user/getAllByBroadcaster:
+    get:
+      operationId: adminapiUserGetallbybroadcaster
+      summary: GetAllByBroadcaster
+      tags:
+      - user
+      description: Return all registered users in current broadcaster
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                users:
+                - name: Guest_2249igw9180
+                  email: ''
+                  password: cca394632dfcb9b3d429a23295e16a90
+                  type: registered
+                  thumbnail: /uploads/default_avatar.png
+                  broadcaster_id: api_tester
+                  token: e42baf5bc3c8f35f956d2625b6ae12bc
+                  amount_of_credits: 15
+                  amount_of_credits_won: 0
+                  available_shouts: 0
+                  expirience_points: 70
+                  level: 1
+                  stats:
+                    winsCount: 0
+                    betsCount: 1
+                    currentStreak: 0
+                  status: 1
+                  updated: false
+                  available_points: 70
+                  _id:
+                    $id: 5fbd015287494515200b14c4
+                - name: Guest_2525uif5038
+                  email: ''
+                  password: 68dc638afb019aa92b09e478593d4420
+                  type: registered
+                  thumbnail: /uploads/default_avatar.png
+                  broadcaster_id: api_tester
+                  token: 587ef2ce058e16a5417c1cdcdc564b53
+                  amount_of_credits: 15
+                  amount_of_credits_won: 0
+                  available_shouts: 0
+                  expirience_points: 0
+                  level: 1
+                  stats:
+                    winsCount: 0
+                    betsCount: 0
+                    currentStreak: 0
+                  status: 1
+                  updated: false
+                  _id:
+                    $id: 5fbd09c57b9b68474c5b1b5f
+                - name: Guest_5725vlo6829
+                  email: ''
+                  password: 92f30643ce97edcbd222031118c843d3
+                  type: registered
+                  thumbnail: /uploads/default_avatar.png
+                  broadcaster_id: api_tester
+                  token: 50eebc6faa1a98b5bf7fc6d3333d8406
+                  amount_of_credits: 15
+                  amount_of_credits_won: 0
+                  available_shouts: 0
+                  expirience_points: 0
+                  level: 1
+                  stats:
+                    winsCount: 0
+                    betsCount: 0
+                    currentStreak: 0
+                  status: 1
+                  updated: false
+                  _id:
+                    $id: 5fbd4225f74c7c76ee3a58d9
+                - name: Guest_1500ran1610
+                  email: ''
+                  password: d60b0ccb361c00b503d7a5ce7c7df757
+                  type: registered
+                  thumbnail: /uploads/default_avatar.png
+                  broadcaster_id: api_tester
+                  token: 6112cb40c1f12b89dd4e673a37a6c0fd
+                  amount_of_credits: 15
+                  amount_of_credits_won: 0
+                  available_shouts: 0
+                  expirience_points: 0
+                  level: 1
+                  stats:
+                    winsCount: 0
+                    betsCount: 0
+                    currentStreak: 0
+                  status: 1
+                  updated: false
+                  _id:
+                    $id: 5fbe00ff05b6c2228f63f49d
+                - name: Guest_4641gka885
+                  email: ''
+                  password: 0f79fd51905ba6398c8a7a19201e5b23
+                  type: registered
+                  thumbnail: /uploads/default_avatar.png
+                  broadcaster_id: api_tester
+                  token: a9f27e5dca47b90f8e679221f83976bc
+                  amount_of_credits: 15
+                  amount_of_credits_won: 0
+                  available_shouts: 0
+                  expirience_points: 0
+                  level: 1
+                  stats:
+                    winsCount: 0
+                    betsCount: 0
+                    currentStreak: 0
+                  status: 1
+                  updated: false
+                  _id:
+                    $id: 5fbf866a3ba52a1ded3c0f2e
+                pagination:
+                  total: 5
+                  currentPage: '1'
+                  totalPages: 1
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/user/loginNew:
+    get:
+      operationId: adminapiUserLogin
+      summary: Login
+      tags:
+      - user
+      description: Request to login in admin system, return token and user id, token will be saved in cookies, all rest requests take it for Authentication header for api permission
+      parameters:
+      - name: username
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: password
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                token: 7c465d9a77540b686e818320c660d964
+                userId: 5fbce6c58703d05e5a73b6f4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/user/register:
+    get:
+      operationId: adminapiUserRegister
+      summary: Register
+      tags:
+      - user
+      description: Register new user
+      parameters:
+      - name: username
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: password
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: email
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: broadcasterName
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                userId: 5fbfb64831bbd74d176cde62
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /userApi/user/getAvailableAvatars:
+    post:
+      operationId: userapiUserGetavailableavatars
+      summary: GetAvailableAvatars
+      tags:
+      - user
+      description: Load default icons/emojies for account
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: zombie
+                shortcut: zombie
+                item_order: 1
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage1123.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b87
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: ninja
+                shortcut: ninja
+                item_order: 2
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage3.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b88
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: crossbones
+                shortcut: crossbones
+                item_order: 3
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage4.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b89
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Robot
+                shortcut: Robot
+                item_order: 4
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage5.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b8a
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Buldog
+                shortcut: Buldog
+                item_order: 5
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage6.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b8b
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Boom
+                shortcut: Boom
+                item_order: 6
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage7.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b8c
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: 'Viking '
+                shortcut: 'Viking '
+                item_order: 7
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage8.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b8d
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Monkey
+                shortcut: Monkey
+                item_order: 8
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage9.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b8e
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: 'Warrior '
+                shortcut: 'Warrior '
+                item_order: 9
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage9.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b8f
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: 'Alien '
+                shortcut: 'Alien '
+                item_order: 11
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/rImage11.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b90
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Big-hair
+                shortcut: Big-hair
+                item_order: 12
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Afro.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b91
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: DaBear
+                shortcut: DaBear
+                item_order: 13
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Bear_Mask.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b92
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Bully
+                shortcut: Bully
+                item_order: 14
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Bull.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b93
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: cateyes
+                shortcut: cateyes
+                item_order: 15
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Cat_Glasses.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b94
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: drago
+                shortcut: drago
+                item_order: 16
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Chinese_Dragon.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b95
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: fishy
+                shortcut: fishy
+                item_order: 17
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Colorful_Fish.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b96
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: daragonfire
+                shortcut: daragonfire
+                item_order: 18
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Dragon_Flames.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b97
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Dude
+                shortcut: Dude
+                item_order: 19
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Dude.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b98
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: dragondance
+                shortcut: dragondance
+                item_order: 20
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Dragons_Flames.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b99
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: ninjafloat
+                shortcut: ninjafloat
+                item_order: 21
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Floating_Ninja.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b9a
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: koooala
+                shortcut: koooala
+                item_order: 22
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Koala.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b9b
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: doggydo
+                shortcut: doggydo
+                item_order: 23
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Multi_Color_Dog.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b9c
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: mysterygirl
+                shortcut: mysterygirl
+                item_order: 24
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Mysterious_Girl.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b9d
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: ninjaslice
+                shortcut: ninjaslice
+                item_order: 25
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Ninja_Sword.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b9e
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: ooowl
+                shortcut: ooowl
+                item_order: 26
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Owl.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0b9f
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: owlyeyes
+                shortcut: owlyeyes
+                item_order: 27
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Owl_Eyes.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba0
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: piradog
+                shortcut: piradog
+                item_order: 28
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Pirate_Dog.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba1
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: spartaneous
+                shortcut: spartaneous
+                item_order: 29
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Spartan.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba2
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Sunny
+                shortcut: Sunny
+                item_order: 30
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Sun.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba3
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Val
+                shortcut: Val
+                item_order: 31
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Valkyrie.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba4
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Irule
+                shortcut: Irule
+                item_order: 32
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Warrior.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba5
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: wolfy
+                shortcut: wolfy
+                item_order: 33
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Wolf.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba6
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: gorillA
+                shortcut: gorillA
+                item_order: 34
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Aztec_Gorilla.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba7
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: LIOroars
+                shortcut: LIOroars
+                item_order: 35
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Lion.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba8
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: pantherio
+                shortcut: pantherio
+                item_order: 36
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Panther.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0ba9
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Tigris
+                shortcut: Tigris
+                item_order: 37
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/Avatar_Tiger.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0baa
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Bull111
+                shortcut: Bull111
+                item_order: 38
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/avatarbull.png
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bab
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: whhhhaa??
+                shortcut: whhhhaa??
+                item_order: 39
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/marmadeAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bac
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: 'Celebrates & farts '
+                shortcut: 'Celebrates & farts '
+                item_order: 40
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/celebrateFartAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bad
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: Monster Rocks
+                shortcut: Monster Rocks
+                item_order: 41
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/monsterAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bae
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: love-hate
+                shortcut: love-hate
+                item_order: 42
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/loveHateAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0baf
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: 'Geekydude tomato '
+                shortcut: 'Geekydude tomato '
+                item_order: 43
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/geekyAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb0
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: AlienDisco Avatar
+                shortcut: AlienDisco Avatar
+                item_order: 44
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/alienAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb1
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: LoserDance Ava
+                shortcut: LoserDance Ava
+                item_order: 45
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/dancingGirlGun.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb2
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: PopFairyAvatar
+                shortcut: PopFairyAvatar
+                item_order: 46
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/popFairyAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb3
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: DancingGirlKissingAvatar
+                shortcut: DancingGirlKissingAvatar
+                item_order: 47
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/dancingGirlKissAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb4
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: DancingGuitarAvatar
+                shortcut: DancingGuitarAvatar
+                item_order: 48
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/dancingGuitarAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb5
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: CryingElephantAvatar
+                shortcut: CryingElephantAvatar
+                item_order: 49
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/cryingElephantAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb6
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: HeadFallsAvatar
+                shortcut: HeadFallsAvatar
+                item_order: 50
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/headFallsAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb7
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: TrollKissAvatar
+                shortcut: TrollKissAvatar
+                item_order: 51
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/trollKissAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb8
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: getOurAvatar
+                shortcut: getOurAvatar
+                item_order: 52
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/getOutAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bb9
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: theFingerAvatar
+                shortcut: theFingerAvatar
+                item_order: 53
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/theFingerAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bba
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: GoalDanceAvatar
+                shortcut: GoalDanceAvatar
+                item_order: 54
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/goalDanceAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bbb
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: FairyDanceAvatar
+                shortcut: FairyDanceAvatar
+                item_order: 55
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/fairyDanceAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bbc
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: dancerCallingAvatar
+                shortcut: dancerCallingAvatar
+                item_order: 56
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/dancerCallingAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bbd
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: geekyAvatar
+                shortcut: geekyAvatar
+                item_order: 57
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/geekyAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bbe
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: geekyDanceAvatar
+                shortcut: geekyDanceAvatar
+                item_order: 58
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/geekyDanceAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bbf
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: swirlDanceAvatar
+                shortcut: swirlDanceAvatar
+                item_order: 59
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/swirlDanceAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bc0
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: alienStillAvatar
+                shortcut: alienStillAvatar
+                item_order: 60
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/alienStillAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bc1
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: MonsterRocksAvatar
+                shortcut: MonsterRocksAvatar
+                item_order: 61
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/MonsterRocksAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bc2
+              - user_id: 5fbce6c58703d05e5a73b6f4
+                broadcaster_name: api_tester
+                name: TrollFallsAvatar
+                shortcut: TrollFallsAvatar
+                item_order: 62
+                status: active
+                type: thumbnail
+                game_id: 0
+                thumbnail: /uploads/products/TrollFallsAvatar.gif
+                _id:
+                  $id: 5fbcee5aa759e61e0f7b0bc3
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/user/login_by_credentials:
+    post:
+      operationId: userapiUserLoginbycredentials
+      summary: LoginByCredentials
+      tags:
+      - user
+      description: 'Request for login by user/password '
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: Success
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/user/login_by_token:
+    post:
+      operationId: userapiUserLoginbytoken
+      summary: LoginByToken
+      tags:
+      - user
+      description: User log in by the token var got in register
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                name: Guest_4641gka885
+                email: ''
+                password: 0f79fd51905ba6398c8a7a19201e5b23
+                type: registered
+                thumbnail: /uploads/default_avatar.png
+                broadcaster_id: api_tester
+                token: a9f27e5dca47b90f8e679221f83976bc
+                amount_of_credits: 15
+                amount_of_credits_won: 0
+                available_shouts: 0
+                expirience_points: 0
+                level: 1
+                stats:
+                  winsCount: 0
+                  betsCount: 0
+                  currentStreak: 0
+                status: 1
+                updated: false
+                _id:
+                  $id: 5fbf866a3ba52a1ded3c0f2e
+                id: 5fbf866a3ba52a1ded3c0f2e
+                pollAnswers: []
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/user/register:
+    post:
+      operationId: userapiUserRegister
+      summary: Register
+      tags:
+      - user
+      description: User registration - the function creates a random username and token
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                name: Guest_1224wdv2006
+                email: ''
+                type: registered
+                thumbnail: /uploads/default_avatar.png
+                broadcaster_id: api_tester
+                token: 64723930231c7b8717c73c26c2c887cf
+                amount_of_credits: 15
+                amount_of_credits_won: 0
+                available_shouts: 0
+                expirience_points: 0
+                level: 1
+                stats:
+                  winsCount: 0
+                  betsCount: 0
+                  currentStreak: 0
+                status: 1
+                updated: false
+                _id:
+                  $id: 5fbfba8c7c61e50cd46ce805
+                action: register
+                id: 5fbfba8c7c61e50cd46ce805
+                pollAnswers: []
+                openBets: []
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/user/sendPasswordToEmail:
+    post:
+      operationId: userapiUserSendpasswordtoemail
+      summary: SendPasswordToEmail
+      tags:
+      - user
+      description: To recover password generate new password and send to user e-mail
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                result: emailError
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/user/update:
+    post:
+      operationId: userapiUserUpdate
+      summary: Update
+      tags:
+      - user
+      description: Update user details
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: Default
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                name: Guest_2447bqm7535
+                email: ''
+                password: '***'
+                type: registered
+                thumbnail: /uploads/default_avatar.png
+                broadcaster_id: '***'
+                token: '***'
+                amount_of_credits: 15
+                amount_of_credits_won: 0
+                available_shouts: 0
+                expirience_points: 0
+                level: 1
+                stats:
+                  winsCount: 0
+                  betsCount: 0
+                  currentStreak: 0
+                status: success
+                updated: true
+                _id:
+                  $id: '***'
+                id: '***'
+                about: ''
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/user/uploadAvatar:
+    post:
+      operationId: userapiUserUploadavatar
+      summary: UploadAvatar
+      tags:
+      - user
+      description: Upload New Avatar
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                type:
+                  type: string
+                token:
+                  type: string
+            example:
+              file: (binary)
+              type: file
+              token: '****'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                filepath: /uploads/users/avatars/df9d28dc86881e76006be92ddcf67b63.png
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

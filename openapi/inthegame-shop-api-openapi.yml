@@ -1,0 +1,280 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin shop API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: shop
+paths:
+  /adminApi/shop/create:
+    post:
+      operationId: adminapiShopCreate
+      summary: Create
+      tags:
+      - shop
+      description: Send new shop object to save and return it as db object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                pointsXP:
+                  type: string
+                image:
+                  type: string
+            example:
+              name: New Item
+              description: test
+              pointsXP: '100'
+              image: '{binary}'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                shop:
+                  name: New Item
+                  description: test
+                  pointsXP: '100'
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  image: ''
+                  _id:
+                    $id: 5fbf8ba778c77731880d90c8
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/shop/delete/{id}:
+    post:
+      operationId: adminapiShopDelete
+      summary: Delete
+      tags:
+      - shop
+      description: Send shop id to delete it from db
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Default
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/shop/getAll:
+    get:
+      operationId: adminapiShopGetall
+      summary: GetAll
+      tags:
+      - shop
+      description: Send request to get shop items list
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                shop:
+                - name: test item
+                  description: test
+                  pointsXP: '100'
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  image: /uploads/shop/4c043d20a7673bcc1189956cef8edc63.ba46792ede92a2eec53f35d8fd4c49e7.png
+                  _id:
+                    $id: 5fbcee8ae6cc2a181c6d5422
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/shop/getById/{id}:
+    get:
+      operationId: adminapiShopGetbyid
+      summary: GetById
+      tags:
+      - shop
+      description: Return shop object selected by given id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Default
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                shop:
+                  name: '***'
+                  description: '***'
+                  pointsXP: '***'
+                  user_id: '***'
+                  image: '***'
+                  _id:
+                    $id: '***'
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/shop/update/{id}:
+    post:
+      operationId: adminapiShopUpdate
+      summary: Update
+      tags:
+      - shop
+      description: Send shop object to update in db with given id and return updated shop item
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                pointsXP:
+                  type: string
+                user_id:
+                  type: string
+                image:
+                  type: string
+                _id:
+                  type: string
+            example:
+              name: New Item
+              description: test
+              pointsXP: '100'
+              user_id: 5fbce6c58703d05e5a73b6f4
+              image: ''
+              _id: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                shop:
+                  name: New Item
+                  description: test
+                  pointsXP: '100'
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  image: ''
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /userApi/shop/buyItem:
+    post:
+      operationId: userapiShopBuyitem
+      summary: BuyItem
+      tags:
+      - shop
+      description: Send item data paid by user
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: APITest
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/shop/getProducts:
+    post:
+      operationId: userapiShopGetproducts
+      summary: GetProducts
+      tags:
+      - shop
+      description: Return list of users purchases for broadcaster
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: APITest
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+              - name: test item
+                description: test
+                pointsXP: '100'
+                user_id: 5fbce6c58703d05e5a73b6f4
+                image: /uploads/shop/4c043d20a7673bcc1189956cef8edc63.ba46792ede92a2eec53f35d8fd4c49e7.png
+                _id:
+                  $id: 5fbcee8ae6cc2a181c6d5422
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

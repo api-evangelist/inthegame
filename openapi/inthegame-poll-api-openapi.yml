@@ -1,0 +1,476 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin poll API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: poll
+paths:
+  /adminApi/poll/create:
+    post:
+      operationId: adminapiPollCreate
+      summary: Create
+      tags:
+      - poll
+      description: Send new poll object to save and return it as db object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                type:
+                  type: string
+                viewType:
+                  type: string
+                question:
+                  type: string
+                hideButtons:
+                  type: string
+                answers:
+                  type: string
+                expoints:
+                  type: string
+                questionType:
+                  type: string
+            example:
+              name: Cinema
+              type: streamer
+              viewType: percentage
+              question: Best Film ever
+              hideButtons: '0'
+              answers: '[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]'
+              expoints: '150'
+              questionType: poll
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                poll:
+                  name: Cinema
+                  type: streamer
+                  items: []
+                  time_limit: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  questionType: poll
+                  viewType: percentage
+                  question: Best Film ever
+                  image: ''
+                  hideButtons: 0
+                  answers:
+                  - answer: Avatar
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: LOTR
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Inception
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Avengers 4
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Titanic
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Dark Knight
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  expoints: '150'
+                  _id:
+                    $id: 5fbd1fc904e3c324c21aed48
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/poll/delete/{pollId}:
+    post:
+      operationId: adminapiPollDelete
+      summary: Delete
+      tags:
+      - poll
+      description: Send poll id to delete it from db
+      parameters:
+      - name: pollId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/poll/getAll:
+    get:
+      operationId: adminapiPollGetall
+      summary: GetAll
+      tags:
+      - poll
+      description: Send request to get polls list by filter options
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                polls:
+                - name: New Poll
+                  type: streamer
+                  items:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    name: test_channel
+                  time_limit: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  questionType: poll
+                  viewType: percentage
+                  question: Test?
+                  image: ''
+                  hideButtons: 0
+                  answers:
+                  - answer: Test
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Live
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  expoints: '20'
+                  _id:
+                    $id: 5fbd07fc48196740b75d323b
+                pagination:
+                  total: 1
+                  currentPage: '1'
+                  totalPages: 1
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/poll/getById{pollId}:
+    get:
+      operationId: adminapiPollGetbyid
+      summary: GetById
+      tags:
+      - poll
+      description: Return poll object selected by given id
+      parameters:
+      - name: pollId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                poll:
+                  name: New Poll
+                  type: streamer
+                  items:
+                  - id: 5fbcee2e636497107a1cbdf4
+                    name: test_channel
+                  time_limit: 0
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  questionType: poll
+                  viewType: percentage
+                  question: Test?
+                  image: ''
+                  hideButtons: 0
+                  answers:
+                  - answer: Test
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Live
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  expoints: '20'
+                  _id:
+                    $id: 5fbd07fc48196740b75d323b
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/poll/result/{pollId}:
+    post:
+      operationId: adminapiPollSendwinresult
+      summary: SendWinResult
+      tags:
+      - poll
+      description: Send request for sending win result of given poll answer to whole users in client
+      parameters:
+      - name: pollId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                answer:
+                  type: string
+                image:
+                  type: string
+                reward:
+                  type: string
+                isRewardSent:
+                  type: string
+                answerSending:
+                  type: string
+            example:
+              answer: '2050'
+              image: ''
+              reward: '500'
+              isRewardSent: 'false'
+              answerSending: 'false'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                pollAnswers:
+                - answer: '2050'
+                  image: ''
+                  reward: '500'
+                  isRewardSent: true
+                  answerSending: true
+                - answer: '2070'
+                  image: ''
+                  reward: '900'
+                  isRewardSent: false
+                  answerSending: false
+                - answer: '2100'
+                  image: ''
+                  reward: '100'
+                  isRewardSent: false
+                  answerSending: false
+                - answer: Never
+                  image: ''
+                  reward: '400'
+                  isRewardSent: false
+                  answerSending: false
+                winners: 0
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /adminApi/poll/update/{pollId}:
+    post:
+      operationId: adminapiPollUpdate
+      summary: Update
+      tags:
+      - poll
+      description: Send poll object to update in db with given id and return updated poll
+      parameters:
+      - name: pollId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                type:
+                  type: string
+                items:
+                  type: string
+                time_limit:
+                  type: string
+                user_id:
+                  type: string
+                questionType:
+                  type: string
+                viewType:
+                  type: string
+                question:
+                  type: string
+                image:
+                  type: string
+                hideButtons:
+                  type: string
+                answers:
+                  type: string
+                expoints:
+                  type: string
+                _id:
+                  type: string
+            example:
+              name: Cinema
+              type: streamer
+              items: ''
+              time_limit: '0'
+              user_id: 5fbce6c58703d05e5a73b6f4
+              questionType: poll
+              viewType: percentage
+              question: Best Film ever
+              image: ''
+              hideButtons: '0'
+              answers: '[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]'
+              expoints: '150'
+              _id: '[object Object]'
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                poll:
+                  name: Cinema
+                  type: streamer
+                  items: []
+                  time_limit: 0
+                  questionType: poll
+                  viewType: percentage
+                  question: Best Film ever
+                  image: ''
+                  hideButtons: 0
+                  answers:
+                  - answer: Avatar
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: LOTR
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Inception
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Avengers 4
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Titanic
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  - answer: Dark Knight
+                    image: ''
+                    reward: 0
+                    isRewardSent: false
+                    answerSending: false
+                  expoints: '150'
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+      security:
+      - AdminToken: []
+  /userApi/poll/answer_new/{questionId}:
+    post:
+      operationId: userapiPollAnswer
+      summary: Answer
+      tags:
+      - poll
+      description: Send user answer data and save it in db
+      parameters:
+      - name: questionId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                answer:
+                  userId: 5fbfbf7b7938293c320ac1dc
+                  questionId: 5fbd1fc904e3c324c21aed48
+                  answer: Inception
+                  channelId: test_channel
+                  isAnswered: true
+                  expoints_given: '150'
+                  userLevel: 1
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

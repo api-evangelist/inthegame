@@ -1,0 +1,293 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin chat API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: chat
+paths:
+  /userApi/chat/banChatUser:
+    post:
+      operationId: userapiChatBanuser
+      summary: BanUser
+      tags:
+      - chat
+      description: Send user data for ban in chat
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: APITest
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                name: Test page
+                useUrl: false
+                channel_name: test_channel
+                channel_id: test_channel
+                broadcaster_id: api_tester
+                pageUrl: ''
+                additionalPageSettings: ''
+                stream_url: https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4
+                chat_url: ''
+                registration_bonus: ''
+                game: Test category
+                game_id: 5fbceda5636497107a1cbdf3
+                is_permanent: 1
+                is_featured: 0
+                status: 1
+                modules:
+                  logo: true
+                  is_open_menu: false
+                  predictions: false
+                  predictions_menu: false
+                  leaderboard: true
+                  leaderboard_menu: true
+                  leaderboard_icon: false
+                  leaderboard_icon_image: ''
+                  account: true
+                  account_menu: true
+                  account_icon: false
+                  account_icon_image: ''
+                  shouts: false
+                  shouts_menu: false
+                  quiz: true
+                  polls: true
+                  polls_menu: true
+                  poll_icon: false
+                  poll_icon_image: ''
+                  contact: false
+                  contact_menu: false
+                  chat: true
+                  chat_menu: true
+                  wiki: true
+                  rating: true
+                  rating_menu: true
+                  rating_icon: false
+                  rating_icon_image: ''
+                  retention: false
+                  close: true
+                  shop: true
+                  shop_menu: true
+                clocks:
+                - id: 5fbd060eaec04b6e6943828b
+                  module: wiki
+                  timeToStay: '10'
+                  time: 0
+                  simpleModule: null
+                - id: 5fbd096648196740b75d323c
+                  simpleModule: null
+                  timeToStay: '10'
+                  module: quiz
+                  time: 15
+                - id: 5fbd07fc48196740b75d323b
+                  module: polls
+                  timeToStay: '10'
+                  time: '25'
+                  simpleModule: null
+                - id: 5fbd09ff0174d8346b7cce86
+                  module: wiki
+                  timeToStay: '10'
+                  time: '50'
+                  simpleModule: null
+                streamSourceType: file
+                moderators:
+                - userId: 5fbfbf7b7938293c320ac1dc
+                  name: Cool User
+                  email: ''
+                - userId: 5fbf866a3ba52a1ded3c0f2e
+                  name: API Tester
+                  email: ''
+                banList:
+                - userId: 5fbff72dda6e9d2d691e0953
+                  name: UserForBan
+                  email: banner@ban.com
+                offersInterval: 0
+                direction: 0
+                user_id: 5fbce6c58703d05e5a73b6f4
+                chatDelay: '15'
+                profanityList:
+                - ''
+                useCustomProfanity: false
+                streamerLogo: ''
+                wikiList: []
+                additionalInfo:
+                  wikiTitle: Wiki
+                languagesList: []
+                customCSS: ''
+                hide_on_smartphone_portrait_mode: true
+                approvalMessageMode: manual
+                broadcasterUseBlocks:
+                  chat:
+                    customCoords:
+                      x: 0
+                      y: 0
+                    useCustomCoords: false
+                  rating:
+                    customCoords:
+                      x: 0
+                      y: 0
+                    useCustomCoords: false
+                  polls:
+                    customCoords:
+                      x: 0
+                      y: 0
+                    useCustomCoords: false
+                position: 0
+                moderator_data:
+                - _id:
+                    $oid: 5fbcf1b4a759e61e0f7b0bc4
+                  user_id: 5fbce6c58703d05e5a73b6f4
+                  banList: []
+                  profanityList:
+                  - ''
+                  useCustomProfanity: true
+                  customCSS: ''
+                  levelsDefinition:
+                  - level: 1
+                    name: novice
+                    expoints: 50
+                  - level: 2
+                    name: advanced
+                    expoints: 300
+                  - level: 3
+                    name: pro
+                    expoints: 1000
+                  - level: 4
+                    name: legendary
+                    expoints: 5000
+                  streamer:
+                    chat_url: ''
+                    stream_url: ''
+                    registration_bonus: 0
+                    streamSourceType: ''
+                    game: ''
+                    game_id: null
+                    position: 0
+                    modules:
+                      logo: true
+                      predictions: true
+                      predictions_menu: true
+                      leaderboard: true
+                      leaderboard_menu: true
+                      account: true
+                      account_menu: true
+                      shouts: true
+                      shouts_menu: true
+                      quiz: true
+                      quiz_menu: true
+                      polls: true
+                      polls_menu: true
+                      contact: true
+                      contact_menu: true
+                      chat: true
+                      chat_menu: true
+                      wiki: false
+                      wiki_menu: false
+                      rating: false
+                      rating_menu: false
+                      retention: false
+                      close: false
+                      shop: true
+                      shop_menu: true
+                    clocks: []
+                    offersInterval: 0
+                    chatDelay: 0
+                    streamerLogo: ''
+                    wikiList: []
+                    additionalInfo:
+                      wikiTitle: Wiki
+                  broadcaster_name: api_tester
+                _id:
+                  $id: 5fbcee2e636497107a1cbdf4
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/chat/chatMessage:
+    post:
+      operationId: userapiChatSend
+      summary: Send
+      tags:
+      - chat
+      description: Send user message and return verified text to client
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message:
+                  message: Hello Bro!Q!!
+                  username: Cool User
+                  userId: 5fbfbf7b7938293c320ac1dc
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+  /userApi/chat/deleteChatMessage:
+    post:
+      operationId: userapiChatDelete
+      summary: Delete
+      tags:
+      - chat
+      description: Delete message from chat with provided id
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                request:
+                  type: string
+            example:
+              request: data
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.

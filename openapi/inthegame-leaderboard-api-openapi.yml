@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: Inthegame admin leaderboard API
+  version: 1.0.0
+  description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
+  contact:
+    name: Inthegame Support
+    email: support@inthegame.io
+    url: https://www.inthegame.io/
+servers:
+- url: https://api-dev.inthegame.io
+  description: Published API host (from Postman collection)
+tags:
+- name: leaderboard
+paths:
+  /userApi/leaderboard/get/{broadcaster}:
+    get:
+      operationId: userapiLeaderboardGet
+      summary: Get
+      tags:
+      - leaderboard
+      description: Return users data list
+      parameters:
+      - name: broadcaster
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: API Test
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                api_tester:
+                - name: Guest_1545hbu6587
+                  email: ''
+                  type: registered
+                  thumbnail: /uploads/default_avatar.png
+                  broadcaster_id: api_tester
+                  amount_of_credits: 15
+                  amount_of_credits_won: 50
+                  available_shouts: 0
+                  expirience_points: 70
+                  level: 1
+                  stats:
+                    winsCount: 1
+                    betsCount: 1
+                    currentStreak: 1
+                  status: 1
+                  updated: false
+                  amount_of_credits_won_temp: 50
+                  available_points: 70
+                  _id:
+                    $id: 5fbfbf7b7938293c320ac1dc
+        '404':
+          description: Not found
+        '500':
+          description: Server error
+components:
+  securitySchemes:
+    AdminToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Admin API token issued after login to the admin panel (https://admintest.inthegame.io/); sent in the Authorization header.
