@@ -1,0 +1,74 @@
+# generated: '2026-07-19'
+# method: searched
+# source: Postman collection socket section (wss://api-dev.inthegame.io:6801)
+# spec_type: AsyncAPI
+asyncapi: 2.6.0
+info:
+  title: Inthegame Realtime (Socket.IO)
+  version: 1.0.0
+  description: Real-time viewer-engagement events pushed over Socket.IO. The socket
+    traces server messages to the app, keeping viewer state in sync when admins inject
+    polls, ratings, trivia, offers and wikis, and streams leaderboard updates. Captured
+    from the provider-published Postman collection socket documentation.
+servers:
+  dev:
+    url: api-dev.inthegame.io:6801
+    protocol: wss
+    description: 'Socket.IO endpoint: wss://api-dev.inthegame.io:6801/socket.io/?EIO=3&transport=websocket'
+channels:
+  leaderboard:
+    subscribe:
+      operationId: onLeaderboard
+      summary: Winners array with won points and current streak, pushed by the leaderboard
+        engine.
+      message:
+        name: leaderboard
+        title: leaderboard
+        payload:
+          type: object
+  injectPoll:
+    subscribe:
+      operationId: onInjectPoll
+      summary: Emitted when an admin injects a poll (adminApi/streamer/injectPoll);
+        carries the injected poll info to the app.
+      message:
+        name: injectPoll
+        title: injectPoll
+        payload:
+          type: object
+  injectRating:
+    subscribe:
+      operationId: onInjectRating
+      summary: Emitted when an admin injects a rating engagement.
+      message:
+        name: injectRating
+        title: injectRating
+        payload:
+          type: object
+  injectTrivia:
+    subscribe:
+      operationId: onInjectTrivia
+      summary: Emitted when an admin injects a trivia/quiz.
+      message:
+        name: injectTrivia
+        title: injectTrivia
+        payload:
+          type: object
+  injectOffer:
+    subscribe:
+      operationId: onInjectOffer
+      summary: Emitted when an admin injects an offer to show on the page.
+      message:
+        name: injectOffer
+        title: injectOffer
+        payload:
+          type: object
+  injectWiki:
+    subscribe:
+      operationId: onInjectWiki
+      summary: Emitted when an admin injects a wiki card for viewers.
+      message:
+        name: injectWiki
+        title: injectWiki
+        payload:
+          type: object

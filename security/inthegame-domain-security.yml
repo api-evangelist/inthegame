@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: inthegame.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 10 08:02:41 2026 GMT
+  hsts: false
+- host: api-dev.inthegame.io
+  https: false
+domains:
+- domain: inthegame.io
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

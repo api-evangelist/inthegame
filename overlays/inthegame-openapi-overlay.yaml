@@ -1,0 +1,13 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Inthegame
+  version: 1.0.0
+extends: openapi/inthegame-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-source: Converted from provider-published Postman collection (public
+      workspace).
+    x-apievangelist-realtime: Socket.IO event surface documented in asyncapi/inthegame-socket-asyncapi.yml
+    x-apievangelist-auth: Admin API uses Authorization-header token; User API uses
+      userToken body field.

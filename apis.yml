@@ -1,25 +1,398 @@
 aid: inthegame
 name: Inthegame
-description: Inthegame is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Inthegame (Synced Apps Technologies Ltd.) is a viewer-interaction and CTV/OTT engagement
+  platform. Its patented no-code layer injects interactive in-stream overlays — polls, trivia,
+  ratings, wikis, offers and a points shop — into live and recorded video across smart TVs and
+  mobile devices, driving engagement and monetization for streaming platforms and broadcasters.
+  The API exposes two surfaces: an adminApi for broadcasters to manage streamers/channels and
+  inject engagements, and a userApi for end-viewers to register, play, answer, chat, buy and
+  climb real-time leaderboards, with a Socket.IO channel pushing live engagement events.
 url: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.inthegame.io/assets/images/6756948bfd57e173d3fa6e19_favicon_itg.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - techstars
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Streaming
+- CTV
+- OTT
+- Video
+- Engagement
+- Interactive
+- Gamification
+- Sports
+- Real-time
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: inthegame:inthegame-admin-api
+  name: Inthegame admin API
+  description: The admin API from Inthegame — 1 operation(s) for admin.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - admin
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-admin-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-analytics-api
+  name: Inthegame analytics API
+  description: The analytics API from Inthegame — 3 operation(s) for analytics.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - analytics
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-analytics-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-category-api
+  name: Inthegame category API
+  description: The category API from Inthegame — 5 operation(s) for category.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - category
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-category-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-chat-api
+  name: Inthegame chat API
+  description: The chat API from Inthegame — 3 operation(s) for chat.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - chat
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-chat-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-entity-api
+  name: Inthegame entity API
+  description: The entity API from Inthegame — 7 operation(s) for entity.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - entity
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-entity-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-general-api
+  name: Inthegame general API
+  description: The general API from Inthegame — 1 operation(s) for general.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - general
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-general-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-item-api
+  name: Inthegame item API
+  description: The item API from Inthegame — 6 operation(s) for item.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - item
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-item-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-leaderboard-api
+  name: Inthegame leaderboard API
+  description: The leaderboard API from Inthegame — 1 operation(s) for leaderboard.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - leaderboard
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-leaderboard-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-moderationdata-api
+  name: Inthegame moderationData API
+  description: The moderationData API from Inthegame — 3 operation(s) for moderationdata.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - moderationData
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-moderationdata-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-poll-api
+  name: Inthegame poll API
+  description: The poll API from Inthegame — 7 operation(s) for poll.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - poll
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-poll-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-promotion-api
+  name: Inthegame promotion API
+  description: The promotion API from Inthegame — 5 operation(s) for promotion.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - promotion
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-promotion-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-rating-api
+  name: Inthegame rating API
+  description: The rating API from Inthegame — 6 operation(s) for rating.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - rating
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-rating-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-shop-api
+  name: Inthegame shop API
+  description: The shop API from Inthegame — 7 operation(s) for shop.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - shop
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-shop-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-socket-api
+  name: Inthegame socket API
+  description: The socket API from Inthegame — 1 operation(s) for socket.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - socket
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-socket-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-sponsor-api
+  name: Inthegame sponsor API
+  description: The sponsor API from Inthegame — 5 operation(s) for sponsor.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - sponsor
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-sponsor-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-streamer-api
+  name: Inthegame streamer API
+  description: The streamer API from Inthegame — 16 operation(s) for streamer.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - streamer
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-streamer-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-translations-api
+  name: Inthegame translations API
+  description: The translations API from Inthegame — 6 operation(s) for translations.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - translations
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-translations-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-trivia-api
+  name: Inthegame trivia API
+  description: The trivia API from Inthegame — 6 operation(s) for trivia.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - trivia
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-trivia-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-uploads-api
+  name: Inthegame uploads API
+  description: The uploads API from Inthegame — 3 operation(s) for uploads.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - uploads
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-uploads-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-user-api
+  name: Inthegame user API
+  description: The user API from Inthegame — 11 operation(s) for user.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - user
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-user-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
+- aid: inthegame:inthegame-wiki-api
+  name: Inthegame wiki API
+  description: The wiki API from Inthegame — 5 operation(s) for wiki.
+  humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+  baseURL: https://api-dev.inthegame.io
+  tags:
+  - wiki
+  properties:
+  - type: OpenAPI
+    url: openapi/inthegame-wiki-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/inthegame-socket-asyncapi.yml
+  - type: Examples
+    url: examples/inthegame-examples.json
 common:
+- type: Documentation
+  url: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace/documentation/13196255-458fc2a9-5588-4940-abeb-1d6ef234d83a
+- type: APIReference
+  url: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace/documentation/13196255-458fc2a9-5588-4940-abeb-1d6ef234d83a
+- type: Postman
+  url: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
+- type: OpenAPI
+  url: openapi/inthegame-openapi.yml
+- type: AsyncAPI
+  url: asyncapi/inthegame-socket-asyncapi.yml
+- type: Webhooks
+  url: asyncapi/inthegame-socket-asyncapi.yml
+- type: Authentication
+  url: authentication/inthegame-authentication.yml
+- type: Conventions
+  url: conventions/inthegame-conventions.yml
+- type: ErrorCatalog
+  url: errors/inthegame-problem-types.yml
+- type: Conformance
+  url: conformance/inthegame-conformance.yml
+- type: DataModel
+  url: data-model/inthegame-data-model.yml
+- type: Examples
+  url: examples/inthegame-examples.json
+- type: Overlay
+  url: overlays/inthegame-openapi-overlay.yaml
+- type: Sandbox
+  url: sandbox/inthegame-sandbox.yml
+- type: MCPServer
+  url: mcp/inthegame-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/inthegame-llms.txt
+- type: AgenticAccess
+  url: agentic-access/inthegame-agentic-access.yml
+- type: DomainSecurity
+  url: security/inthegame-domain-security.yml
+- type: Blog
+  url: https://www.inthegame.io/blog
+- type: Support
+  url: mailto:support@inthegame.io
+- type: TermsOfService
+  url: https://www.inthegame.io/terms-of-services
+- type: PrivacyPolicy
+  url: https://www.inthegame.io/privacy-policy
 - type: Website
-  url: https://inthegame.io/
+  url: https://www.inthegame.io/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/inthegame-openapi.yml + Postman collection "Error Codes" section
+format: http-status
+envelope: 'Plain HTTP status codes. The provider documents: 200 = success; 404 and
+  500 = errors. Error bodies are not standardized (no RFC 9457 problem+json).'
+problems:
+- status: 200
+  title: Success
+  remediation: Request succeeded.
+- status: 404
+  title: Not Found
+  remediation: Resource (streamer, poll, trivia, rating, wiki, shop item, user) does
+    not exist or the id/channel is wrong. Verify the path id and that the entity was
+    created.
+- status: 500
+  title: Server Error
+  remediation: Unexpected server-side failure. Retry; if persistent, contact support@inthegame.io.

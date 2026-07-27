@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: Postman collection "Inthegame API Docs" (public workspace) + openapi/inthegame-openapi.yml
+authentication:
+  admin_api: Authorization header carries the admin token issued after login to the
+    admin panel (https://admintest.inthegame.io/). Sent as a header (documented as
+    browser cookie / login token).
+  user_api: userToken parameter supplied in the request body identifies the end-viewer
+    session.
+idempotency:
+  supported: false
+  note: No idempotency-key header or mechanism is documented; write operations are
+    plain POSTs.
+pagination:
+  style: page-number
+  params:
+  - per-page
+  note: List endpoints accept a per-page query parameter (e.g. per-page=10000); analytics
+    getParameters uses per-page. No documented cursor.
+rate_limiting:
+  supported: false
+  note: 'The provider explicitly documents "Rate limit: No".'
+request_format:
+  admin_writes: application/x-www-form-urlencoded (form fields)
+  some_writes: application/json
+  user_writes: form / JSON with userToken
+versioning:
+  scheme: none-documented
+  note: No version segment in paths; some endpoints use _new/_new_2 suffixes to denote
+    newer variants.
+error_envelope: Plain HTTP status codes (200 success; 404/500 errors) — see errors/inthegame-problem-types.yml
+realtime: Socket.IO channel (wss://api-dev.inthegame.io:6801/socket.io/) pushes real-time
+  engagement events — see asyncapi/inthegame-socket-asyncapi.yml
+cross_links:
+  errors: errors/inthegame-problem-types.yml
+  authentication: authentication/inthegame-authentication.yml
+  events: asyncapi/inthegame-socket-asyncapi.yml

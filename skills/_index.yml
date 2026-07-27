@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: generated
+source: openapi/inthegame-openapi.yml + conventions/ + errors/
+skills:
+- file: inthegame-inject-poll.md
+  name: Create and inject a live poll
+  api: openapi/inthegame-openapi.yml
+  operations: [adminapiUserLogin, adminapiPollCreate, adminapiStreamerInjectpoll, adminapiPollSendwinresult]
+- file: inthegame-viewer-play-poll.md
+  name: Viewer answers a poll and checks the leaderboard
+  api: openapi/inthegame-openapi.yml
+  operations: [userapiUserLoginbycredentials, userapiPollAnswer, userapiLeaderboardGet]
+- file: inthegame-run-trivia.md
+  name: Run a live trivia round
+  api: openapi/inthegame-openapi.yml
+  operations: [adminapiTriviaCreate, adminapiStreamerInjecttrivia, userapiTriviaAnswer]
+- file: inthegame-shop-purchase.md
+  name: Configure a shop product and let a viewer buy it
+  api: openapi/inthegame-openapi.yml
+  operations: [adminapiShopCreate, userapiShopGetproducts, userapiShopBuyitem]

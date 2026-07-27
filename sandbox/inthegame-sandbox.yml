@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: searched
+source: Postman collection "Inthegame API Docs" Overview/Authentication sections
+test_vs_live: The provider publishes a dev/test environment; the documented API host
+  is the dev host below.
+environments:
+- name: dev
+  api_base: https://api-dev.inthegame.io
+  socket: wss://api-dev.inthegame.io:6801/socket.io/?EIO=3&transport=websocket
+  admin_panel: https://admintest.inthegame.io/
+test_credentials:
+- type: demo-admin-account
+  username: api_tester
+  password: qwer1234
+  panel: https://admintest.inthegame.io/
+  note: Provider-published shared demo account created specifically for the API docs.
+warning: These are provider-published shared demo values from the public API documentation,
+  captured verbatim; not private secrets.

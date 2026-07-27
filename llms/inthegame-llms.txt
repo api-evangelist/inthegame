@@ -1,0 +1,25 @@
+# Inthegame
+
+> Inthegame (Synced Apps Technologies Ltd.) is a viewer-interaction and CTV/OTT engagement platform. Its no-code layer injects interactive in-stream overlays — polls, trivia, ratings, wikis, offers and shop — into live and recorded video across smart TVs and mobile, with real-time leaderboards and monetization. The API has two surfaces: an adminApi for broadcasters to manage and inject engagements, and a userApi for end-viewers to play, answer, chat and buy.
+
+## APIs
+- [Inthegame API (OpenAPI)](openapi/inthegame-openapi.yml): 108 operations across streamer/channel, poll, trivia, rating, wiki, shop, sponsor, prize, entity, item, user, analytics and translations.
+- [Realtime events (AsyncAPI / Socket.IO)](asyncapi/inthegame-socket-asyncapi.yml): injectPoll/injectRating/injectTrivia/injectOffer/injectWiki and leaderboard events over wss://api-dev.inthegame.io:6801.
+
+## Specs & artifacts
+- [Authentication](authentication/inthegame-authentication.yml): Admin Authorization-header token; userToken body field for viewers.
+- [Conventions](conventions/inthegame-conventions.yml): pagination (per-page), no rate limit, no idempotency key.
+- [Error catalog](errors/inthegame-problem-types.yml): plain HTTP 200/404/500.
+- [Data model](data-model/inthegame-data-model.yml): entity graph.
+- [Sandbox / test account](sandbox/inthegame-sandbox.yml): admin demo panel + dev host.
+- [Agent Skills](skills/_index.yml): inject-poll, viewer-play-poll, run-trivia, shop-purchase.
+- [MCP candidate tools](mcp/inthegame-mcp.yml)
+
+## Docs
+- [API docs (Postman)](https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace)
+- [Technology](https://www.inthegame.io/technology)
+- [About](https://www.inthegame.io/about)
+- [Blog](https://www.inthegame.io/blog)
+- [Terms of Service](https://www.inthegame.io/terms-of-services)
+- [Privacy Policy](https://www.inthegame.io/privacy-policy)
+- Support: support@inthegame.io

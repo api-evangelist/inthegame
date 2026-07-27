@@ -1,0 +1,73 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/inthegame-openapi.yml (tags + path id-reference fields)
+entities:
+- name: streamer
+  aka: channel/page
+  description: A broadcaster channel/page that hosts interactive overlays
+  id_fields:
+  - channelId
+  - channel_id
+  - streamerId
+- name: poll
+  description: Interactive poll injected into a stream
+- name: trivia
+  description: Trivia / quiz question set
+- name: rating
+  description: Viewer rating engagement
+- name: wiki
+  description: Player/entity wiki card shown to viewers
+- name: entity
+  description: Domain entity (e.g. player/team) referenced by wikis and ratings
+- name: item
+  description: Catalog item / avatar asset
+- name: shop
+  aka: product
+  description: Shop product available for purchase with points
+- name: sponsor
+  description: Sponsor attached to engagements/offers
+- name: prize
+  aka: promotion
+  description: Prize/promotion awarded to viewers
+- name: league
+  aka: rating category
+  description: Category/league grouping for ratings
+- name: user
+  description: Admin/broadcaster user or end-viewer
+- name: moderatorData
+  description: Per-user moderation state
+- name: leaderboard
+  description: Per-broadcaster viewer ranking
+relationships:
+- from: poll
+  to: streamer
+  type: belongs_to
+  via: channelId
+- from: trivia
+  to: streamer
+  type: belongs_to
+  via: channelId
+- from: rating
+  to: streamer
+  type: belongs_to
+  via: channelId
+- from: wiki
+  to: streamer
+  type: belongs_to
+  via: channelId
+- from: rating
+  to: league
+  type: belongs_to
+  via: categoryId
+- from: leaderboard
+  to: streamer
+  type: belongs_to
+  via: broadcaster
+- from: shop
+  to: streamer
+  type: belongs_to
+  via: channel
+- from: moderatorData
+  to: user
+  type: belongs_to
+  via: user_id
