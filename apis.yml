@@ -350,7 +350,7 @@ common:
 - type: Postman
   url: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
 - type: OpenAPI
-  url: openapi/inthegame-openapi.yml
+  url: openapi/_original/inthegame-openapi.yml
 - type: AsyncAPI
   url: asyncapi/inthegame-socket-asyncapi.yml
 - type: Webhooks
