@@ -1,0 +1,741 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin streamer API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "streamer",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "AddPollEngagement",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/addPollEngagement/:channelId",
+            "params": [
+              {
+                "name": "channelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "pollId",
+                  "value": ""
+                },
+                {
+                  "name": "time",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Request to engage poll to streamer"
+        },
+        {
+          "info": {
+            "name": "AddTriviaQuestionEngagement",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/addTriviaEngagement/:channelId/1",
+            "params": [
+              {
+                "name": "channelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "triviaId",
+                  "value": ""
+                },
+                {
+                  "name": "time",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Request to engage trivia to streamer"
+        },
+        {
+          "info": {
+            "name": "AddWikiEngagement",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/addWikiEngagement/:channelId",
+            "params": [
+              {
+                "name": "channelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "wikiId",
+                  "value": ""
+                },
+                {
+                  "name": "time",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Request to engage wiki to streamer"
+        },
+        {
+          "info": {
+            "name": "Create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/create",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "useUrl",
+                  "value": ""
+                },
+                {
+                  "name": "channel_name",
+                  "value": ""
+                },
+                {
+                  "name": "channel_id",
+                  "value": ""
+                },
+                {
+                  "name": "pageUrl",
+                  "value": ""
+                },
+                {
+                  "name": "is_permanent",
+                  "value": ""
+                },
+                {
+                  "name": "is_featured",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "chat_url",
+                  "value": ""
+                },
+                {
+                  "name": "stream_url",
+                  "value": ""
+                },
+                {
+                  "name": "streamSourceType",
+                  "value": ""
+                },
+                {
+                  "name": "game",
+                  "value": ""
+                },
+                {
+                  "name": "game_id",
+                  "value": ""
+                },
+                {
+                  "name": "user_id",
+                  "value": ""
+                },
+                {
+                  "name": "position",
+                  "value": ""
+                },
+                {
+                  "name": "modules",
+                  "value": ""
+                },
+                {
+                  "name": "clocks",
+                  "value": ""
+                },
+                {
+                  "name": "moderators",
+                  "value": ""
+                },
+                {
+                  "name": "banList",
+                  "value": ""
+                },
+                {
+                  "name": "offersInterval",
+                  "value": ""
+                },
+                {
+                  "name": "chatDelay",
+                  "value": ""
+                },
+                {
+                  "name": "profanityList",
+                  "value": ""
+                },
+                {
+                  "name": "useCustomProfanity",
+                  "value": ""
+                },
+                {
+                  "name": "streamerLogo",
+                  "value": ""
+                },
+                {
+                  "name": "customCSS",
+                  "value": ""
+                },
+                {
+                  "name": "hide_on_smartphone_portrait_mode",
+                  "value": ""
+                },
+                {
+                  "name": "wikiList",
+                  "value": ""
+                },
+                {
+                  "name": "additionalInfo",
+                  "value": ""
+                },
+                {
+                  "name": "languagesList",
+                  "value": ""
+                },
+                {
+                  "name": "approvalMessageMode",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send new streamer object to save and return it as db object"
+        },
+        {
+          "info": {
+            "name": "Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/delete/:streamerId",
+            "params": [
+              {
+                "name": "streamerId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send streamer id to delete it from db"
+        },
+        {
+          "info": {
+            "name": "GetAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/getAll",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send request to get streamers list"
+        },
+        {
+          "info": {
+            "name": "GetById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/getById/:streamerId",
+            "params": [
+              {
+                "name": "streamerId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return streamer object selected by given id"
+        },
+        {
+          "info": {
+            "name": "InjectModule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/injectModule/:channelId",
+            "params": [
+              {
+                "name": "channelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Request to inject module"
+        },
+        {
+          "info": {
+            "name": "InjectOffer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/injectOffer/:channel_id",
+            "params": [
+              {
+                "name": "channel_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Request to inject offer"
+        },
+        {
+          "info": {
+            "name": "InjectPoll",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/injectPoll/:channelId",
+            "params": [
+              {
+                "name": "channelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Request to inject a poll or a prediction"
+        },
+        {
+          "info": {
+            "name": "InjectRating",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/injectRating/:channelId",
+            "params": [
+              {
+                "name": "channelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "ratingId",
+                  "value": ""
+                },
+                {
+                  "name": "timeToStay",
+                  "value": ""
+                },
+                {
+                  "name": "closePostInteraction",
+                  "value": ""
+                },
+                {
+                  "name": "popOnChannel",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Request to inject rating"
+        },
+        {
+          "info": {
+            "name": "InjectTrivia",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/injectTrivia/:channelId",
+            "params": [
+              {
+                "name": "channelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "questionId",
+                  "value": ""
+                },
+                {
+                  "name": "timeToStay",
+                  "value": ""
+                },
+                {
+                  "name": "closePostInteraction",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Request to inject trivia"
+        },
+        {
+          "info": {
+            "name": "InjectWiki",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/injectWiki/:channelId",
+            "params": [
+              {
+                "name": "channelId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "wikiId",
+                  "value": ""
+                },
+                {
+                  "name": "timeToStay",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Request to inject wiki"
+        },
+        {
+          "info": {
+            "name": "ToggleActiveMode",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/toggle/:streamerId",
+            "params": [
+              {
+                "name": "streamerId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send streamer id to reflect active state"
+        },
+        {
+          "info": {
+            "name": "Update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/streamer/update",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "useUrl",
+                  "value": ""
+                },
+                {
+                  "name": "channel_name",
+                  "value": ""
+                },
+                {
+                  "name": "channel_id",
+                  "value": ""
+                },
+                {
+                  "name": "broadcaster_id",
+                  "value": ""
+                },
+                {
+                  "name": "pageUrl",
+                  "value": ""
+                },
+                {
+                  "name": "additionalPageSettings",
+                  "value": ""
+                },
+                {
+                  "name": "stream_url",
+                  "value": ""
+                },
+                {
+                  "name": "chat_url",
+                  "value": ""
+                },
+                {
+                  "name": "registration_bonus",
+                  "value": ""
+                },
+                {
+                  "name": "game",
+                  "value": ""
+                },
+                {
+                  "name": "game_id",
+                  "value": ""
+                },
+                {
+                  "name": "is_permanent",
+                  "value": ""
+                },
+                {
+                  "name": "is_featured",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "modules",
+                  "value": ""
+                },
+                {
+                  "name": "clocks",
+                  "value": ""
+                },
+                {
+                  "name": "streamSourceType",
+                  "value": ""
+                },
+                {
+                  "name": "moderators",
+                  "value": ""
+                },
+                {
+                  "name": "banList",
+                  "value": ""
+                },
+                {
+                  "name": "offersInterval",
+                  "value": ""
+                },
+                {
+                  "name": "direction",
+                  "value": ""
+                },
+                {
+                  "name": "user_id",
+                  "value": ""
+                },
+                {
+                  "name": "chatDelay",
+                  "value": ""
+                },
+                {
+                  "name": "profanityList",
+                  "value": ""
+                },
+                {
+                  "name": "useCustomProfanity",
+                  "value": ""
+                },
+                {
+                  "name": "streamerLogo",
+                  "value": ""
+                },
+                {
+                  "name": "wikiList",
+                  "value": ""
+                },
+                {
+                  "name": "additionalInfo",
+                  "value": ""
+                },
+                {
+                  "name": "languagesList",
+                  "value": ""
+                },
+                {
+                  "name": "customCSS",
+                  "value": ""
+                },
+                {
+                  "name": "hide_on_smartphone_portrait_mode",
+                  "value": ""
+                },
+                {
+                  "name": "approvalMessageMode",
+                  "value": ""
+                },
+                {
+                  "name": "broadcasterUseBlocks",
+                  "value": ""
+                },
+                {
+                  "name": "_id",
+                  "value": ""
+                },
+                {
+                  "name": "position",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send streamer object to update in db with given id and return updated streamer"
+        },
+        {
+          "info": {
+            "name": "GetInfo",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/streamer/getInfo",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Load all related information about streamer"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

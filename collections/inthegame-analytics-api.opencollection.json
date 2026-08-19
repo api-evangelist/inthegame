@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin analytics API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "analytics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GetParameters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/analytics/getParameters",
+            "params": [
+              {
+                "name": "per-page",
+                "value": "10000",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Get help data for drop down in filter"
+        },
+        {
+          "info": {
+            "name": "GetReport",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/analytics/getReport",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Get report for analytics user actions from client (activities)"
+        },
+        {
+          "info": {
+            "name": "Add",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/analytics/add",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "add user activity to db"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

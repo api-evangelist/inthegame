@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin socket API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "socket",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Leaderboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/leaderboards/leaderboardEngine_new_2"
+          },
+          "docs": "Socket message returns winners array with info about won points, current streak"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

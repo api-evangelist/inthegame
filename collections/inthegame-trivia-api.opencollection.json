@@ -1,0 +1,241 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin trivia API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "trivia",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/trivia/create",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "type",
+                  "value": ""
+                },
+                {
+                  "name": "question",
+                  "value": ""
+                },
+                {
+                  "name": "category",
+                  "value": ""
+                },
+                {
+                  "name": "correctAnswer",
+                  "value": ""
+                },
+                {
+                  "name": "incorrectAnswers",
+                  "value": ""
+                },
+                {
+                  "name": "pointsGiven",
+                  "value": ""
+                },
+                {
+                  "name": "timePerQuestion",
+                  "value": ""
+                },
+                {
+                  "name": "expoints",
+                  "value": ""
+                },
+                {
+                  "name": "delayUntilAnswer",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Create trivia in db and return new object"
+        },
+        {
+          "info": {
+            "name": "Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/trivia/delete/:triviaId",
+            "params": [
+              {
+                "name": "triviaId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Remove selected trivia from db"
+        },
+        {
+          "info": {
+            "name": "GetAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/trivia/getAll",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return trivia list with filter options"
+        },
+        {
+          "info": {
+            "name": "GetById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/trivia/getById/:triviaId",
+            "params": [
+              {
+                "name": "triviaId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return trivia by given id"
+        },
+        {
+          "info": {
+            "name": "Update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/trivia/update/:triviaId",
+            "params": [
+              {
+                "name": "triviaId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "question",
+                  "value": ""
+                },
+                {
+                  "name": "pointsGiven",
+                  "value": ""
+                },
+                {
+                  "name": "timePerQuestion",
+                  "value": ""
+                },
+                {
+                  "name": "delayUntilAnswer",
+                  "value": ""
+                },
+                {
+                  "name": "category",
+                  "value": ""
+                },
+                {
+                  "name": "user_id",
+                  "value": ""
+                },
+                {
+                  "name": "correctAnswer",
+                  "value": ""
+                },
+                {
+                  "name": "expoints",
+                  "value": ""
+                },
+                {
+                  "name": "incorrectAnswers",
+                  "value": ""
+                },
+                {
+                  "name": "_id",
+                  "value": ""
+                },
+                {
+                  "name": "meta",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Update trivia with given id"
+        },
+        {
+          "info": {
+            "name": "Answer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/trivia/answer/:questionId",
+            "params": [
+              {
+                "name": "questionId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Sned user answer data and save it in db"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

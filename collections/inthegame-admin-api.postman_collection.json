@@ -1,0 +1,208 @@
+{
+  "item": [
+    {
+      "id": "ca056fcf-1b1c-4bac-8527-8991ea4ab5c1",
+      "name": "admin",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ff71a8c3-d7bf-4d95-80a6-60f422009117",
+          "name": "GetCurrentUser",
+          "request": {
+            "name": "GetCurrentUser",
+            "description": {
+              "content": "Gets current logged user object by token saved in cookies. Requested every time page loads for applying some actions on server.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "admin",
+                "currentUser"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ce3e309e-b4cf-44f7-a769-f832512ff8a3",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "admin",
+                    "currentUser"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"api_tester\",\n  \"password\": \"5d93ceb70e2bf5daa84ec3d0cd2c731a\",\n  \"email\": \"leonid.arenshteyn@inthegame.io\",\n  \"broadcaster_name\": \"api_tester\",\n  \"type\": \"moderator\",\n  \"_id\": {\n    \"$id\": \"5fbce6c58703d05e5a73b6f4\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "414b2f43-18d1-4b77-9aa4-27c8bf621dae",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "admin",
+                    "currentUser"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "96a46283-b0f4-4388-8972-280667dbc86c",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "admin",
+                    "currentUser"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1b805bd8-d897-4839-8ce7-fcd67aa247fb",
+    "name": "Inthegame admin API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

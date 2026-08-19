@@ -1,0 +1,5113 @@
+{
+  "item": [
+    {
+      "id": "948bdd88-d333-45a9-aa71-d322fc8f7e1f",
+      "name": "streamer",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dbfc8ead-dc86-49e2-89eb-b2092db0c484",
+          "name": "AddPollEngagement",
+          "request": {
+            "name": "AddPollEngagement",
+            "description": {
+              "content": "Request to engage poll to streamer",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "addPollEngagement",
+                ":channelId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "pollId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "time",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ea4fe22c-e8f0-405e-b946-a4d567e4eeba",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "addPollEngagement",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "pollId",
+                      "value": "5fbd07fc48196740b75d323b"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time",
+                      "value": "25"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"poll\": {\n    \"id\": \"5fbd07fc48196740b75d323b\",\n    \"name\": \"New Poll\",\n    \"question\": \"Test?\",\n    \"questionType\": \"poll\",\n    \"type\": \"streamer\",\n    \"hideButtons\": 0,\n    \"image\": \"\",\n    \"time_limit\": 0,\n    \"items\": [\n      {\n        \"id\": \"5fbcee2e636497107a1cbdf4\",\n        \"name\": \"test_channel\"\n      }\n    ],\n    \"viewType\": \"percentage\",\n    \"answers\": [\n      {\n        \"answer\": \"Test\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Live\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      }\n    ],\n    \"answers_statistic\": [],\n    \"answers_total\": 0,\n    \"prizes\": []\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2e8b1798-4480-4162-857a-9f7c7e33dbcd",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "addPollEngagement",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "pollId",
+                      "value": "5fbd07fc48196740b75d323b"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time",
+                      "value": "25"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6466e32e-0c2a-4fe5-a1e3-9c33fc3ca747",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "addPollEngagement",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "pollId",
+                      "value": "5fbd07fc48196740b75d323b"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time",
+                      "value": "25"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ac2e5ded-19b8-41ab-b75d-f896b5ff3ba7",
+          "name": "AddTriviaQuestionEngagement",
+          "request": {
+            "name": "AddTriviaQuestionEngagement",
+            "description": {
+              "content": "Request to engage trivia to streamer",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "addTriviaEngagement",
+                ":channelId",
+                "1"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "triviaId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "time",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "375e1f6c-e743-4e58-9420-417a11d5de69",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "addTriviaEngagement",
+                    ":channelId",
+                    "1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "triviaId",
+                      "value": "5fbd096648196740b75d323c"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time",
+                      "value": "15"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"streamer\": {\n    \"name\": \"Test page\",\n    \"useUrl\": false,\n    \"channel_name\": \"test_channel\",\n    \"channel_id\": \"test_channel\",\n    \"broadcaster_id\": \"api_tester\",\n    \"pageUrl\": \"\",\n    \"additionalPageSettings\": \"\",\n    \"stream_url\": \"https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4\",\n    \"chat_url\": \"\",\n    \"registration_bonus\": \"\",\n    \"game\": \"Test category\",\n    \"game_id\": \"5fbceda5636497107a1cbdf3\",\n    \"is_permanent\": 1,\n    \"is_featured\": 0,\n    \"status\": 1,\n    \"modules\": {\n      \"logo\": true,\n      \"is_open_menu\": false,\n      \"predictions\": false,\n      \"predictions_menu\": false,\n      \"leaderboard\": true,\n      \"leaderboard_menu\": true,\n      \"leaderboard_icon\": false,\n      \"leaderboard_icon_image\": \"\",\n      \"account\": true,\n      \"account_menu\": true,\n      \"account_icon\": false,\n      \"account_icon_image\": \"\",\n      \"shouts\": false,\n      \"shouts_menu\": false,\n      \"quiz\": true,\n      \"polls\": true,\n      \"polls_menu\": true,\n      \"poll_icon\": false,\n      \"poll_icon_image\": \"\",\n      \"contact\": false,\n      \"contact_menu\": false,\n      \"chat\": true,\n      \"chat_menu\": true,\n      \"wiki\": true,\n      \"rating\": true,\n      \"rating_menu\": true,\n      \"rating_icon\": false,\n      \"rating_icon_image\": \"\",\n      \"retention\": false,\n      \"close\": true,\n      \"shop\": true,\n      \"shop_menu\": true\n    },\n    \"clocks\": [\n      {\n        \"id\": \"5fbd060eaec04b6e6943828b\",\n        \"module\": \"wiki\",\n        \"timeToStay\": \"10\",\n        \"time\": 0,\n        \"simpleModule\": null\n      },\n      {\n        \"id\": \"5fbd07fc48196740b75d323b\",\n        \"module\": \"polls\",\n        \"timeToStay\": \"10\",\n        \"time\": \"25\"\n      },\n      {\n        \"id\": \"5fbd096648196740b75d323c\",\n        \"simpleModule\": null,\n        \"timeToStay\": \"10\",\n        \"module\": \"quiz\",\n        \"time\": 15\n      }\n    ],\n    \"streamSourceType\": \"file\",\n    \"moderators\": [],\n    \"banList\": [],\n    \"offersInterval\": 0,\n    \"direction\": 0,\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"chatDelay\": 0,\n    \"profanityList\": [\n      \"\"\n    ],\n    \"useCustomProfanity\": false,\n    \"streamerLogo\": \"\",\n    \"wikiList\": [],\n    \"additionalInfo\": {\n      \"wikiTitle\": \"Wiki\"\n    },\n    \"languagesList\": [],\n    \"customCSS\": \"\",\n    \"hide_on_smartphone_portrait_mode\": true,\n    \"approvalMessageMode\": \"timer\",\n    \"broadcasterUseBlocks\": {\n      \"chat\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"rating\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"polls\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      }\n    },\n    \"position\": 0,\n    \"moderator_data\": [\n      {\n        \"_id\": {\n          \"$oid\": \"5fbcf1b4a759e61e0f7b0bc4\"\n        },\n        \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n        \"banList\": [],\n        \"profanityList\": [\n          \"\"\n        ],\n        \"useCustomProfanity\": true,\n        \"customCSS\": \"\",\n        \"levelsDefinition\": [\n          {\n            \"level\": 1,\n            \"name\": \"novice\",\n            \"expoints\": 50\n          },\n          {\n            \"level\": 2,\n            \"name\": \"advanced\",\n            \"expoints\": 300\n          },\n          {\n            \"level\": 3,\n            \"name\": \"pro\",\n            \"expoints\": 1000\n          },\n          {\n            \"level\": 4,\n            \"name\": \"legendary\",\n            \"expoints\": 5000\n          }\n        ],\n        \"streamer\": {\n          \"chat_url\": \"\",\n          \"stream_url\": \"\",\n          \"registration_bonus\": 0,\n          \"streamSourceType\": \"\",\n          \"game\": \"\",\n          \"game_id\": null,\n          \"position\": 0,\n          \"modules\": {\n            \"logo\": true,\n            \"predictions\": true,\n            \"predictions_menu\": true,\n            \"leaderboard\": true,\n            \"leaderboard_menu\": true,\n            \"account\": true,\n            \"account_menu\": true,\n            \"shouts\": true,\n            \"shouts_menu\": true,\n            \"quiz\": true,\n            \"quiz_menu\": true,\n            \"polls\": true,\n            \"polls_menu\": true,\n            \"contact\": true,\n            \"contact_menu\": true,\n            \"chat\": true,\n            \"chat_menu\": true,\n            \"wiki\": false,\n            \"wiki_menu\": false,\n            \"rating\": false,\n            \"rating_menu\": false,\n            \"retention\": false,\n            \"close\": false,\n            \"shop\": true,\n            \"shop_menu\": true\n          },\n          \"clocks\": [],\n          \"offersInterval\": 0,\n          \"chatDelay\": 0,\n          \"streamerLogo\": \"\",\n          \"wikiList\": [],\n          \"additionalInfo\": {\n            \"wikiTitle\": \"Wiki\"\n          }\n        },\n        \"broadcaster_name\": \"api_tester\"\n      }\n    ],\n    \"_id\": {\n      \"$id\": \"5fbcee2e636497107a1cbdf4\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "49ad7347-2ba9-4040-b4ee-9246a48a9f14",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "addTriviaEngagement",
+                    ":channelId",
+                    "1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "triviaId",
+                      "value": "5fbd096648196740b75d323c"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time",
+                      "value": "15"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "018a6fa6-9a0a-4bc6-a3a7-e1a5e2b25ee8",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "addTriviaEngagement",
+                    ":channelId",
+                    "1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "triviaId",
+                      "value": "5fbd096648196740b75d323c"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time",
+                      "value": "15"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ac1326eb-8d33-4959-955a-87f956eea264",
+          "name": "AddWikiEngagement",
+          "request": {
+            "name": "AddWikiEngagement",
+            "description": {
+              "content": "Request to engage wiki to streamer",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "addWikiEngagement",
+                ":channelId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "wikiId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "time",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "68491129-4544-46ec-9ff6-cd0867638d2f",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "addWikiEngagement",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "wikiId",
+                      "value": "5fbd09ff0174d8346b7cce86"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time",
+                      "value": "50"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"wiki\": {\n    \"id\": \"5fbd09ff0174d8346b7cce86\",\n    \"name\": \"Whats Up\",\n    \"showInMenu\": false,\n    \"icon\": \"\",\n    \"content\": \"<h1>What&#39;s UP BRO?</h1>\\n\",\n    \"streamers\": [\n      {\n        \"id\": \"5fbcee2e636497107a1cbdf4\",\n        \"channel_name\": \"test_channel\"\n      }\n    ],\n    \"meta\": {\n      \"left\": \"60px\",\n      \"top\": \"60px\",\n      \"width\": \"300px\",\n      \"height\": \"300px\",\n      \"expoints\": \"150\"\n    },\n    \"type\": \"html\",\n    \"tweetUrl\": \"\",\n    \"prizes\": []\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9145dad9-e54c-47b2-a9cc-f087ef11b35e",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "addWikiEngagement",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "wikiId",
+                      "value": "5fbd09ff0174d8346b7cce86"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time",
+                      "value": "50"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a945ba50-177d-46af-90ca-cb7593b038d3",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "addWikiEngagement",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "wikiId",
+                      "value": "5fbd09ff0174d8346b7cce86"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time",
+                      "value": "50"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fdb44b3f-8049-475c-9f9a-efc5d5350464",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Send new streamer object to save and return it as db object",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "useUrl",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "channel_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "channel_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageUrl",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "is_permanent",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "is_featured",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "chat_url",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "stream_url",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "streamSourceType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "game",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "game_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "user_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "position",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "modules",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "clocks",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "moderators",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "banList",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offersInterval",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "chatDelay",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "profanityList",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "useCustomProfanity",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "streamerLogo",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "customCSS",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "hide_on_smartphone_portrait_mode",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "wikiList",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "additionalInfo",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "languagesList",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "approvalMessageMode",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "57fb7515-433b-4b16-8358-160721d6deb5",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Default Page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useUrl",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_name",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_id",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pageUrl",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_permanent",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_featured",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chat_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "stream_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamSourceType",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "position",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "modules",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "clocks",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "moderators",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "banList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "offersInterval",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chatDelay",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "profanityList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useCustomProfanity",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamerLogo",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "customCSS",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hide_on_smartphone_portrait_mode",
+                      "value": "true"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "wikiList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "additionalInfo",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "languagesList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "approvalMessageMode",
+                      "value": "timer"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"streamer\": {\n    \"name\": \"Default Page\",\n    \"useUrl\": false,\n    \"channel_name\": \"new_page\",\n    \"channel_id\": \"new_page\",\n    \"broadcaster_id\": \"api_tester\",\n    \"pageUrl\": \"\",\n    \"additionalPageSettings\": \"\",\n    \"stream_url\": \"\",\n    \"chat_url\": \"\",\n    \"registration_bonus\": \"\",\n    \"game\": \"\",\n    \"game_id\": \"\",\n    \"is_permanent\": 1,\n    \"is_featured\": 0,\n    \"status\": 1,\n    \"modules\": {\n      \"logo\": true,\n      \"is_open_menu\": false,\n      \"predictions\": false,\n      \"predictions_menu\": false,\n      \"leaderboard\": true,\n      \"leaderboard_menu\": true,\n      \"leaderboard_icon\": false,\n      \"leaderboard_icon_image\": \"\",\n      \"account\": true,\n      \"account_menu\": true,\n      \"account_icon\": false,\n      \"account_icon_image\": \"\",\n      \"shouts\": false,\n      \"shouts_menu\": false,\n      \"quiz\": true,\n      \"polls\": true,\n      \"polls_menu\": true,\n      \"poll_icon\": false,\n      \"poll_icon_image\": \"\",\n      \"contact\": false,\n      \"contact_menu\": false,\n      \"chat\": false,\n      \"chat_menu\": false,\n      \"wiki\": false,\n      \"rating\": false,\n      \"rating_menu\": false,\n      \"rating_icon\": false,\n      \"rating_icon_image\": \"\",\n      \"retention\": false,\n      \"close\": false,\n      \"shop\": true,\n      \"shop_menu\": true\n    },\n    \"clocks\": [],\n    \"streamSourceType\": \"\",\n    \"moderators\": [],\n    \"banList\": [],\n    \"offersInterval\": 0,\n    \"direction\": 0,\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"chatDelay\": 0,\n    \"profanityList\": [\n      \"\"\n    ],\n    \"useCustomProfanity\": false,\n    \"streamerLogo\": \"\",\n    \"wikiList\": [],\n    \"additionalInfo\": {\n      \"wikiTitle\": \"Wiki\"\n    },\n    \"languagesList\": [],\n    \"customCSS\": \"\",\n    \"hide_on_smartphone_portrait_mode\": true,\n    \"approvalMessageMode\": \"timer\",\n    \"broadcasterUseBlocks\": {\n      \"chat\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"rating\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"polls\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      }\n    },\n    \"_id\": {\n      \"$id\": \"5fbcf7a7ddbd2068304f33d6\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "690559d6-fa4c-41de-96e8-99a4413dcdda",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Default Page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useUrl",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_name",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_id",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pageUrl",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_permanent",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_featured",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chat_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "stream_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamSourceType",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "position",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "modules",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "clocks",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "moderators",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "banList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "offersInterval",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chatDelay",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "profanityList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useCustomProfanity",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamerLogo",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "customCSS",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hide_on_smartphone_portrait_mode",
+                      "value": "true"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "wikiList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "additionalInfo",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "languagesList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "approvalMessageMode",
+                      "value": "timer"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "626f1f30-a27d-4069-ae4e-b517fc750bf2",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Default Page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useUrl",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_name",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_id",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pageUrl",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_permanent",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_featured",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chat_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "stream_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamSourceType",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "position",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "modules",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "clocks",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "moderators",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "banList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "offersInterval",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chatDelay",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "profanityList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useCustomProfanity",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamerLogo",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "customCSS",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hide_on_smartphone_portrait_mode",
+                      "value": "true"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "wikiList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "additionalInfo",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "languagesList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "approvalMessageMode",
+                      "value": "timer"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1be6e5be-9f9e-4fe1-8450-614549eebadf",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Send streamer id to delete it from db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "delete",
+                ":streamerId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "streamerId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "91fbef94-93f0-4edf-b1bf-ee5ac0d3d3ad",
+              "name": "APi Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "delete",
+                    ":streamerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "streamerId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "29513378-744c-44b3-a54c-8d1e0a433dd1",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "delete",
+                    ":streamerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "streamerId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b2bb8fa2-fe78-41b6-9505-09b6c419b6fa",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "delete",
+                    ":streamerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "streamerId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7af24525-7800-427c-b752-b52bb2612a29",
+          "name": "GetAll",
+          "request": {
+            "name": "GetAll",
+            "description": {
+              "content": "Send request to get streamers list",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "getAll"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "67a23b1a-1b1d-4598-bd8a-c73bdea36c2f",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"streamers\": [\n    {\n      \"name\": \"Test page\",\n      \"useUrl\": false,\n      \"channel_name\": \"test_channel\",\n      \"channel_id\": \"test_channel\",\n      \"broadcaster_id\": \"api_tester\",\n      \"pageUrl\": \"\",\n      \"additionalPageSettings\": \"\",\n      \"stream_url\": \"https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4\",\n      \"chat_url\": \"\",\n      \"registration_bonus\": \"\",\n      \"game\": \"Test category\",\n      \"game_id\": \"5fbceda5636497107a1cbdf3\",\n      \"is_permanent\": 1,\n      \"is_featured\": 0,\n      \"status\": 1,\n      \"modules\": {\n        \"logo\": true,\n        \"is_open_menu\": false,\n        \"predictions\": false,\n        \"predictions_menu\": false,\n        \"leaderboard\": true,\n        \"leaderboard_menu\": true,\n        \"leaderboard_icon\": false,\n        \"leaderboard_icon_image\": \"\",\n        \"account\": true,\n        \"account_menu\": true,\n        \"account_icon\": false,\n        \"account_icon_image\": \"\",\n        \"shouts\": false,\n        \"shouts_menu\": false,\n        \"quiz\": true,\n        \"polls\": true,\n        \"polls_menu\": true,\n        \"poll_icon\": false,\n        \"poll_icon_image\": \"\",\n        \"contact\": false,\n        \"contact_menu\": false,\n        \"chat\": true,\n        \"chat_menu\": true,\n        \"wiki\": false,\n        \"rating\": false,\n        \"rating_menu\": false,\n        \"rating_icon\": false,\n        \"rating_icon_image\": \"\",\n        \"retention\": false,\n        \"close\": true,\n        \"shop\": true,\n        \"shop_menu\": true\n      },\n      \"clocks\": [],\n      \"streamSourceType\": \"file\",\n      \"moderators\": [],\n      \"banList\": [],\n      \"offersInterval\": 0,\n      \"direction\": 0,\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"chatDelay\": 0,\n      \"profanityList\": [\n        \"\"\n      ],\n      \"useCustomProfanity\": false,\n      \"streamerLogo\": \"\",\n      \"wikiList\": [],\n      \"additionalInfo\": {\n        \"wikiTitle\": \"Wiki\"\n      },\n      \"languagesList\": [],\n      \"customCSS\": \"\",\n      \"hide_on_smartphone_portrait_mode\": true,\n      \"approvalMessageMode\": \"timer\",\n      \"broadcasterUseBlocks\": {\n        \"chat\": {\n          \"customCoords\": {\n            \"x\": 0,\n            \"y\": 0\n          },\n          \"useCustomCoords\": false\n        },\n        \"rating\": {\n          \"customCoords\": {\n            \"x\": 0,\n            \"y\": 0\n          },\n          \"useCustomCoords\": false\n        },\n        \"polls\": {\n          \"customCoords\": {\n            \"x\": 0,\n            \"y\": 0\n          },\n          \"useCustomCoords\": false\n        }\n      },\n      \"position\": 0,\n      \"_id\": {\n        \"$id\": \"5fbcee2e636497107a1cbdf4\"\n      }\n    }\n  ],\n  \"pagination\": {\n    \"total\": 1,\n    \"currentPage\": 1,\n    \"totalPages\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6efe1f14-a41d-490c-9c36-47fd96f3c0b9",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b0e9be5d-2aac-428c-9e70-65b72b720d44",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d0fc088f-c90f-48a5-962c-4c37cbddc2aa",
+          "name": "GetById",
+          "request": {
+            "name": "GetById",
+            "description": {
+              "content": "Return streamer object selected by given id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "getById",
+                ":streamerId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "streamerId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "77846587-e7e3-4744-b17d-363ce869ec7f",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "getById",
+                    ":streamerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "streamerId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"streamer\": {\n    \"name\": \"Test page\",\n    \"useUrl\": false,\n    \"channel_name\": \"test_channel\",\n    \"channel_id\": \"test_channel\",\n    \"broadcaster_id\": \"api_tester\",\n    \"pageUrl\": \"\",\n    \"additionalPageSettings\": \"\",\n    \"stream_url\": \"https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4\",\n    \"chat_url\": \"\",\n    \"registration_bonus\": \"\",\n    \"game\": \"Test category\",\n    \"game_id\": \"5fbceda5636497107a1cbdf3\",\n    \"is_permanent\": 1,\n    \"is_featured\": 0,\n    \"status\": 1,\n    \"modules\": {\n      \"logo\": true,\n      \"is_open_menu\": false,\n      \"predictions\": false,\n      \"predictions_menu\": false,\n      \"leaderboard\": true,\n      \"leaderboard_menu\": true,\n      \"leaderboard_icon\": false,\n      \"leaderboard_icon_image\": \"\",\n      \"account\": true,\n      \"account_menu\": true,\n      \"account_icon\": false,\n      \"account_icon_image\": \"\",\n      \"shouts\": false,\n      \"shouts_menu\": false,\n      \"quiz\": true,\n      \"polls\": true,\n      \"polls_menu\": true,\n      \"poll_icon\": false,\n      \"poll_icon_image\": \"\",\n      \"contact\": false,\n      \"contact_menu\": false,\n      \"chat\": true,\n      \"chat_menu\": true,\n      \"wiki\": false,\n      \"rating\": false,\n      \"rating_menu\": false,\n      \"rating_icon\": false,\n      \"rating_icon_image\": \"\",\n      \"retention\": false,\n      \"close\": true,\n      \"shop\": true,\n      \"shop_menu\": true\n    },\n    \"clocks\": [],\n    \"streamSourceType\": \"file\",\n    \"moderators\": [],\n    \"banList\": [],\n    \"offersInterval\": 0,\n    \"direction\": 0,\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"chatDelay\": 0,\n    \"profanityList\": \"\",\n    \"useCustomProfanity\": false,\n    \"streamerLogo\": \"\",\n    \"wikiList\": [],\n    \"additionalInfo\": {\n      \"wikiTitle\": \"Wiki\"\n    },\n    \"languagesList\": [],\n    \"customCSS\": \"\",\n    \"hide_on_smartphone_portrait_mode\": true,\n    \"approvalMessageMode\": \"timer\",\n    \"broadcasterUseBlocks\": {\n      \"chat\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"rating\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"polls\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      }\n    },\n    \"position\": 0,\n    \"_id\": {\n      \"$id\": \"5fbcee2e636497107a1cbdf4\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "16e7e193-edbf-40b5-a64e-21cf7243b6d2",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "getById",
+                    ":streamerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "streamerId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3bc72646-1456-471a-bb9e-9ba776599b2d",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "getById",
+                    ":streamerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "streamerId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f3bfa9f9-0bc4-4fdc-b4b4-1a515dcd1fa4",
+          "name": "InjectModule",
+          "request": {
+            "name": "InjectModule",
+            "description": {
+              "content": "Request to inject module",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "injectModule",
+                ":channelId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f093fc56-aa05-4726-82c3-1c629027fd3f",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectModule",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"moduleId\": \"account\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "025f1894-6fb3-457e-9539-d76ec657b2f0",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectModule",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "56753c98-4f80-4acd-98f9-af4dbbc8908c",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectModule",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b9c09d20-aaaa-4bcb-befe-84de2813806c",
+          "name": "InjectOffer",
+          "request": {
+            "name": "InjectOffer",
+            "description": {
+              "content": "Request to inject offer",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "injectOffer",
+                ":channel_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channel_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "dd4c2948-b618-4c30-8e72-d6150dc9f57e",
+              "name": "APi Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectOffer",
+                    ":channel_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channel_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"offer\": {\n    \"name\": \"test promo\",\n    \"place\": \"\",\n    \"streamers\": [\n      {\n        \"id\": \"5fbcee2e636497107a1cbdf4\",\n        \"channel_name\": \"test_channel\"\n      }\n    ],\n    \"description\": \"test\",\n    \"url\": \"test.com\",\n    \"thumbnail\": \"\",\n    \"itemType\": \"big\",\n    \"items\": [],\n    \"content\": \"<h1>Welcome to my channel</h1>\\n\",\n    \"sponsor\": \"5fbcee9ce1a5930b1508c482\",\n    \"type\": \"offers\",\n    \"viewType\": [\n      \"flip\"\n    ],\n    \"secondsDelay\": 5,\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"offersOptions\": {\n      \"sendToChat\": true,\n      \"chatMessage\": \"Welcome!!!\",\n      \"interval\": \"1\"\n    },\n    \"meta\": {\n      \"left\": \"50px\",\n      \"top\": \"50px\",\n      \"width\": \"80px\",\n      \"height\": \"80px\",\n      \"expoints\": \"500\"\n    },\n    \"lastSentTime\": 1606222769,\n    \"_id\": {\n      \"$id\": \"5fbcef0cf2d31b5bc07df5cc\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2be9a0b7-9d6a-41ae-ad35-d6e733deed01",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectOffer",
+                    ":channel_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channel_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3111053d-9b87-4404-8b80-97f18f995677",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectOffer",
+                    ":channel_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channel_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "16cf923e-7a4a-4ca0-b546-7919b8a7c45b",
+          "name": "InjectPoll",
+          "request": {
+            "name": "InjectPoll",
+            "description": {
+              "content": "Request to inject a poll or a prediction",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "injectPoll",
+                ":channelId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f58ca694-24a9-4c0b-b019-a4d6f0f6c3cf",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectPoll",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"poll\": {\n    \"id\": \"5fbcf049f2d31b5bc07df5ce\",\n    \"name\": \"Test poll\",\n    \"question\": \"Filling good?\",\n    \"questionType\": \"poll\",\n    \"type\": \"streamer\",\n    \"hideButtons\": 0,\n    \"image\": \"\",\n    \"time_limit\": 0,\n    \"items\": [\n      {\n        \"id\": \"5fbcee2e636497107a1cbdf4\",\n        \"name\": \"test_channel\"\n      }\n    ],\n    \"viewType\": \"numbers\",\n    \"answers\": [\n      {\n        \"answer\": \"Yes\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"No\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"So so\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      }\n    ],\n    \"answers_statistic\": [],\n    \"answers_total\": 0,\n    \"prizes\": []\n  },\n  \"streamer\": {\n    \"name\": \"Test page\",\n    \"useUrl\": false,\n    \"channel_name\": \"test_channel\",\n    \"channel_id\": \"test_channel\",\n    \"broadcaster_id\": \"api_tester\",\n    \"pageUrl\": \"\",\n    \"additionalPageSettings\": \"\",\n    \"stream_url\": \"https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4\",\n    \"chat_url\": \"\",\n    \"registration_bonus\": \"\",\n    \"game\": \"Test category\",\n    \"game_id\": \"5fbceda5636497107a1cbdf3\",\n    \"is_permanent\": 1,\n    \"is_featured\": 0,\n    \"status\": 1,\n    \"modules\": {\n      \"logo\": true,\n      \"is_open_menu\": false,\n      \"predictions\": false,\n      \"predictions_menu\": false,\n      \"leaderboard\": true,\n      \"leaderboard_menu\": true,\n      \"leaderboard_icon\": false,\n      \"leaderboard_icon_image\": \"\",\n      \"account\": true,\n      \"account_menu\": true,\n      \"account_icon\": false,\n      \"account_icon_image\": \"\",\n      \"shouts\": false,\n      \"shouts_menu\": false,\n      \"quiz\": true,\n      \"polls\": true,\n      \"polls_menu\": true,\n      \"poll_icon\": false,\n      \"poll_icon_image\": \"\",\n      \"contact\": false,\n      \"contact_menu\": false,\n      \"chat\": true,\n      \"chat_menu\": true,\n      \"wiki\": false,\n      \"rating\": false,\n      \"rating_menu\": false,\n      \"rating_icon\": false,\n      \"rating_icon_image\": \"\",\n      \"retention\": false,\n      \"close\": true,\n      \"shop\": true,\n      \"shop_menu\": true\n    },\n    \"clocks\": [],\n    \"streamSourceType\": \"file\",\n    \"moderators\": [],\n    \"banList\": [],\n    \"offersInterval\": 0,\n    \"direction\": 0,\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"chatDelay\": 0,\n    \"profanityList\": [\n      \"\"\n    ],\n    \"useCustomProfanity\": false,\n    \"streamerLogo\": \"\",\n    \"wikiList\": [],\n    \"additionalInfo\": {\n      \"wikiTitle\": \"Wiki\"\n    },\n    \"languagesList\": [],\n    \"customCSS\": \"\",\n    \"hide_on_smartphone_portrait_mode\": true,\n    \"approvalMessageMode\": \"timer\",\n    \"broadcasterUseBlocks\": {\n      \"chat\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"rating\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"polls\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      }\n    },\n    \"position\": 0,\n    \"moderator_data\": [\n      {\n        \"_id\": {\n          \"$oid\": \"5fbcf1b4a759e61e0f7b0bc4\"\n        },\n        \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n        \"banList\": [],\n        \"profanityList\": [\n          \"\"\n        ],\n        \"useCustomProfanity\": true,\n        \"customCSS\": \"\",\n        \"levelsDefinition\": [\n          {\n            \"level\": 1,\n            \"name\": \"novice\",\n            \"expoints\": 50\n          },\n          {\n            \"level\": 2,\n            \"name\": \"advanced\",\n            \"expoints\": 300\n          },\n          {\n            \"level\": 3,\n            \"name\": \"pro\",\n            \"expoints\": 1000\n          },\n          {\n            \"level\": 4,\n            \"name\": \"legendary\",\n            \"expoints\": 5000\n          }\n        ],\n        \"streamer\": {\n          \"chat_url\": \"\",\n          \"stream_url\": \"\",\n          \"registration_bonus\": 0,\n          \"streamSourceType\": \"\",\n          \"game\": \"\",\n          \"game_id\": null,\n          \"position\": 0,\n          \"modules\": {\n            \"logo\": true,\n            \"predictions\": true,\n            \"predictions_menu\": true,\n            \"leaderboard\": true,\n            \"leaderboard_menu\": true,\n            \"account\": true,\n            \"account_menu\": true,\n            \"shouts\": true,\n            \"shouts_menu\": true,\n            \"quiz\": true,\n            \"quiz_menu\": true,\n            \"polls\": true,\n            \"polls_menu\": true,\n            \"contact\": true,\n            \"contact_menu\": true,\n            \"chat\": true,\n            \"chat_menu\": true,\n            \"wiki\": false,\n            \"wiki_menu\": false,\n            \"rating\": false,\n            \"rating_menu\": false,\n            \"retention\": false,\n            \"close\": false,\n            \"shop\": true,\n            \"shop_menu\": true\n          },\n          \"clocks\": [],\n          \"offersInterval\": 0,\n          \"chatDelay\": 0,\n          \"streamerLogo\": \"\",\n          \"wikiList\": [],\n          \"additionalInfo\": {\n            \"wikiTitle\": \"Wiki\"\n          }\n        },\n        \"broadcaster_name\": \"api_tester\"\n      }\n    ],\n    \"_id\": {\n      \"$id\": \"5fbcee2e636497107a1cbdf4\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9eb15c87-c0be-4046-8d6e-0ccbf8b1c9cd",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectPoll",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4e65789f-5df8-4bf3-9de6-aea768bb30a0",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectPoll",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b89be32-06d4-45df-8bd4-0b7b80a917c5",
+          "name": "InjectRating",
+          "request": {
+            "name": "InjectRating",
+            "description": {
+              "content": "Request to inject rating",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "injectRating",
+                ":channelId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "ratingId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timeToStay",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "closePostInteraction",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "popOnChannel",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "587a1a97-9985-4294-b728-fdfdea76399e",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectRating",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "ratingId",
+                      "value": "5fbcf1325e784e3816715935"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timeToStay",
+                      "value": "10"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "closePostInteraction",
+                      "value": "true"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "popOnChannel",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"rating\": {\n    \"id\": \"5fbcf1325e784e3816715935\",\n    \"name\": \"Harry Potter\",\n    \"description\": \"film\",\n    \"icon\": \"\",\n    \"optionsNumber\": \"5\",\n    \"answers\": [],\n    \"streamers\": [\n      {\n        \"id\": \"5fbcee2e636497107a1cbdf4\",\n        \"channel_name\": \"test_channel\"\n      }\n    ],\n    \"prizes\": []\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7ca3c403-fff0-4318-b885-b4d3eadc5f84",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectRating",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "ratingId",
+                      "value": "5fbcf1325e784e3816715935"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timeToStay",
+                      "value": "10"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "closePostInteraction",
+                      "value": "true"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "popOnChannel",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f98c2333-40a9-4f48-9e26-4b30f5b7989a",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectRating",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "ratingId",
+                      "value": "5fbcf1325e784e3816715935"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timeToStay",
+                      "value": "10"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "closePostInteraction",
+                      "value": "true"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "popOnChannel",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7cc6470a-816c-4c04-ac41-00ed6418aed9",
+          "name": "InjectTrivia",
+          "request": {
+            "name": "InjectTrivia",
+            "description": {
+              "content": "Request to inject trivia",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "injectTrivia",
+                ":channelId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "questionId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timeToStay",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "closePostInteraction",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9b17fdbc-53e7-4744-b48f-7c42d55d0d70",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectTrivia",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "questionId",
+                      "value": "5fbcf1055e784e3816715934"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timeToStay",
+                      "value": "10"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "closePostInteraction",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "188a6d23-a14e-4b7d-91db-8c31a8c9204d",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectTrivia",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "questionId",
+                      "value": "5fbcf1055e784e3816715934"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timeToStay",
+                      "value": "10"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "closePostInteraction",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "836c2ad0-33ab-43b9-9b3b-4b0e4aa0ea87",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectTrivia",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "questionId",
+                      "value": "5fbcf1055e784e3816715934"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timeToStay",
+                      "value": "10"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "closePostInteraction",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "370ab522-2f15-4fee-afb9-84d771861e02",
+          "name": "InjectWiki",
+          "request": {
+            "name": "InjectWiki",
+            "description": {
+              "content": "Request to inject wiki",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "injectWiki",
+                ":channelId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channelId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "wikiId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timeToStay",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "74fab67c-e926-44e1-b2b3-933d4e762015",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectWiki",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "wikiId",
+                      "value": "5fbd060eaec04b6e6943828b"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timeToStay",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"wiki\": {\n    \"id\": \"5fbd060eaec04b6e6943828b\",\n    \"name\": \"Test Wiki\",\n    \"showInMenu\": false,\n    \"icon\": \"\",\n    \"content\": \"<p>Hello to all!!!</p>\\n\",\n    \"streamers\": [\n      {\n        \"id\": \"5fbcee2e636497107a1cbdf4\",\n        \"channel_name\": \"test_channel\"\n      }\n    ],\n    \"meta\": {\n      \"left\": \"250px\",\n      \"top\": \"50px\",\n      \"width\": \"150px\",\n      \"height\": \"150px\",\n      \"expoints\": \"10\"\n    },\n    \"type\": \"html\",\n    \"tweetUrl\": \"\",\n    \"prizes\": []\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bf41b356-ef5e-459f-b3ce-7385b39ae83f",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectWiki",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "wikiId",
+                      "value": "5fbd060eaec04b6e6943828b"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timeToStay",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f8ece72e-8bda-4746-aa6b-4928b5e08fb5",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "injectWiki",
+                    ":channelId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channelId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "wikiId",
+                      "value": "5fbd060eaec04b6e6943828b"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timeToStay",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97914f31-eef0-4916-a695-48e15d4042e2",
+          "name": "ToggleActiveMode",
+          "request": {
+            "name": "ToggleActiveMode",
+            "description": {
+              "content": "Send streamer id to reflect active state",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "toggle",
+                ":streamerId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "streamerId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d55f7b8d-b21a-46b2-931f-89cbd78fe744",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "toggle",
+                    ":streamerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "streamerId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ca97bcaa-b6f0-4f40-a408-32ce80aaaa0d",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "toggle",
+                    ":streamerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "streamerId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a53d7df7-e4e4-429a-9fc4-cb832fe99a53",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "toggle",
+                    ":streamerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "streamerId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d6cf8358-8d42-4f23-a09f-153b24393d80",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Send streamer object to update in db with given id and return updated streamer",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "streamer",
+                "update"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "useUrl",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "channel_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "channel_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "broadcaster_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageUrl",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "additionalPageSettings",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "stream_url",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "chat_url",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "registration_bonus",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "game",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "game_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "is_permanent",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "is_featured",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "modules",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "clocks",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "streamSourceType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "moderators",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "banList",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offersInterval",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "direction",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "user_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "chatDelay",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "profanityList",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "useCustomProfanity",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "streamerLogo",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "wikiList",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "additionalInfo",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "languagesList",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "customCSS",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "hide_on_smartphone_portrait_mode",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "approvalMessageMode",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "broadcasterUseBlocks",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "position",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "55ae6a8b-4dd7-4fbe-b4d1-af7cff0c55ba",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Default Page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useUrl",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_name",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_id",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "broadcaster_id",
+                      "value": "api_tester"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pageUrl",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "additionalPageSettings",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "stream_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chat_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "registration_bonus",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_permanent",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_featured",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "modules",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "clocks",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamSourceType",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "moderators",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "banList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "offersInterval",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "direction",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chatDelay",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "profanityList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useCustomProfanity",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamerLogo",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "wikiList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "additionalInfo",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "languagesList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "customCSS",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hide_on_smartphone_portrait_mode",
+                      "value": "true"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "approvalMessageMode",
+                      "value": "timer"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "broadcasterUseBlocks",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "position",
+                      "value": "0"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"streamer\": {\n    \"name\": \"Default Page\",\n    \"useUrl\": false,\n    \"channel_name\": \"new_page\",\n    \"channel_id\": \"new_page\",\n    \"broadcaster_id\": \"api_tester\",\n    \"pageUrl\": \"\",\n    \"additionalPageSettings\": \"\",\n    \"stream_url\": \"\",\n    \"chat_url\": \"\",\n    \"registration_bonus\": \"\",\n    \"game\": \"\",\n    \"game_id\": \"\",\n    \"is_permanent\": 1,\n    \"is_featured\": 0,\n    \"status\": 1,\n    \"modules\": {\n      \"logo\": true,\n      \"is_open_menu\": false,\n      \"predictions\": false,\n      \"predictions_menu\": false,\n      \"leaderboard\": true,\n      \"leaderboard_menu\": true,\n      \"leaderboard_icon\": false,\n      \"leaderboard_icon_image\": \"\",\n      \"account\": true,\n      \"account_menu\": true,\n      \"account_icon\": false,\n      \"account_icon_image\": \"\",\n      \"shouts\": false,\n      \"shouts_menu\": false,\n      \"quiz\": true,\n      \"polls\": true,\n      \"polls_menu\": true,\n      \"poll_icon\": false,\n      \"poll_icon_image\": \"\",\n      \"contact\": false,\n      \"contact_menu\": false,\n      \"chat\": false,\n      \"chat_menu\": false,\n      \"wiki\": false,\n      \"rating\": false,\n      \"rating_menu\": false,\n      \"rating_icon\": false,\n      \"rating_icon_image\": \"\",\n      \"retention\": false,\n      \"close\": false,\n      \"shop\": true,\n      \"shop_menu\": true\n    },\n    \"clocks\": [],\n    \"streamSourceType\": \"\",\n    \"moderators\": [],\n    \"banList\": [],\n    \"offersInterval\": 0,\n    \"direction\": 0,\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"chatDelay\": 0,\n    \"profanityList\": \"\",\n    \"useCustomProfanity\": false,\n    \"streamerLogo\": \"\",\n    \"wikiList\": [],\n    \"additionalInfo\": {\n      \"wikiTitle\": \"Wiki\"\n    },\n    \"languagesList\": [],\n    \"customCSS\": \"\",\n    \"hide_on_smartphone_portrait_mode\": true,\n    \"approvalMessageMode\": \"timer\",\n    \"broadcasterUseBlocks\": {\n      \"chat\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"rating\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      },\n      \"polls\": {\n        \"customCoords\": {\n          \"x\": 0,\n          \"y\": 0\n        },\n        \"useCustomCoords\": false\n      }\n    },\n    \"position\": 0,\n    \"_id\": {\n      \"$id\": \"5fbcf7a7ddbd2068304f33d6\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "cb72531e-6d7c-4bb0-b867-1e821e1dbc2a",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Default Page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useUrl",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_name",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_id",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "broadcaster_id",
+                      "value": "api_tester"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pageUrl",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "additionalPageSettings",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "stream_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chat_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "registration_bonus",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_permanent",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_featured",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "modules",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "clocks",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamSourceType",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "moderators",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "banList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "offersInterval",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "direction",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chatDelay",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "profanityList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useCustomProfanity",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamerLogo",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "wikiList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "additionalInfo",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "languagesList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "customCSS",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hide_on_smartphone_portrait_mode",
+                      "value": "true"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "approvalMessageMode",
+                      "value": "timer"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "broadcasterUseBlocks",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "position",
+                      "value": "0"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ae7d1605-214d-466a-88b8-a63a7ba443e2",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "streamer",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Default Page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useUrl",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_name",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "channel_id",
+                      "value": "new_page"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "broadcaster_id",
+                      "value": "api_tester"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pageUrl",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "additionalPageSettings",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "stream_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chat_url",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "registration_bonus",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_permanent",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "is_featured",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "modules",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "clocks",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamSourceType",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "moderators",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "banList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "offersInterval",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "direction",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "chatDelay",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "profanityList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "useCustomProfanity",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamerLogo",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "wikiList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "additionalInfo",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "languagesList",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "customCSS",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hide_on_smartphone_portrait_mode",
+                      "value": "true"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "approvalMessageMode",
+                      "value": "timer"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "broadcasterUseBlocks",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "position",
+                      "value": "0"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7481412f-5126-487e-9fd4-97b8fbcbdac8",
+          "name": "GetInfo",
+          "request": {
+            "name": "GetInfo",
+            "description": {
+              "content": "Load all related information about streamer",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "streamer",
+                "getInfo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f3774374-c21a-486c-920f-5f5eaf18c027",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "streamer",
+                    "getInfo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Test page\",\n  \"useUrl\": false,\n  \"channel_name\": \"test_channel\",\n  \"channel_id\": \"test_channel\",\n  \"broadcaster_id\": \"api_tester\",\n  \"pageUrl\": \"\",\n  \"additionalPageSettings\": \"\",\n  \"stream_url\": \"https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4\",\n  \"chat_url\": \"\",\n  \"registration_bonus\": \"\",\n  \"game\": \"Test category\",\n  \"game_id\": \"5fbceda5636497107a1cbdf3\",\n  \"is_permanent\": 1,\n  \"is_featured\": 0,\n  \"status\": 1,\n  \"modules\": {\n    \"logo\": true,\n    \"is_open_menu\": false,\n    \"predictions\": false,\n    \"predictions_menu\": false,\n    \"leaderboard\": true,\n    \"leaderboard_menu\": true,\n    \"leaderboard_icon\": false,\n    \"leaderboard_icon_image\": \"\",\n    \"account\": true,\n    \"account_menu\": true,\n    \"account_icon\": false,\n    \"account_icon_image\": \"\",\n    \"shouts\": false,\n    \"shouts_menu\": false,\n    \"quiz\": true,\n    \"polls\": true,\n    \"polls_menu\": true,\n    \"poll_icon\": false,\n    \"poll_icon_image\": \"\",\n    \"contact\": false,\n    \"contact_menu\": false,\n    \"chat\": true,\n    \"chat_menu\": true,\n    \"wiki\": true,\n    \"rating\": true,\n    \"rating_menu\": true,\n    \"rating_icon\": false,\n    \"rating_icon_image\": \"\",\n    \"retention\": false,\n    \"close\": true,\n    \"shop\": true,\n    \"shop_menu\": true\n  },\n  \"clocks\": [\n    {\n      \"id\": \"5fbd060eaec04b6e6943828b\",\n      \"module\": \"wiki\",\n      \"timeToStay\": \"10\",\n      \"time\": 0,\n      \"simpleModule\": null\n    },\n    {\n      \"id\": \"5fbd07fc48196740b75d323b\",\n      \"module\": \"polls\",\n      \"timeToStay\": \"10\",\n      \"time\": \"25\"\n    },\n    {\n      \"id\": \"5fbd096648196740b75d323c\",\n      \"simpleModule\": null,\n      \"timeToStay\": \"10\",\n      \"module\": \"quiz\",\n      \"time\": 15\n    },\n    {\n      \"id\": \"5fbd09ff0174d8346b7cce86\",\n      \"module\": \"wiki\",\n      \"timeToStay\": \"10\",\n      \"time\": \"50\"\n    }\n  ],\n  \"streamSourceType\": \"file\",\n  \"moderators\": [],\n  \"banList\": [],\n  \"offersInterval\": 0,\n  \"direction\": 0,\n  \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n  \"chatDelay\": 0,\n  \"profanityList\": [\n    \"\"\n  ],\n  \"useCustomProfanity\": false,\n  \"streamerLogo\": \"\",\n  \"wikiList\": [],\n  \"additionalInfo\": {\n    \"wikiTitle\": \"Wiki\"\n  },\n  \"languagesList\": [],\n  \"customCSS\": \"\",\n  \"hide_on_smartphone_portrait_mode\": true,\n  \"approvalMessageMode\": \"timer\",\n  \"broadcasterUseBlocks\": {\n    \"chat\": {\n      \"customCoords\": {\n        \"x\": 0,\n        \"y\": 0\n      },\n      \"useCustomCoords\": false\n    },\n    \"rating\": {\n      \"customCoords\": {\n        \"x\": 0,\n        \"y\": 0\n      },\n      \"useCustomCoords\": false\n    },\n    \"polls\": {\n      \"customCoords\": {\n        \"x\": 0,\n        \"y\": 0\n      },\n      \"useCustomCoords\": false\n    }\n  },\n  \"position\": 0,\n  \"moderator_data\": [\n    {\n      \"_id\": {\n        \"$oid\": \"5fbcf1b4a759e61e0f7b0bc4\"\n      },\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"banList\": [],\n      \"profanityList\": [\n        \"\"\n      ],\n      \"useCustomProfanity\": true,\n      \"customCSS\": \"\",\n      \"levelsDefinition\": [\n        {\n          \"level\": 1,\n          \"name\": \"novice\",\n          \"expoints\": 50\n        },\n        {\n          \"level\": 2,\n          \"name\": \"advanced\",\n          \"expoints\": 300\n        },\n        {\n          \"level\": 3,\n          \"name\": \"pro\",\n          \"expoints\": 1000\n        },\n        {\n          \"level\": 4,\n          \"name\": \"legendary\",\n          \"expoints\": 5000\n        }\n      ],\n      \"streamer\": {\n        \"chat_url\": \"\",\n        \"stream_url\": \"\",\n        \"registration_bonus\": 0,\n        \"streamSourceType\": \"\",\n        \"game\": \"\",\n        \"game_id\": null,\n        \"position\": 0,\n        \"modules\": {\n          \"logo\": true,\n          \"predictions\": true,\n          \"predictions_menu\": true,\n          \"leaderboard\": true,\n          \"leaderboard_menu\": true,\n          \"account\": true,\n          \"account_menu\": true,\n          \"shouts\": true,\n          \"shouts_menu\": true,\n          \"quiz\": true,\n          \"quiz_menu\": true,\n          \"polls\": true,\n          \"polls_menu\": true,\n          \"contact\": true,\n          \"contact_menu\": true,\n          \"chat\": true,\n          \"chat_menu\": true,\n          \"wiki\": false,\n          \"wiki_menu\": false,\n          \"rating\": false,\n          \"rating_menu\": false,\n          \"retention\": false,\n          \"close\": false,\n          \"shop\": true,\n          \"shop_menu\": true\n        },\n        \"clocks\": [],\n        \"offersInterval\": 0,\n        \"chatDelay\": 0,\n        \"streamerLogo\": \"\",\n        \"wikiList\": [],\n        \"additionalInfo\": {\n          \"wikiTitle\": \"Wiki\"\n        }\n      },\n      \"broadcaster_name\": \"api_tester\"\n    }\n  ],\n  \"id\": \"5fbcee2e636497107a1cbdf4\",\n  \"polls\": [\n    {\n      \"id\": \"5fbcf049f2d31b5bc07df5ce\",\n      \"name\": \"Test poll\",\n      \"question\": \"Filling good?\",\n      \"questionType\": \"poll\",\n      \"type\": \"streamer\",\n      \"hideButtons\": 0,\n      \"image\": \"\",\n      \"time_limit\": 0,\n      \"items\": [\n        {\n          \"id\": \"5fbcee2e636497107a1cbdf4\",\n          \"name\": \"test_channel\"\n        }\n      ],\n      \"viewType\": \"numbers\",\n      \"answers\": [\n        {\n          \"answer\": \"Yes\",\n          \"image\": \"\",\n          \"reward\": 0,\n          \"isRewardSent\": false,\n          \"answerSending\": false\n        },\n        {\n          \"answer\": \"No\",\n          \"image\": \"\",\n          \"reward\": 0,\n          \"isRewardSent\": false,\n          \"answerSending\": false\n        },\n        {\n          \"answer\": \"So so\",\n          \"image\": \"\",\n          \"reward\": 0,\n          \"isRewardSent\": false,\n          \"answerSending\": false\n        }\n      ],\n      \"expoints\": \"200\",\n      \"prizes\": []\n    }\n  ],\n  \"ratings\": [\n    {\n      \"id\": \"5fbcf1325e784e3816715935\",\n      \"name\": \"Harry Potter\",\n      \"description\": \"film\",\n      \"icon\": \"\",\n      \"optionsNumber\": \"5\",\n      \"averageRate\": 0,\n      \"totalPeople\": 0,\n      \"totalPoints\": 0,\n      \"streamers\": [\n        {\n          \"id\": \"5fbcee2e636497107a1cbdf4\",\n          \"channel_name\": \"test_channel\"\n        }\n      ],\n      \"expoints\": \"80\",\n      \"prizes\": []\n    }\n  ],\n  \"wikis\": [\n    {\n      \"id\": \"5fbd060eaec04b6e6943828b\",\n      \"name\": \"Test Wiki\",\n      \"showInMenu\": false,\n      \"icon\": \"\",\n      \"content\": \"<p>Hello to all!!!</p>\\n\",\n      \"streamers\": [\n        {\n          \"id\": \"5fbcee2e636497107a1cbdf4\",\n          \"channel_name\": \"test_channel\"\n        }\n      ],\n      \"meta\": {\n        \"left\": \"250px\",\n        \"top\": \"50px\",\n        \"width\": \"150px\",\n        \"height\": \"150px\",\n        \"expoints\": \"10\"\n      },\n      \"type\": \"html\",\n      \"tweetUrl\": \"\",\n      \"prizes\": []\n    },\n    {\n      \"id\": \"5fbd09ff0174d8346b7cce86\",\n      \"name\": \"Whats Up\",\n      \"showInMenu\": false,\n      \"icon\": \"\",\n      \"content\": \"<h1>What&#39;s UP BRO?</h1>\\n\",\n      \"streamers\": [\n        {\n          \"id\": \"5fbcee2e636497107a1cbdf4\",\n          \"channel_name\": \"test_channel\"\n        }\n      ],\n      \"meta\": {\n        \"left\": \"60px\",\n        \"top\": \"60px\",\n        \"width\": \"300px\",\n        \"height\": \"300px\",\n        \"expoints\": \"150\"\n      },\n      \"type\": \"html\",\n      \"tweetUrl\": \"\",\n      \"prizes\": []\n    }\n  ],\n  \"advertising\": [\n    {\n      \"name\": \"test promo\",\n      \"place\": \"\",\n      \"streamers\": [\n        {\n          \"id\": \"5fbcee2e636497107a1cbdf4\",\n          \"channel_name\": \"test_channel\"\n        }\n      ],\n      \"description\": \"test\",\n      \"url\": \"test.com\",\n      \"thumbnail\": \"\",\n      \"itemType\": \"big\",\n      \"items\": [],\n      \"content\": \"<h1>Welcome to my channel</h1>\\n\",\n      \"sponsor\": \"5fbcee9ce1a5930b1508c482\",\n      \"type\": \"offers\",\n      \"viewType\": [\n        \"flip\"\n      ],\n      \"secondsDelay\": 5,\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"offersOptions\": {\n        \"sendToChat\": true,\n        \"chatMessage\": \"Welcome!!!\",\n        \"interval\": \"1\"\n      },\n      \"meta\": {\n        \"left\": \"50px\",\n        \"top\": \"50px\",\n        \"width\": \"80px\",\n        \"height\": \"80px\",\n        \"expoints\": \"500\"\n      },\n      \"lastSentTime\": 1606401871,\n      \"sponsorLogo\": \"\",\n      \"_id\": {\n        \"$id\": \"5fbcef0cf2d31b5bc07df5cc\"\n      }\n    }\n  ],\n  \"offers\": [\n    {\n      \"name\": \"test promo\",\n      \"place\": \"\",\n      \"streamers\": [\n        {\n          \"id\": \"5fbcee2e636497107a1cbdf4\",\n          \"channel_name\": \"test_channel\"\n        }\n      ],\n      \"description\": \"test\",\n      \"url\": \"test.com\",\n      \"thumbnail\": \"\",\n      \"itemType\": \"big\",\n      \"items\": [],\n      \"content\": \"<h1>Welcome to my channel</h1>\\n\",\n      \"sponsor\": \"5fbcee9ce1a5930b1508c482\",\n      \"type\": \"offers\",\n      \"viewType\": [\n        \"flip\"\n      ],\n      \"secondsDelay\": 5,\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"offersOptions\": {\n        \"sendToChat\": true,\n        \"chatMessage\": \"Welcome!!!\",\n        \"interval\": \"1\"\n      },\n      \"meta\": {\n        \"left\": \"50px\",\n        \"top\": \"50px\",\n        \"width\": \"80px\",\n        \"height\": \"80px\",\n        \"expoints\": \"500\"\n      },\n      \"lastSentTime\": 1606401871,\n      \"sponsorLogo\": \"\",\n      \"_id\": {\n        \"$id\": \"5fbcef0cf2d31b5bc07df5cc\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bf25ace3-031d-450d-89fc-bf1dcf433664",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "streamer",
+                    "getInfo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ea8aea85-42b5-4961-9f9d-2deee0641d83",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "streamer",
+                    "getInfo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "156d06ba-bcb5-4b6a-89df-e64f0ef70df3",
+    "name": "Inthegame admin streamer API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

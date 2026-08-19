@@ -5,8 +5,8 @@ source: openapi/inthegame-openapi.yml
 server:
   name: inthegame
   transport: http
-note: Candidate tool surface derived one-tool-per-operation from the OpenAPI. No official
-  hosted MCP server was found.
+note: Candidate tool surface derived one-tool-per-operation from the OpenAPI. No official hosted MCP server
+  was found.
 tools:
 - name: adminapiAdminGetcurrentuser
   description: GetCurrentUser
@@ -332,3 +332,9 @@ tools:
 - name: userapiUserUploadavatar
   description: UploadAvatar
   source_operation: openapi/inthegame-openapi.yml#userapiUserUploadavatar
+deployment:
+  mode: none
+  verified: derived
+  tools: 108
+  checked: '2026-08-12'
+  source: catalog MCP census

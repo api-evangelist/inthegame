@@ -1,0 +1,1626 @@
+{
+  "item": [
+    {
+      "id": "19817a30-8052-481d-8f15-a9db7de4324a",
+      "name": "shop",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dded3473-67a1-45d7-a1c1-4ede4c6875b5",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Send new shop object to save and return it as db object",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "shop",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pointsXP",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3acc1313-4255-4f5e-84c9-0c4c8b7b9ea9",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Item"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsXP",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": "{binary}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"shop\": {\n    \"name\": \"New Item\",\n    \"description\": \"test\",\n    \"pointsXP\": \"100\",\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"image\": \"\",\n    \"_id\": {\n      \"$id\": \"5fbf8ba778c77731880d90c8\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3e645a15-f7dc-44b6-8504-05e7c3e99d75",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Item"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsXP",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": "{binary}"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "270b708a-1d3b-4515-bcdb-444617af2d1e",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Item"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsXP",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": "{binary}"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "465a7a1d-7cc5-4509-b418-f1151ec2162d",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Send shop id to delete it from db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "shop",
+                "delete",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "652c439a-9eea-41a8-a658-bae7b2976287",
+              "name": "Default",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "delete",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "be1151c7-0dd4-4b67-bc01-2d35a0a990ee",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "delete",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b1a271ca-106a-4052-a86b-e12a7fcbe96e",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "delete",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8d4d73ff-41c4-4ee0-b50c-e8ca4f790996",
+          "name": "GetAll",
+          "request": {
+            "name": "GetAll",
+            "description": {
+              "content": "Send request to get shop items list",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "shop",
+                "getAll"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "93562fd0-1f79-4626-b19b-aa3795000df5",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"shop\": [\n    {\n      \"name\": \"test item\",\n      \"description\": \"test\",\n      \"pointsXP\": \"100\",\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"image\": \"/uploads/shop/4c043d20a7673bcc1189956cef8edc63.ba46792ede92a2eec53f35d8fd4c49e7.png\",\n      \"_id\": {\n        \"$id\": \"5fbcee8ae6cc2a181c6d5422\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "24e4ccc1-dfc0-4406-a85d-ef7023e2bfe3",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b2560f9e-592d-419c-b616-ed978b49344c",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "484ab909-3a3d-4a25-a246-0ec34de53a97",
+          "name": "GetById",
+          "request": {
+            "name": "GetById",
+            "description": {
+              "content": "Return shop object selected by given id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "shop",
+                "getById",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6af6eac2-c53b-4686-83f9-53cffbe38093",
+              "name": "Default",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "getById",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"shop\": {\n    \"name\": \"***\",\n    \"description\": \"***\",\n    \"pointsXP\": \"***\",\n    \"user_id\": \"***\",\n    \"image\": \"***\",\n    \"_id\": {\n      \"$id\": \"***\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b0edd872-c7e3-4d55-9679-65c993f13557",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "getById",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "529b4ce8-06ac-43d0-83af-4095584f8639",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "getById",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69074822-6d8e-4ef2-ac93-c7062328e1e3",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Send shop object to update in db with given id and return updated shop item",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "shop",
+                "update",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pointsXP",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "user_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "_id",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d415d273-c401-4f60-b163-5986a53cb8a9",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "update",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Item"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsXP",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"shop\": {\n    \"name\": \"New Item\",\n    \"description\": \"test\",\n    \"pointsXP\": \"100\",\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"image\": \"\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d9737789-5c35-49a6-92e9-e1eece06941d",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "update",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Item"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsXP",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9a6823b2-da67-4185-afa4-a0bba66bdcf3",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "shop",
+                    "update",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Item"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsXP",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a2900df9-4042-4557-810c-f1b11a86b65c",
+          "name": "BuyItem",
+          "request": {
+            "name": "BuyItem",
+            "description": {
+              "content": "Send item data paid by user",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "shop",
+                "buyItem"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b8c96fe0-2c06-4ff1-b4c4-6de705887aee",
+              "name": "APITest",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "shop",
+                    "buyItem"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"success\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "92c66ffc-0698-4a26-967b-234a091dc9d8",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "shop",
+                    "buyItem"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e419fef6-b4d1-45fa-8ecc-7ae08885468e",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "shop",
+                    "buyItem"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3c090b16-dd7f-44da-b155-f88eaa6a3d19",
+          "name": "GetProducts",
+          "request": {
+            "name": "GetProducts",
+            "description": {
+              "content": "Return list of users purchases for broadcaster",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "shop",
+                "getProducts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8c78165d-a9e8-4c89-a458-0800790a452c",
+              "name": "APITest",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "shop",
+                    "getProducts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"test item\",\n    \"description\": \"test\",\n    \"pointsXP\": \"100\",\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"image\": \"/uploads/shop/4c043d20a7673bcc1189956cef8edc63.ba46792ede92a2eec53f35d8fd4c49e7.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee8ae6cc2a181c6d5422\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "edf2c2cc-009d-4201-8aef-871c340ae2da",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "shop",
+                    "getProducts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6f892cb0-55ca-4cc4-8067-0c42c3bf7cf5",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "shop",
+                    "getProducts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c365d62b-fc84-4e4d-bb33-32aabd555240",
+    "name": "Inthegame admin shop API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

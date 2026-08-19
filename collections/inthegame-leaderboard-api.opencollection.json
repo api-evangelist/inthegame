@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin leaderboard API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "leaderboard",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/userApi/leaderboard/get/:broadcaster",
+            "params": [
+              {
+                "name": "broadcaster",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Return users data list"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

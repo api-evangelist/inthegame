@@ -1,0 +1,1211 @@
+{
+  "item": [
+    {
+      "id": "7c22f41b-3620-489a-a431-686c5c5d1fee",
+      "name": "wiki",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e1eb8e66-5352-4dc5-a6f2-ad3f944cc404",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Create new wiki",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "wiki",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "icon",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "showInMenu",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "content",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "streamers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "tweetUrl",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "meta",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "eb006848-b25d-4656-947c-84b16b066bf5",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Title"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "showInMenu",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "content",
+                      "value": "<p>header</p>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamers",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "html"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tweetUrl",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "meta",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Title\",\n  \"icon\": \"\",\n  \"showInMenu\": false,\n  \"content\": \"<p>header</p>\\n\",\n  \"streamers\": [],\n  \"type\": \"html\",\n  \"tweetUrl\": \"\",\n  \"meta\": {\n    \"left\": \"50px\",\n    \"top\": \"50px\",\n    \"width\": \"50px\",\n    \"height\": \"50px\",\n    \"expoints\": \"500\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d8e70885-2367-4e3f-973d-efca36d2f862",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Title"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "showInMenu",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "content",
+                      "value": "<p>header</p>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamers",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "html"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tweetUrl",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "meta",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5e6a520a-74eb-4938-9645-6cf028e677f6",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Title"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "showInMenu",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "content",
+                      "value": "<p>header</p>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamers",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "html"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tweetUrl",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "meta",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "83f5a628-e4d4-4cb5-8cb9-44b53bed4ad4",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Remove selected wiki",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "wiki",
+                "delete",
+                ":wikiId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "wikiId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c994833c-c4c9-4a17-8e43-28f86cf38198",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "delete",
+                    ":wikiId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "wikiId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9c300264-2d44-4068-869d-78e83e8d4dc0",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "delete",
+                    ":wikiId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "wikiId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "416dbb26-46a8-41c9-989b-1c3bb04ecc64",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "delete",
+                    ":wikiId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "wikiId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0a94494b-55e1-4250-a56f-765b4d166169",
+          "name": "GetAll",
+          "request": {
+            "name": "GetAll",
+            "description": {
+              "content": "Return wiki list",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "wiki",
+                "getAll"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a902117c-f93f-411e-8cc4-6dbfc14d1212",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"wikis\": [\n    {\n      \"name\": \"Test Wiki\",\n      \"showInMenu\": false,\n      \"icon\": \"\",\n      \"content\": \"<p>Hello to all!!!</p>\\n\",\n      \"streamers\": [\n        {\n          \"id\": \"5fbcee2e636497107a1cbdf4\",\n          \"channel_name\": \"test_channel\"\n        }\n      ],\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"meta\": {\n        \"left\": \"250px\",\n        \"top\": \"50px\",\n        \"width\": \"150px\",\n        \"height\": \"150px\",\n        \"expoints\": \"10\"\n      },\n      \"type\": \"html\",\n      \"tweetUrl\": \"\",\n      \"_id\": {\n        \"$id\": \"5fbd060eaec04b6e6943828b\"\n      }\n    }\n  ],\n  \"pagination\": {\n    \"total\": 1,\n    \"currentPage\": \"1\",\n    \"totalPages\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3c028d6a-366d-40c5-a397-81d741d0928d",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "64986ffa-aa0d-4ee7-ac65-3411352b5c32",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "28851364-fff5-4ede-a640-f454c9a85819",
+          "name": "GetById",
+          "request": {
+            "name": "GetById",
+            "description": {
+              "content": "Return wiki with given id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "wiki",
+                "getById",
+                ":wikiId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "wikiId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e614c875-55ec-4415-970c-751ad933cfb3",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "getById",
+                    ":wikiId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "wikiId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"wiki\": {\n    \"name\": \"Test Wiki\",\n    \"showInMenu\": false,\n    \"icon\": \"\",\n    \"content\": \"<p>Hello to all!!!</p>\\n\",\n    \"streamers\": [\n      {\n        \"id\": \"5fbcee2e636497107a1cbdf4\",\n        \"channel_name\": \"test_channel\"\n      }\n    ],\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"meta\": {\n      \"left\": \"250px\",\n      \"top\": \"50px\",\n      \"width\": \"150px\",\n      \"height\": \"150px\",\n      \"expoints\": \"10\"\n    },\n    \"type\": \"html\",\n    \"tweetUrl\": \"\",\n    \"_id\": {\n      \"$id\": \"5fbd060eaec04b6e6943828b\"\n    },\n    \"incorrectAnswers\": []\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b7bb4f0f-6108-4743-8234-9053f602e0f1",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "getById",
+                    ":wikiId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "wikiId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "107745ba-e5a6-4b42-85e1-729c5768b147",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "getById",
+                    ":wikiId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "wikiId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b946e2c0-031b-48df-8546-cb2fec52b741",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Update selected wiki",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "wiki",
+                "update",
+                ":wikiId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "wikiId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "976adbe1-646a-498c-b614-83350e30bbfa",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "update",
+                    ":wikiId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "wikiId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"wiki\": {\n    \"name\": \"Title\",\n    \"showInMenu\": false,\n    \"icon\": \"\",\n    \"content\": \"<p>header</p>\\n\",\n    \"streamers\": [],\n    \"meta\": {\n      \"left\": \"50px\",\n      \"top\": \"50px\",\n      \"width\": \"50px\",\n      \"height\": \"50px\",\n      \"expoints\": \"500\"\n    },\n    \"type\": \"html\",\n    \"tweetUrl\": \"\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "18d6855a-060b-4760-bf62-5f54b8e5a651",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "update",
+                    ":wikiId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "wikiId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ba16610f-ee22-44a7-a821-3775fdf37edd",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "wiki",
+                    "update",
+                    ":wikiId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "wikiId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3c3eb74a-7c00-4ee5-8f20-588f2c55ad62",
+    "name": "Inthegame admin wiki API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

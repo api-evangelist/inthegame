@@ -1,0 +1,1585 @@
+{
+  "item": [
+    {
+      "id": "36f4768b-b8bf-4c7a-ae36-8cf556159d40",
+      "name": "rating",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f5199ae4-00dc-4627-92da-d918e010711d",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Send new rating object to save and return it as db object",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "rating",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "icon",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "optionsNumber",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "streamers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "expoints",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b0542b5b-d70e-4f14-98d1-f9f3c799c2b8",
+              "name": "Api Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Rating"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "optionsNumber",
+                      "value": "3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamers",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "25"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"rating\": {\n    \"name\": \"New Rating\",\n    \"description\": \"Test\",\n    \"optionsNumber\": \"3\",\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"icon\": \"\",\n    \"streamers\": [],\n    \"expoints\": \"25\",\n    \"_id\": {\n      \"$id\": \"5fbf89dfb4f1c0219d147841\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "44a213ca-1727-47de-842b-4e96e273033d",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Rating"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "optionsNumber",
+                      "value": "3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamers",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "25"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "39901b63-fd41-4e70-be47-15cd90e1e08b",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Rating"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "optionsNumber",
+                      "value": "3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamers",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "25"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4d29ea95-54fa-460e-b0eb-95d92b941bec",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Send rating id to delete it from db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "rating",
+                "delete",
+                ":ratingId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "ratingId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "73e0e620-0759-4427-918b-d114296a3e52",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "delete",
+                    ":ratingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ratingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "103fe237-4028-4021-bc9d-39062308262b",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "delete",
+                    ":ratingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ratingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "403fbdde-a245-4fb4-bb21-3ff7bab18b4b",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "delete",
+                    ":ratingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ratingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "05eb2143-94ac-4307-8084-77c8d75cd26b",
+          "name": "GetAll",
+          "request": {
+            "name": "GetAll",
+            "description": {
+              "content": "Send request to get ratings list by filter options",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "rating",
+                "getAll"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3324c4d8-1001-4a85-aa0e-a79637ee5fa0",
+              "name": "Default",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "{\"ratings\":[****],\"pagination\":{\"total\":0,\"currentPage\":\"1\",\"totalPages\":0}}",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "22f6b03e-2920-416f-99ec-af2fc2bc7b56",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "db7fea4e-9ba4-47e4-9121-8ea71c4d8768",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8c6f2446-4360-446b-8038-5dfe09d26e45",
+          "name": "GetById",
+          "request": {
+            "name": "GetById",
+            "description": {
+              "content": "Return rating object selected by given id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "rating",
+                "getById",
+                ":ratingId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "ratingId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f79e77d0-2580-4ec0-a846-bf540474d542",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "getById",
+                    ":ratingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ratingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"rating\": {\n    \"name\": \"Harry Potter\",\n    \"description\": \"film\",\n    \"optionsNumber\": \"5\",\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"icon\": \"\",\n    \"streamers\": [\n      {\n        \"id\": \"5fbcee2e636497107a1cbdf4\",\n        \"channel_name\": \"test_channel\"\n      }\n    ],\n    \"expoints\": \"80\",\n    \"_id\": {\n      \"$id\": \"5fbcf1325e784e3816715935\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "591bd250-a674-4161-84a0-8c4517abd8f8",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "getById",
+                    ":ratingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ratingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "934c8b41-e4eb-4473-a447-a3795f8aefc7",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "getById",
+                    ":ratingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ratingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d0c6fca6-38b8-4951-9d58-fe425e019502",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Send rating object to update in db with given id and return updated rating",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "rating",
+                "update",
+                ":ratingId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "ratingId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "optionsNumber",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "user_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "icon",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "streamers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "expoints",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "meta",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3b5ae824-eef9-4c8e-a70e-9ffdd1dc3c4a",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "update",
+                    ":ratingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ratingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Rating"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "optionsNumber",
+                      "value": "3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamers",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "25"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "meta",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"rating\": {\n    \"name\": \"New Rating\",\n    \"description\": \"Test\",\n    \"optionsNumber\": \"3\",\n    \"icon\": \"\",\n    \"streamers\": [],\n    \"expoints\": \"25\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "205bc2ca-e7d2-4d72-b725-e06a640ea97b",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "update",
+                    ":ratingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ratingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Rating"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "optionsNumber",
+                      "value": "3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamers",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "25"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "meta",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f950d54e-b771-480c-8f46-3a9a3ab73ca3",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "rating",
+                    "update",
+                    ":ratingId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ratingId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "New Rating"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "description",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "optionsNumber",
+                      "value": "3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "icon",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "streamers",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "25"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "meta",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "02d8f340-ac98-4233-86c6-0a2b96b6d71b",
+          "name": "Answer",
+          "request": {
+            "name": "Answer",
+            "description": {
+              "content": "Send user answer data and save it in db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "rating",
+                "answer_new",
+                ":questionId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "questionId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "97fa7daf-5b31-4753-a102-7bd26e81e5de",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "rating",
+                    "answer_new",
+                    ":questionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "questionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"answer\": {\n    \"userId\": \"5fbfbf7b7938293c320ac1dc\",\n    \"ratingId\": \"5fbcf1325e784e3816715935\",\n    \"answer\": 5,\n    \"channelId\": \"test_channel\",\n    \"isAnswered\": true,\n    \"expoints_given\": \"80\",\n    \"userLevel\": 2\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ad862b2e-546f-49fd-b7ff-f5ae60d9b639",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "rating",
+                    "answer_new",
+                    ":questionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "questionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "573ebd17-c063-4b2d-ba95-7c81b1b5d2dc",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "rating",
+                    "answer_new",
+                    ":questionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "questionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a23004de-7240-44d2-bc3b-4104275c5f31",
+    "name": "Inthegame admin rating API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

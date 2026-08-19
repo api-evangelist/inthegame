@@ -1,0 +1,644 @@
+{
+  "item": [
+    {
+      "id": "7a799056-8f14-40fb-aa43-982b09b0004d",
+      "name": "moderationData",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ec50535e-1443-4584-bb40-cd2f3a0448d2",
+          "name": "GetByUserIdOrCreate",
+          "request": {
+            "name": "GetByUserIdOrCreate",
+            "description": {
+              "content": "Get broadcaster settings moderation data by user id or create it if it doesn't exist in db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "moderatorData",
+                "getModeratorDataByUserIdOrCreate",
+                ":user_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "user_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "13130892-112a-4eef-a93d-f23be1270329",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "moderatorData",
+                    "getModeratorDataByUserIdOrCreate",
+                    ":user_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "user_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"moderatorData\": {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"banList\": [],\n    \"profanityList\": \"\",\n    \"useCustomProfanity\": true,\n    \"customCSS\": \"\",\n    \"levelsDefinition\": [\n      {\n        \"level\": 1,\n        \"name\": \"novice\",\n        \"expoints\": 50\n      },\n      {\n        \"level\": 2,\n        \"name\": \"advanced\",\n        \"expoints\": 300\n      },\n      {\n        \"level\": 3,\n        \"name\": \"pro\",\n        \"expoints\": 1000\n      },\n      {\n        \"level\": 4,\n        \"name\": \"legendary\",\n        \"expoints\": 5000\n      }\n    ],\n    \"streamer\": {\n      \"chat_url\": \"\",\n      \"stream_url\": \"\",\n      \"registration_bonus\": 0,\n      \"streamSourceType\": \"\",\n      \"game\": \"\",\n      \"game_id\": null,\n      \"position\": 0,\n      \"modules\": {\n        \"logo\": true,\n        \"predictions\": true,\n        \"predictions_menu\": true,\n        \"leaderboard\": true,\n        \"leaderboard_menu\": true,\n        \"account\": true,\n        \"account_menu\": true,\n        \"shouts\": true,\n        \"shouts_menu\": true,\n        \"quiz\": true,\n        \"quiz_menu\": true,\n        \"polls\": true,\n        \"polls_menu\": true,\n        \"contact\": true,\n        \"contact_menu\": true,\n        \"chat\": true,\n        \"chat_menu\": true,\n        \"wiki\": false,\n        \"wiki_menu\": false,\n        \"rating\": false,\n        \"rating_menu\": false,\n        \"retention\": false,\n        \"close\": false,\n        \"shop\": true,\n        \"shop_menu\": true\n      },\n      \"clocks\": [],\n      \"offersInterval\": 0,\n      \"chatDelay\": 0,\n      \"streamerLogo\": \"\",\n      \"wikiList\": [],\n      \"additionalInfo\": {\n        \"wikiTitle\": \"Wiki\"\n      }\n    },\n    \"broadcaster_name\": \"api_tester\",\n    \"_id\": {\n      \"$id\": \"5fbcf1b4a759e61e0f7b0bc4\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fc5e00df-c76d-461e-b796-98d7a02fc6c0",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "moderatorData",
+                    "getModeratorDataByUserIdOrCreate",
+                    ":user_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "user_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5783f2d7-84de-4886-993a-80c04c72047f",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "moderatorData",
+                    "getModeratorDataByUserIdOrCreate",
+                    ":user_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "user_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "26889762-94ff-49fb-bff3-b379c424fc41",
+          "name": "GetByCurrentUser",
+          "request": {
+            "name": "GetByCurrentUser",
+            "description": {
+              "content": "Return moderation data of current broadcaster",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "moderatorData",
+                "getModeratorDataCurrentUser"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "448dc49d-0a75-4c1b-ad82-324050b7dcd1",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "moderatorData",
+                    "getModeratorDataCurrentUser"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"moderatorData\": {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"banList\": [],\n    \"profanityList\": \"\",\n    \"useCustomProfanity\": true,\n    \"customCSS\": \"\",\n    \"levelsDefinition\": [\n      {\n        \"level\": 1,\n        \"name\": \"novice\",\n        \"expoints\": 50\n      },\n      {\n        \"level\": 2,\n        \"name\": \"advanced\",\n        \"expoints\": 300\n      },\n      {\n        \"level\": 3,\n        \"name\": \"pro\",\n        \"expoints\": 1000\n      },\n      {\n        \"level\": 4,\n        \"name\": \"legendary\",\n        \"expoints\": 5000\n      }\n    ],\n    \"streamer\": {\n      \"chat_url\": \"\",\n      \"stream_url\": \"\",\n      \"registration_bonus\": 0,\n      \"streamSourceType\": \"\",\n      \"game\": \"\",\n      \"game_id\": null,\n      \"position\": 0,\n      \"modules\": {\n        \"logo\": true,\n        \"predictions\": true,\n        \"predictions_menu\": true,\n        \"leaderboard\": true,\n        \"leaderboard_menu\": true,\n        \"account\": true,\n        \"account_menu\": true,\n        \"shouts\": true,\n        \"shouts_menu\": true,\n        \"quiz\": true,\n        \"quiz_menu\": true,\n        \"polls\": true,\n        \"polls_menu\": true,\n        \"contact\": true,\n        \"contact_menu\": true,\n        \"chat\": true,\n        \"chat_menu\": true,\n        \"wiki\": false,\n        \"wiki_menu\": false,\n        \"rating\": false,\n        \"rating_menu\": false,\n        \"retention\": false,\n        \"close\": false,\n        \"shop\": true,\n        \"shop_menu\": true\n      },\n      \"clocks\": [],\n      \"offersInterval\": 0,\n      \"chatDelay\": 0,\n      \"streamerLogo\": \"\",\n      \"wikiList\": [],\n      \"additionalInfo\": {\n        \"wikiTitle\": \"Wiki\"\n      }\n    },\n    \"broadcaster_name\": \"api_tester\",\n    \"_id\": {\n      \"$id\": \"5fbcf1b4a759e61e0f7b0bc4\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c3783f97-3a3e-4070-9e97-92333537f3b2",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "moderatorData",
+                    "getModeratorDataCurrentUser"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2048b5ed-c54e-4f37-9d0f-7b09c335dcbc",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "moderatorData",
+                    "getModeratorDataCurrentUser"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "eefda0c6-14e3-4316-afc0-cde4b92e6a0b",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Send moderation data object to update in db with given id and return updated data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "moderatorData",
+                "update",
+                ":dataId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dataId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "febfd681-6007-4871-a303-63bfa0bad94f",
+              "name": "Default",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "moderatorData",
+                    "update",
+                    ":dataId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "dataId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "{\"moderatorData\":{*****}}",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a2d4d79e-af4e-41f0-af79-d887441e33e9",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "moderatorData",
+                    "update",
+                    ":dataId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "dataId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d2759532-3613-4369-b240-3b3250849574",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "moderatorData",
+                    "update",
+                    ":dataId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "dataId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "40117ca7-641e-414a-b8ba-b54138763a1a",
+    "name": "Inthegame admin moderationData API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

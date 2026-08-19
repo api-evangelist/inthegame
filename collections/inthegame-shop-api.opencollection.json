@@ -1,0 +1,214 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin shop API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "shop",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/shop/create",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "pointsXP",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send new shop object to save and return it as db object"
+        },
+        {
+          "info": {
+            "name": "Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/shop/delete/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send shop id to delete it from db"
+        },
+        {
+          "info": {
+            "name": "GetAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/shop/getAll",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send request to get shop items list"
+        },
+        {
+          "info": {
+            "name": "GetById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/shop/getById/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return shop object selected by given id"
+        },
+        {
+          "info": {
+            "name": "Update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/shop/update/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "pointsXP",
+                  "value": ""
+                },
+                {
+                  "name": "user_id",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                },
+                {
+                  "name": "_id",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send shop object to update in db with given id and return updated shop item"
+        },
+        {
+          "info": {
+            "name": "BuyItem",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/shop/buyItem",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Send item data paid by user"
+        },
+        {
+          "info": {
+            "name": "GetProducts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/shop/getProducts",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Return list of users purchases for broadcaster"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

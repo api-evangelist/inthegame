@@ -1,0 +1,258 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin promotion API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "promotion",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/prize/create",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "url",
+                  "value": ""
+                },
+                {
+                  "name": "streamers",
+                  "value": ""
+                },
+                {
+                  "name": "type",
+                  "value": ""
+                },
+                {
+                  "name": "itemType",
+                  "value": ""
+                },
+                {
+                  "name": "viewType",
+                  "value": ""
+                },
+                {
+                  "name": "secondsDelay",
+                  "value": ""
+                },
+                {
+                  "name": "items",
+                  "value": ""
+                },
+                {
+                  "name": "content",
+                  "value": ""
+                },
+                {
+                  "name": "sponsor",
+                  "value": ""
+                },
+                {
+                  "name": "offersOptions",
+                  "value": ""
+                },
+                {
+                  "name": "meta",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send new promotion object to save and return it as db object"
+        },
+        {
+          "info": {
+            "name": "Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/prize/delete/:prizeId",
+            "params": [
+              {
+                "name": "prizeId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send promotion id to delete it from db"
+        },
+        {
+          "info": {
+            "name": "GetAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/prize/getAll",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send request to get promotions list"
+        },
+        {
+          "info": {
+            "name": "GetById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/prize/getById/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return promotion object selected by given id"
+        },
+        {
+          "info": {
+            "name": "Update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/prize/update/:prizeId",
+            "params": [
+              {
+                "name": "prizeId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "place",
+                  "value": ""
+                },
+                {
+                  "name": "streamers",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "url",
+                  "value": ""
+                },
+                {
+                  "name": "thumbnail",
+                  "value": ""
+                },
+                {
+                  "name": "itemType",
+                  "value": ""
+                },
+                {
+                  "name": "items",
+                  "value": ""
+                },
+                {
+                  "name": "content",
+                  "value": ""
+                },
+                {
+                  "name": "sponsor",
+                  "value": ""
+                },
+                {
+                  "name": "type",
+                  "value": ""
+                },
+                {
+                  "name": "viewType",
+                  "value": ""
+                },
+                {
+                  "name": "secondsDelay",
+                  "value": ""
+                },
+                {
+                  "name": "user_id",
+                  "value": ""
+                },
+                {
+                  "name": "offersOptions",
+                  "value": ""
+                },
+                {
+                  "name": "meta",
+                  "value": ""
+                },
+                {
+                  "name": "lastSentTime",
+                  "value": ""
+                },
+                {
+                  "name": "_id",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send promotion object to update in db with given id and return updated promotion"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,204 @@
+{
+  "item": [
+    {
+      "id": "2bf065ab-b162-4e59-8e74-117bc064e54e",
+      "name": "leaderboard",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e9730c22-7549-4f5e-8bbc-3e4cd5e2c470",
+          "name": "Get",
+          "request": {
+            "name": "Get",
+            "description": {
+              "content": "Return users data list",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "leaderboard",
+                "get",
+                ":broadcaster"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "broadcaster",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c827e586-8de1-4226-b0de-689fabcffa05",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "leaderboard",
+                    "get",
+                    ":broadcaster"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "broadcaster",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"api_tester\": [\n    {\n      \"name\": \"Guest_1545hbu6587\",\n      \"email\": \"\",\n      \"type\": \"registered\",\n      \"thumbnail\": \"/uploads/default_avatar.png\",\n      \"broadcaster_id\": \"api_tester\",\n      \"amount_of_credits\": 15,\n      \"amount_of_credits_won\": 50,\n      \"available_shouts\": 0,\n      \"expirience_points\": 70,\n      \"level\": 1,\n      \"stats\": {\n        \"winsCount\": 1,\n        \"betsCount\": 1,\n        \"currentStreak\": 1\n      },\n      \"status\": 1,\n      \"updated\": false,\n      \"amount_of_credits_won_temp\": 50,\n      \"available_points\": 70,\n      \"_id\": {\n        \"$id\": \"5fbfbf7b7938293c320ac1dc\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dce01656-af8b-41dc-addf-760b092aa69d",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "leaderboard",
+                    "get",
+                    ":broadcaster"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "broadcaster",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0f3e68e4-e5f5-408b-9ca9-9d8f7ae39f04",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "leaderboard",
+                    "get",
+                    ":broadcaster"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "broadcaster",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5d407f8d-9fd7-49b0-b3da-dc500124b636",
+    "name": "Inthegame admin leaderboard API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

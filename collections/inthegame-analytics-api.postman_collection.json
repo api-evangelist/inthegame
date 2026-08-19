@@ -1,0 +1,590 @@
+{
+  "item": [
+    {
+      "id": "7af334a7-8377-46d5-87f7-f8825293e067",
+      "name": "analytics",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f8221667-1b78-4a53-8adf-8e3d37c96175",
+          "name": "GetParameters",
+          "request": {
+            "name": "GetParameters",
+            "description": {
+              "content": "Get help data for drop down in filter",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "analytics",
+                "getParameters"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "per-page",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bba720d7-384b-4e8c-ac23-4cc551de98f6",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "analytics",
+                    "getParameters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "per-page",
+                      "value": "10000"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"devices\": [\n    {\n      \"deviceName\": \"Android\"\n    },\n    {\n      \"deviceName\": \"iPhone\"\n    },\n    {\n      \"deviceName\": \"iPad\"\n    },\n    {\n      \"deviceName\": \"BlackBerry\"\n    }\n  ],\n  \"platforms\": [\n    {\n      \"platformName\": \"mobile\"\n    },\n    {\n      \"platformName\": \"web\"\n    }\n  ],\n  \"countries\": [\n    {\n      \"countryCode\": \"US\",\n      \"countryName\": \"United States\"\n    },\n    {\n      \"countryCode\": \"IL\",\n      \"countryName\": \"Israel\"\n    }\n  ],\n  \"browsers\": [\n    {\n      \"browserName\": \"Chrome\"\n    },\n    {\n      \"browserName\": \"Safari\"\n    },\n    {\n      \"browserName\": \"Firefox\"\n    },\n    {\n      \"browserName\": \"MSIE\"\n    }\n  ],\n  \"type\": \"new\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6938803a-6b8d-4c22-97d6-078cfbb52e13",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "analytics",
+                    "getParameters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "per-page",
+                      "value": "10000"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5475ecc0-07ac-4a44-9b06-47124cc1e4a7",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "analytics",
+                    "getParameters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "per-page",
+                      "value": "10000"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db6d6805-8469-4b35-8395-86200646d5ef",
+          "name": "GetReport",
+          "request": {
+            "name": "GetReport",
+            "description": {
+              "content": "Get report for analytics user actions from client (activities)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "analytics",
+                "getReport"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2a0ad6a9-c4bf-4c4e-83f6-9c986c5a048b",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "analytics",
+                    "getReport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"report\": [\n    {\n      \"module\": \"Rating\",\n      \"impressions\": 2,\n      \"engagements\": 0,\n      \"engagementRatio\": 0,\n      \"clicks\": 0,\n      \"ctr\": 0,\n      \"subModules\": [\n        {\n          \"module\": \"Harry Potter\",\n          \"impressions\": 2,\n          \"engagements\": 0,\n          \"ctr\": 0,\n          \"clicks\": 0,\n          \"engagementRatio\": 0\n        }\n      ]\n    },\n    {\n      \"module\": \"Polls\",\n      \"impressions\": 2,\n      \"engagements\": 0,\n      \"engagementRatio\": 0,\n      \"clicks\": 0,\n      \"ctr\": 0,\n      \"subModules\": [\n        {\n          \"module\": \"Test poll\",\n          \"impressions\": 2,\n          \"engagements\": 0,\n          \"ctr\": 0,\n          \"clicks\": 0,\n          \"engagementRatio\": 0\n        }\n      ]\n    },\n    {\n      \"module\": \"Quiz\",\n      \"impressions\": 1,\n      \"engagements\": 0,\n      \"engagementRatio\": 0,\n      \"clicks\": 0,\n      \"ctr\": 0,\n      \"subModules\": [\n        {\n          \"module\": \"Which year Harry Potter was born?\",\n          \"impressions\": 1,\n          \"engagements\": 0,\n          \"ctr\": 0,\n          \"clicks\": 0,\n          \"engagementRatio\": 0\n        }\n      ]\n    },\n    {\n      \"module\": \"Wiki\",\n      \"impressions\": 5,\n      \"engagements\": 0,\n      \"engagementRatio\": 0,\n      \"clicks\": 0,\n      \"ctr\": 0,\n      \"subModules\": [\n        {\n          \"module\": \"Test Wiki\",\n          \"impressions\": 5,\n          \"engagements\": 0,\n          \"ctr\": 0,\n          \"clicks\": 0,\n          \"engagementRatio\": 0\n        }\n      ]\n    },\n    {\n      \"module\": \"Chat\",\n      \"impressions\": 1,\n      \"engagements\": 1,\n      \"engagementRatio\": 1,\n      \"clicks\": 0,\n      \"ctr\": 0,\n      \"subModules\": []\n    },\n    {\n      \"module\": \"Account\",\n      \"impressions\": 1,\n      \"engagements\": 1,\n      \"engagementRatio\": 1,\n      \"clicks\": 0,\n      \"ctr\": 0,\n      \"subModules\": []\n    }\n  ],\n  \"type\": \"new\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "91b7ee21-ff11-4d2a-b0e3-0f5c3c158bf7",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "analytics",
+                    "getReport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "af2c062e-b3e2-4d70-958a-e2cfdf028ee3",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "analytics",
+                    "getReport"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3ccf2c7e-c9a3-4151-b1f8-d4490cde3a10",
+          "name": "Add",
+          "request": {
+            "name": "Add",
+            "description": {
+              "content": "add user activity to db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "analytics",
+                "add"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ddbdcfdb-89fc-454b-836c-15768f27ce3f",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "analytics",
+                    "add"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"success\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6c533191-ad08-479e-95e8-c242efb5552c",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "analytics",
+                    "add"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b962d45e-8978-4c27-8173-d031ff77c359",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "analytics",
+                    "add"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "56ed63c0-1a21-4cb5-b64b-ecb9be9d0a62",
+    "name": "Inthegame admin analytics API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

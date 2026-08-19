@@ -1,0 +1,161 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin wiki API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "wiki",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/wiki/create",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "icon",
+                  "value": ""
+                },
+                {
+                  "name": "showInMenu",
+                  "value": ""
+                },
+                {
+                  "name": "content",
+                  "value": ""
+                },
+                {
+                  "name": "streamers",
+                  "value": ""
+                },
+                {
+                  "name": "type",
+                  "value": ""
+                },
+                {
+                  "name": "tweetUrl",
+                  "value": ""
+                },
+                {
+                  "name": "meta",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Create new wiki"
+        },
+        {
+          "info": {
+            "name": "Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/wiki/delete/:wikiId",
+            "params": [
+              {
+                "name": "wikiId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Remove selected wiki"
+        },
+        {
+          "info": {
+            "name": "GetAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/wiki/getAll",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return wiki list"
+        },
+        {
+          "info": {
+            "name": "GetById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/wiki/getById/:wikiId",
+            "params": [
+              {
+                "name": "wikiId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return wiki with given id"
+        },
+        {
+          "info": {
+            "name": "Update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/wiki/update/:wikiId",
+            "params": [
+              {
+                "name": "wikiId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Update selected wiki"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

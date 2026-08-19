@@ -1,0 +1,221 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin rating API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "rating",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/rating/create",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "icon",
+                  "value": ""
+                },
+                {
+                  "name": "optionsNumber",
+                  "value": ""
+                },
+                {
+                  "name": "streamers",
+                  "value": ""
+                },
+                {
+                  "name": "expoints",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send new rating object to save and return it as db object"
+        },
+        {
+          "info": {
+            "name": "Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/rating/delete/:ratingId",
+            "params": [
+              {
+                "name": "ratingId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send rating id to delete it from db"
+        },
+        {
+          "info": {
+            "name": "GetAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/rating/getAll",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send request to get ratings list by filter options"
+        },
+        {
+          "info": {
+            "name": "GetById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/rating/getById/:ratingId",
+            "params": [
+              {
+                "name": "ratingId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return rating object selected by given id"
+        },
+        {
+          "info": {
+            "name": "Update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/rating/update/:ratingId",
+            "params": [
+              {
+                "name": "ratingId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "optionsNumber",
+                  "value": ""
+                },
+                {
+                  "name": "user_id",
+                  "value": ""
+                },
+                {
+                  "name": "icon",
+                  "value": ""
+                },
+                {
+                  "name": "streamers",
+                  "value": ""
+                },
+                {
+                  "name": "expoints",
+                  "value": ""
+                },
+                {
+                  "name": "_id",
+                  "value": ""
+                },
+                {
+                  "name": "meta",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send rating object to update in db with given id and return updated rating"
+        },
+        {
+          "info": {
+            "name": "Answer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/rating/answer_new/:questionId",
+            "params": [
+              {
+                "name": "questionId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Send user answer data and save it in db"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

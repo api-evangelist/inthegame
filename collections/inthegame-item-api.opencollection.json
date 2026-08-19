@@ -1,0 +1,231 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin item API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "item",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/items/create",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "alias",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "category",
+                  "value": ""
+                },
+                {
+                  "name": "type",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                },
+                {
+                  "name": "shortcut",
+                  "value": ""
+                },
+                {
+                  "name": "item_order",
+                  "value": ""
+                },
+                {
+                  "name": "game_id",
+                  "value": ""
+                },
+                {
+                  "name": "game",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send new item object to save and return it as db object"
+        },
+        {
+          "info": {
+            "name": "Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/items/delete/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send item id to delete it from db"
+        },
+        {
+          "info": {
+            "name": "GetAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/items/getAll",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send request to get items list by filter options"
+        },
+        {
+          "info": {
+            "name": "GetById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/items/getById/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return item object selected by given id"
+        },
+        {
+          "info": {
+            "name": "ImportDefaultAvatars",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/items/importDefaultAvatars",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return status success if default avatrs imported in db"
+        },
+        {
+          "info": {
+            "name": "Update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/items/update/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "user_id",
+                  "value": ""
+                },
+                {
+                  "name": "broadcaster_name",
+                  "value": ""
+                },
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "shortcut",
+                  "value": ""
+                },
+                {
+                  "name": "item_order",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "type",
+                  "value": ""
+                },
+                {
+                  "name": "game_id",
+                  "value": ""
+                },
+                {
+                  "name": "thumbnail",
+                  "value": ""
+                },
+                {
+                  "name": "_id",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send item object to update in db with given id and return updated item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

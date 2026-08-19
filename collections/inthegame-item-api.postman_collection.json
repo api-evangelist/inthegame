@@ -1,0 +1,1652 @@
+{
+  "item": [
+    {
+      "id": "6617ff61-ee3b-4c48-8cb7-19d68983dd3d",
+      "name": "item",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8d797e58-1e86-4755-80bc-cd91cc1de3f3",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Send new item object to save and return it as db object",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "items",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "alias",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "shortcut",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item_order",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "game_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "game",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b93eeb06-c829-4f81-bfdd-dc8c5f37f773",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "alias",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "active"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "thumbnail"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "shortcut",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "item_order",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": "5fbceda5636497107a1cbdf3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game",
+                      "value": "Test category"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"item\": {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Test\",\n    \"shortcut\": \"Test\",\n    \"item_order\": 1,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": \"5fbceda5636497107a1cbdf3\",\n    \"thumbnail\": \"\",\n    \"_id\": {\n      \"$id\": \"5fbd171198ffc537f676f555\"\n    },\n    \"id\": \"5fbd171198ffc537f676f555\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4e1c298f-a531-4fa2-b25b-f0eb8519ecca",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "alias",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "active"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "thumbnail"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "shortcut",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "item_order",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": "5fbceda5636497107a1cbdf3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game",
+                      "value": "Test category"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "406ad521-e98a-4621-a708-7ae33d913bb7",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "alias",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "active"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "thumbnail"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "shortcut",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "item_order",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": "5fbceda5636497107a1cbdf3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game",
+                      "value": "Test category"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "43494d1e-f45a-4833-a1ef-b6b0f1037df5",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Send item id to delete it from db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "items",
+                "delete",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fae47b63-b530-4d6d-b3ce-00cc81901d3d",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "delete",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "69057dc6-4150-4b87-82e4-8d48e683bea3",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "delete",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8c62fb75-770b-454f-b3fc-8d317127933a",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "delete",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "88fb3e28-14d9-478f-9e9b-0cd3ff306465",
+          "name": "GetAll",
+          "request": {
+            "name": "GetAll",
+            "description": {
+              "content": "Send request to get items list by filter options",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "items",
+                "getAll"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "72bbb4ff-3a1e-4d04-a87b-435998ab5ef9",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"broadcaster_name\": \"api_tester\",\n      \"name\": \"zombie\",\n      \"shortcut\": \"zombie\",\n      \"item_order\": 1,\n      \"status\": \"active\",\n      \"type\": \"thumbnail\",\n      \"game_id\": 0,\n      \"thumbnail\": \"/uploads/products/rImage1123.png\",\n      \"_id\": {\n        \"$id\": \"5fbcee5aa759e61e0f7b0b87\"\n      }\n    }\n  ],\n  \"pagination\": {\n    \"total\": 1,\n    \"currentPage\": \"1\",\n    \"totalPages\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "25035c78-e077-45ef-bf9c-fbaf33c0fbe7",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "91207ff7-4df8-4cb9-995f-56cfe90cd013",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "499871b0-baff-4280-87d0-e3beb441e592",
+          "name": "GetById",
+          "request": {
+            "name": "GetById",
+            "description": {
+              "content": "Return item object selected by given id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "items",
+                "getById",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "df5a56fd-4752-4f7c-aef7-7dea5b28dda2",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "getById",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"item\": {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"zombie\",\n    \"shortcut\": \"zombie\",\n    \"item_order\": 1,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage1123.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b87\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5a210914-5946-4f00-b0b3-e2cfead55dbf",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "getById",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b794688a-9256-4d69-8d62-5573e0b7e018",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "getById",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b7fb28e-e0f2-4427-bdf6-7ad49a7236f8",
+          "name": "ImportDefaultAvatars",
+          "request": {
+            "name": "ImportDefaultAvatars",
+            "description": {
+              "content": "Return status success if default avatrs imported in db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "items",
+                "importDefaultAvatars"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "242549b5-6821-4cbc-aa82-db035e9ac926",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "importDefaultAvatars"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"added\": \"success\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8eb7c891-268e-44fc-b5be-dc327bbbc9f6",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "importDefaultAvatars"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "24771eb5-5d14-4944-b480-9579c0ca4b9b",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "importDefaultAvatars"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "85d4f698-eb95-4cf5-8e2c-9907851cd0a7",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Send item object to update in db with given id and return updated item",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "items",
+                "update",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "user_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "broadcaster_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "shortcut",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "item_order",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "game_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "thumbnail",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "_id",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4f245cd9-a192-46d4-811c-d448b318bf6d",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "update",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "broadcaster_name",
+                      "value": "api_tester"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "shortcut",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "item_order",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "active"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "thumbnail"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": "5fbceda5636497107a1cbdf3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "thumbnail",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"item\": {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Test\",\n    \"shortcut\": \"Test\",\n    \"item_order\": 1,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": \"5fbceda5636497107a1cbdf3\",\n    \"thumbnail\": \"\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c6118602-5895-431b-9a41-2b9c915d3bf8",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "update",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "broadcaster_name",
+                      "value": "api_tester"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "shortcut",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "item_order",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "active"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "thumbnail"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": "5fbceda5636497107a1cbdf3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "thumbnail",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a41e7d9e-7b3e-448c-9f2e-0428e8b90abf",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "items",
+                    "update",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "broadcaster_name",
+                      "value": "api_tester"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "shortcut",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "item_order",
+                      "value": "1"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "active"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "thumbnail"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "game_id",
+                      "value": "5fbceda5636497107a1cbdf3"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "thumbnail",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d5de27cb-736e-4638-af66-848e4efa297e",
+    "name": "Inthegame admin item API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

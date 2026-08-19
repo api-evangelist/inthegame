@@ -1,0 +1,2170 @@
+{
+  "item": [
+    {
+      "id": "1c474247-5488-4f36-83b8-c834894af21a",
+      "name": "user",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4c5ce64d-5b5d-42c9-8c9c-5b44c6fca47d",
+          "name": "GetAll",
+          "request": {
+            "name": "GetAll",
+            "description": {
+              "content": "Return channel users list registered in app",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "user",
+                "getAll"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "aec6f3aa-2d9e-4ca2-bed2-c98efdf20ad3",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"users\": [\n    {\n      \"name\": \"API Tester\",\n      \"email\": \"\",\n      \"password\": \"0f79fd51905ba6398c8a7a19201e5b23\",\n      \"type\": \"registered\",\n      \"thumbnail\": \"/uploads/users/avatars/df9d28dc86881e76006be92ddcf67b63.png\",\n      \"broadcaster_id\": \"api_tester\",\n      \"token\": \"a9f27e5dca47b90f8e679221f83976bc\",\n      \"amount_of_credits\": 15,\n      \"amount_of_credits_won\": 0,\n      \"available_shouts\": 0,\n      \"expirience_points\": 1570,\n      \"level\": 3,\n      \"stats\": {\n        \"winsCount\": 0,\n        \"betsCount\": 2,\n        \"currentStreak\": 0\n      },\n      \"status\": 1,\n      \"updated\": true,\n      \"available_points\": 1570,\n      \"about\": \"\",\n      \"_id\": {\n        \"$id\": \"5fbf866a3ba52a1ded3c0f2e\"\n      }\n    },\n    {\n      \"name\": \"Cool User\",\n      \"email\": \"\",\n      \"password\": \"9ef66123f15844a765df3edbf9e0d33e\",\n      \"type\": \"registered\",\n      \"thumbnail\": \"/uploads/default_avatar.png\",\n      \"broadcaster_id\": \"api_tester\",\n      \"token\": \"f857f0b284ad18779a8855304da069ed\",\n      \"amount_of_credits\": 15,\n      \"amount_of_credits_won\": 50,\n      \"available_shouts\": 0,\n      \"expirience_points\": 300,\n      \"level\": 2,\n      \"stats\": {\n        \"winsCount\": 1,\n        \"betsCount\": 1,\n        \"currentStreak\": 1\n      },\n      \"status\": 1,\n      \"updated\": true,\n      \"amount_of_credits_won_temp\": 50,\n      \"available_points\": 300,\n      \"active\": true,\n      \"polls\": {\n        \"5fbd1fc904e3c324c21aed48\": \"Inception\"\n      },\n      \"ratings\": {\n        \"5fbcf1325e784e3816715935\": \"5\"\n      },\n      \"about\": \"\",\n      \"_id\": {\n        \"$id\": \"5fbfbf7b7938293c320ac1dc\"\n      }\n    },\n    {\n      \"name\": \"UserForBan\",\n      \"email\": \"banner@ban.com\",\n      \"password\": \"16be0bcb0d7dbd781c5ca5ae01a2ad8c\",\n      \"type\": \"registered\",\n      \"thumbnail\": \"/uploads/default_avatar.png\",\n      \"broadcaster_id\": \"api_tester\",\n      \"token\": \"f4c2ad1894bed34ae47b7a00df40dc84\",\n      \"amount_of_credits\": 15,\n      \"amount_of_credits_won\": 0,\n      \"available_shouts\": 0,\n      \"expirience_points\": 0,\n      \"level\": 1,\n      \"stats\": {\n        \"winsCount\": 0,\n        \"betsCount\": 0,\n        \"currentStreak\": 0\n      },\n      \"status\": 1,\n      \"updated\": true,\n      \"about\": \"Banned\",\n      \"_id\": {\n        \"$id\": \"5fbff72dda6e9d2d691e0953\"\n      }\n    }\n  ],\n  \"pagination\": {\n    \"total\": 3,\n    \"currentPage\": 1,\n    \"totalPages\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "22696fb1-1d75-442d-989c-8127d9dd2b6f",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "852c78d1-b976-413c-b155-1e8260f6fe0c",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "575bb578-6c5d-441a-bd1d-4f32e0abf9e2",
+          "name": "GetAllByBroadcaster",
+          "request": {
+            "name": "GetAllByBroadcaster",
+            "description": {
+              "content": "Return all registered users in current broadcaster",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "user",
+                "getAllByBroadcaster"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "56e42e8f-469b-41d2-97dd-78b9f2e392a9",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "getAllByBroadcaster"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"users\": [\n    {\n      \"name\": \"Guest_2249igw9180\",\n      \"email\": \"\",\n      \"password\": \"cca394632dfcb9b3d429a23295e16a90\",\n      \"type\": \"registered\",\n      \"thumbnail\": \"/uploads/default_avatar.png\",\n      \"broadcaster_id\": \"api_tester\",\n      \"token\": \"e42baf5bc3c8f35f956d2625b6ae12bc\",\n      \"amount_of_credits\": 15,\n      \"amount_of_credits_won\": 0,\n      \"available_shouts\": 0,\n      \"expirience_points\": 70,\n      \"level\": 1,\n      \"stats\": {\n        \"winsCount\": 0,\n        \"betsCount\": 1,\n        \"currentStreak\": 0\n      },\n      \"status\": 1,\n      \"updated\": false,\n      \"available_points\": 70,\n      \"_id\": {\n        \"$id\": \"5fbd015287494515200b14c4\"\n      }\n    },\n    {\n      \"name\": \"Guest_2525uif5038\",\n      \"email\": \"\",\n      \"password\": \"68dc638afb019aa92b09e478593d4420\",\n      \"type\": \"registered\",\n      \"thumbnail\": \"/uploads/default_avatar.png\",\n      \"broadcaster_id\": \"api_tester\",\n      \"token\": \"587ef2ce058e16a5417c1cdcdc564b53\",\n      \"amount_of_credits\": 15,\n      \"amount_of_credits_won\": 0,\n      \"available_shouts\": 0,\n      \"expirience_points\": 0,\n      \"level\": 1,\n      \"stats\": {\n        \"winsCount\": 0,\n        \"betsCount\": 0,\n        \"currentStreak\": 0\n      },\n      \"status\": 1,\n      \"updated\": false,\n      \"_id\": {\n        \"$id\": \"5fbd09c57b9b68474c5b1b5f\"\n      }\n    },\n    {\n      \"name\": \"Guest_5725vlo6829\",\n      \"email\": \"\",\n      \"password\": \"92f30643ce97edcbd222031118c843d3\",\n      \"type\": \"registered\",\n      \"thumbnail\": \"/uploads/default_avatar.png\",\n      \"broadcaster_id\": \"api_tester\",\n      \"token\": \"50eebc6faa1a98b5bf7fc6d3333d8406\",\n      \"amount_of_credits\": 15,\n      \"amount_of_credits_won\": 0,\n      \"available_shouts\": 0,\n      \"expirience_points\": 0,\n      \"level\": 1,\n      \"stats\": {\n        \"winsCount\": 0,\n        \"betsCount\": 0,\n        \"currentStreak\": 0\n      },\n      \"status\": 1,\n      \"updated\": false,\n      \"_id\": {\n        \"$id\": \"5fbd4225f74c7c76ee3a58d9\"\n      }\n    },\n    {\n      \"name\": \"Guest_1500ran1610\",\n      \"email\": \"\",\n      \"password\": \"d60b0ccb361c00b503d7a5ce7c7df757\",\n      \"type\": \"registered\",\n      \"thumbnail\": \"/uploads/default_avatar.png\",\n      \"broadcaster_id\": \"api_tester\",\n      \"token\": \"6112cb40c1f12b89dd4e673a37a6c0fd\",\n      \"amount_of_credits\": 15,\n      \"amount_of_credits_won\": 0,\n      \"available_shouts\": 0,\n      \"expirience_points\": 0,\n      \"level\": 1,\n      \"stats\": {\n        \"winsCount\": 0,\n        \"betsCount\": 0,\n        \"currentStreak\": 0\n      },\n      \"status\": 1,\n      \"updated\": false,\n      \"_id\": {\n        \"$id\": \"5fbe00ff05b6c2228f63f49d\"\n      }\n    },\n    {\n      \"name\": \"Guest_4641gka885\",\n      \"email\": \"\",\n      \"password\": \"0f79fd51905ba6398c8a7a19201e5b23\",\n      \"type\": \"registered\",\n      \"thumbnail\": \"/uploads/default_avatar.png\",\n      \"broadcaster_id\": \"api_tester\",\n      \"token\": \"a9f27e5dca47b90f8e679221f83976bc\",\n      \"amount_of_credits\": 15,\n      \"amount_of_credits_won\": 0,\n      \"available_shouts\": 0,\n      \"expirience_points\": 0,\n      \"level\": 1,\n      \"stats\": {\n        \"winsCount\": 0,\n        \"betsCount\": 0,\n        \"currentStreak\": 0\n      },\n      \"status\": 1,\n      \"updated\": false,\n      \"_id\": {\n        \"$id\": \"5fbf866a3ba52a1ded3c0f2e\"\n      }\n    }\n  ],\n  \"pagination\": {\n    \"total\": 5,\n    \"currentPage\": \"1\",\n    \"totalPages\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "97023ec7-5dfc-49be-afc1-b3fb7386bdda",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "getAllByBroadcaster"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "812a5a20-d06e-459f-a83c-5489c82f3fd9",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "getAllByBroadcaster"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3ecdc4ca-64f0-48f1-971b-939642232391",
+          "name": "Login",
+          "request": {
+            "name": "Login",
+            "description": {
+              "content": "Request to login in admin system, return token and user id, token will be saved in cookies, all rest requests take it for Authentication header for api permission",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "user",
+                "loginNew"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "username",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "password",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2ef6dff1-6cb6-456c-bd56-f0bb04a504b9",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "loginNew"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "username",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "password",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"token\": \"7c465d9a77540b686e818320c660d964\",\n  \"userId\": \"5fbce6c58703d05e5a73b6f4\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93099e3c-a0c3-44f6-989b-c457260cce16",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "loginNew"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "username",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "password",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f963f9a7-1f5b-4ce8-ac16-e8e62099a89c",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "loginNew"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "username",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "password",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0f1f7b2a-040d-4909-ba43-bddd8e10f69c",
+          "name": "Register",
+          "request": {
+            "name": "Register",
+            "description": {
+              "content": "Register new user",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "user",
+                "register"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "username",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "password",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "broadcasterName",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "93620a9e-1fad-4421-8585-ff1c25c1e1cc",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "register"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "username",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "password",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "broadcasterName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"userId\": \"5fbfb64831bbd74d176cde62\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d30a1f5f-72ce-4542-bcf5-90029ef1f091",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "register"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "username",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "password",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "broadcasterName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "789e3c5c-14f5-4435-ba9f-490880064fcb",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "user",
+                    "register"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "username",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "password",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "broadcasterName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7f246bff-877d-4206-b045-d2a6ffc185c9",
+          "name": "GetAvailableAvatars",
+          "request": {
+            "name": "GetAvailableAvatars",
+            "description": {
+              "content": "Load default icons/emojies for account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "user",
+                "getAvailableAvatars"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4d268735-d89d-4c30-86a4-873bdf788673",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "getAvailableAvatars"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"zombie\",\n    \"shortcut\": \"zombie\",\n    \"item_order\": 1,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage1123.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b87\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"ninja\",\n    \"shortcut\": \"ninja\",\n    \"item_order\": 2,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage3.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b88\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"crossbones\",\n    \"shortcut\": \"crossbones\",\n    \"item_order\": 3,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage4.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b89\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Robot\",\n    \"shortcut\": \"Robot\",\n    \"item_order\": 4,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage5.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b8a\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Buldog\",\n    \"shortcut\": \"Buldog\",\n    \"item_order\": 5,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage6.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b8b\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Boom\",\n    \"shortcut\": \"Boom\",\n    \"item_order\": 6,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage7.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b8c\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Viking \",\n    \"shortcut\": \"Viking \",\n    \"item_order\": 7,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage8.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b8d\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Monkey\",\n    \"shortcut\": \"Monkey\",\n    \"item_order\": 8,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage9.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b8e\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Warrior \",\n    \"shortcut\": \"Warrior \",\n    \"item_order\": 9,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage9.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b8f\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Alien \",\n    \"shortcut\": \"Alien \",\n    \"item_order\": 11,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/rImage11.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b90\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Big-hair\",\n    \"shortcut\": \"Big-hair\",\n    \"item_order\": 12,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Afro.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b91\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"DaBear\",\n    \"shortcut\": \"DaBear\",\n    \"item_order\": 13,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Bear_Mask.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b92\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Bully\",\n    \"shortcut\": \"Bully\",\n    \"item_order\": 14,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Bull.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b93\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"cateyes\",\n    \"shortcut\": \"cateyes\",\n    \"item_order\": 15,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Cat_Glasses.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b94\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"drago\",\n    \"shortcut\": \"drago\",\n    \"item_order\": 16,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Chinese_Dragon.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b95\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"fishy\",\n    \"shortcut\": \"fishy\",\n    \"item_order\": 17,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Colorful_Fish.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b96\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"daragonfire\",\n    \"shortcut\": \"daragonfire\",\n    \"item_order\": 18,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Dragon_Flames.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b97\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Dude\",\n    \"shortcut\": \"Dude\",\n    \"item_order\": 19,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Dude.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b98\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"dragondance\",\n    \"shortcut\": \"dragondance\",\n    \"item_order\": 20,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Dragons_Flames.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b99\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"ninjafloat\",\n    \"shortcut\": \"ninjafloat\",\n    \"item_order\": 21,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Floating_Ninja.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b9a\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"koooala\",\n    \"shortcut\": \"koooala\",\n    \"item_order\": 22,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Koala.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b9b\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"doggydo\",\n    \"shortcut\": \"doggydo\",\n    \"item_order\": 23,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Multi_Color_Dog.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b9c\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"mysterygirl\",\n    \"shortcut\": \"mysterygirl\",\n    \"item_order\": 24,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Mysterious_Girl.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b9d\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"ninjaslice\",\n    \"shortcut\": \"ninjaslice\",\n    \"item_order\": 25,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Ninja_Sword.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b9e\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"ooowl\",\n    \"shortcut\": \"ooowl\",\n    \"item_order\": 26,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Owl.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0b9f\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"owlyeyes\",\n    \"shortcut\": \"owlyeyes\",\n    \"item_order\": 27,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Owl_Eyes.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba0\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"piradog\",\n    \"shortcut\": \"piradog\",\n    \"item_order\": 28,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Pirate_Dog.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba1\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"spartaneous\",\n    \"shortcut\": \"spartaneous\",\n    \"item_order\": 29,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Spartan.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba2\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Sunny\",\n    \"shortcut\": \"Sunny\",\n    \"item_order\": 30,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Sun.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba3\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Val\",\n    \"shortcut\": \"Val\",\n    \"item_order\": 31,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Valkyrie.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba4\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Irule\",\n    \"shortcut\": \"Irule\",\n    \"item_order\": 32,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Warrior.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba5\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"wolfy\",\n    \"shortcut\": \"wolfy\",\n    \"item_order\": 33,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Wolf.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba6\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"gorillA\",\n    \"shortcut\": \"gorillA\",\n    \"item_order\": 34,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Aztec_Gorilla.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba7\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"LIOroars\",\n    \"shortcut\": \"LIOroars\",\n    \"item_order\": 35,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Lion.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba8\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"pantherio\",\n    \"shortcut\": \"pantherio\",\n    \"item_order\": 36,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Panther.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0ba9\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Tigris\",\n    \"shortcut\": \"Tigris\",\n    \"item_order\": 37,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/Avatar_Tiger.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0baa\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Bull111\",\n    \"shortcut\": \"Bull111\",\n    \"item_order\": 38,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/avatarbull.png\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bab\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"whhhhaa??\",\n    \"shortcut\": \"whhhhaa??\",\n    \"item_order\": 39,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/marmadeAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bac\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Celebrates & farts \",\n    \"shortcut\": \"Celebrates & farts \",\n    \"item_order\": 40,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/celebrateFartAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bad\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Monster Rocks\",\n    \"shortcut\": \"Monster Rocks\",\n    \"item_order\": 41,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/monsterAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bae\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"love-hate\",\n    \"shortcut\": \"love-hate\",\n    \"item_order\": 42,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/loveHateAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0baf\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"Geekydude tomato \",\n    \"shortcut\": \"Geekydude tomato \",\n    \"item_order\": 43,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/geekyAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb0\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"AlienDisco Avatar\",\n    \"shortcut\": \"AlienDisco Avatar\",\n    \"item_order\": 44,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/alienAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb1\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"LoserDance Ava\",\n    \"shortcut\": \"LoserDance Ava\",\n    \"item_order\": 45,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/dancingGirlGun.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb2\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"PopFairyAvatar\",\n    \"shortcut\": \"PopFairyAvatar\",\n    \"item_order\": 46,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/popFairyAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb3\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"DancingGirlKissingAvatar\",\n    \"shortcut\": \"DancingGirlKissingAvatar\",\n    \"item_order\": 47,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/dancingGirlKissAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb4\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"DancingGuitarAvatar\",\n    \"shortcut\": \"DancingGuitarAvatar\",\n    \"item_order\": 48,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/dancingGuitarAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb5\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"CryingElephantAvatar\",\n    \"shortcut\": \"CryingElephantAvatar\",\n    \"item_order\": 49,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/cryingElephantAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb6\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"HeadFallsAvatar\",\n    \"shortcut\": \"HeadFallsAvatar\",\n    \"item_order\": 50,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/headFallsAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb7\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"TrollKissAvatar\",\n    \"shortcut\": \"TrollKissAvatar\",\n    \"item_order\": 51,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/trollKissAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb8\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"getOurAvatar\",\n    \"shortcut\": \"getOurAvatar\",\n    \"item_order\": 52,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/getOutAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bb9\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"theFingerAvatar\",\n    \"shortcut\": \"theFingerAvatar\",\n    \"item_order\": 53,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/theFingerAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bba\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"GoalDanceAvatar\",\n    \"shortcut\": \"GoalDanceAvatar\",\n    \"item_order\": 54,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/goalDanceAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bbb\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"FairyDanceAvatar\",\n    \"shortcut\": \"FairyDanceAvatar\",\n    \"item_order\": 55,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/fairyDanceAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bbc\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"dancerCallingAvatar\",\n    \"shortcut\": \"dancerCallingAvatar\",\n    \"item_order\": 56,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/dancerCallingAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bbd\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"geekyAvatar\",\n    \"shortcut\": \"geekyAvatar\",\n    \"item_order\": 57,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/geekyAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bbe\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"geekyDanceAvatar\",\n    \"shortcut\": \"geekyDanceAvatar\",\n    \"item_order\": 58,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/geekyDanceAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bbf\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"swirlDanceAvatar\",\n    \"shortcut\": \"swirlDanceAvatar\",\n    \"item_order\": 59,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/swirlDanceAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bc0\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"alienStillAvatar\",\n    \"shortcut\": \"alienStillAvatar\",\n    \"item_order\": 60,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/alienStillAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bc1\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"MonsterRocksAvatar\",\n    \"shortcut\": \"MonsterRocksAvatar\",\n    \"item_order\": 61,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/MonsterRocksAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bc2\"\n    }\n  },\n  {\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"broadcaster_name\": \"api_tester\",\n    \"name\": \"TrollFallsAvatar\",\n    \"shortcut\": \"TrollFallsAvatar\",\n    \"item_order\": 62,\n    \"status\": \"active\",\n    \"type\": \"thumbnail\",\n    \"game_id\": 0,\n    \"thumbnail\": \"/uploads/products/TrollFallsAvatar.gif\",\n    \"_id\": {\n      \"$id\": \"5fbcee5aa759e61e0f7b0bc3\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ec40359d-0c6c-4ccf-b1c7-fd165026c4f5",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "getAvailableAvatars"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "42f5479f-3af5-4d8f-a52c-5e51b1dfe7a4",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "getAvailableAvatars"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7a3bf79c-fa50-456b-a47e-bbf09d4769c0",
+          "name": "LoginByCredentials",
+          "request": {
+            "name": "LoginByCredentials",
+            "description": {
+              "content": "Request for login by user/password ",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "user",
+                "login_by_credentials"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "951304dc-bf98-469a-b3f7-99bd7b5f8d74",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "login_by_credentials"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bfaece4f-296e-4bcc-b91b-35c8ff143bc0",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "login_by_credentials"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "646ce346-9d2b-46ab-9bfb-91d064b30c56",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "login_by_credentials"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5d7800c6-fd18-455e-8c83-21f7fa1f23d7",
+          "name": "LoginByToken",
+          "request": {
+            "name": "LoginByToken",
+            "description": {
+              "content": "User log in by the token var got in register",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "user",
+                "login_by_token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "0899958e-45d1-4c22-ad37-1cbd8f69ef02",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "login_by_token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Guest_4641gka885\",\n  \"email\": \"\",\n  \"password\": \"0f79fd51905ba6398c8a7a19201e5b23\",\n  \"type\": \"registered\",\n  \"thumbnail\": \"/uploads/default_avatar.png\",\n  \"broadcaster_id\": \"api_tester\",\n  \"token\": \"a9f27e5dca47b90f8e679221f83976bc\",\n  \"amount_of_credits\": 15,\n  \"amount_of_credits_won\": 0,\n  \"available_shouts\": 0,\n  \"expirience_points\": 0,\n  \"level\": 1,\n  \"stats\": {\n    \"winsCount\": 0,\n    \"betsCount\": 0,\n    \"currentStreak\": 0\n  },\n  \"status\": 1,\n  \"updated\": false,\n  \"_id\": {\n    \"$id\": \"5fbf866a3ba52a1ded3c0f2e\"\n  },\n  \"id\": \"5fbf866a3ba52a1ded3c0f2e\",\n  \"pollAnswers\": []\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1a3c710d-18b4-4233-9fc2-a2ef638eabde",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "login_by_token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a7d58566-e5b6-4333-aee9-fcf9c234795a",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "login_by_token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "be0aed74-debf-493a-a1ff-b7ed6cd441f7",
+          "name": "Register",
+          "request": {
+            "name": "Register",
+            "description": {
+              "content": "User registration - the function creates a random username and token",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "user",
+                "register"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "af486cfc-0e57-4539-abd5-30ffc2cedd98",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "register"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Guest_1224wdv2006\",\n  \"email\": \"\",\n  \"type\": \"registered\",\n  \"thumbnail\": \"/uploads/default_avatar.png\",\n  \"broadcaster_id\": \"api_tester\",\n  \"token\": \"64723930231c7b8717c73c26c2c887cf\",\n  \"amount_of_credits\": 15,\n  \"amount_of_credits_won\": 0,\n  \"available_shouts\": 0,\n  \"expirience_points\": 0,\n  \"level\": 1,\n  \"stats\": {\n    \"winsCount\": 0,\n    \"betsCount\": 0,\n    \"currentStreak\": 0\n  },\n  \"status\": 1,\n  \"updated\": false,\n  \"_id\": {\n    \"$id\": \"5fbfba8c7c61e50cd46ce805\"\n  },\n  \"action\": \"register\",\n  \"id\": \"5fbfba8c7c61e50cd46ce805\",\n  \"pollAnswers\": [],\n  \"openBets\": []\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5e394c76-5157-4575-a2a4-2fc2f46cf3a4",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "register"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ffb9ad49-8b57-4bbb-a1b7-9598d0601d38",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "register"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "eaf9e063-04a8-46a3-ba1c-e60ccdbb9a78",
+          "name": "SendPasswordToEmail",
+          "request": {
+            "name": "SendPasswordToEmail",
+            "description": {
+              "content": "To recover password generate new password and send to user e-mail",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "user",
+                "sendPasswordToEmail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b11d809a-f1ce-42fb-9005-d564a06cce5f",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "sendPasswordToEmail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"result\": \"emailError\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b43e8d4d-ca79-4856-a483-15365e32a92c",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "sendPasswordToEmail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "28f97b7a-cb03-4327-83cf-5845cd256644",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "sendPasswordToEmail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5ed2fa9b-7cfa-46cb-a4b8-4f2ad2038dca",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Update user details",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "user",
+                "update"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "87baef89-4869-4a0e-8797-d948cae1f24f",
+              "name": "Default",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Guest_2447bqm7535\",\n  \"email\": \"\",\n  \"password\": \"***\",\n  \"type\": \"registered\",\n  \"thumbnail\": \"/uploads/default_avatar.png\",\n  \"broadcaster_id\": \"***\",\n  \"token\": \"***\",\n  \"amount_of_credits\": 15,\n  \"amount_of_credits_won\": 0,\n  \"available_shouts\": 0,\n  \"expirience_points\": 0,\n  \"level\": 1,\n  \"stats\": {\n    \"winsCount\": 0,\n    \"betsCount\": 0,\n    \"currentStreak\": 0\n  },\n  \"status\": \"success\",\n  \"updated\": true,\n  \"_id\": {\n    \"$id\": \"***\"\n  },\n  \"id\": \"***\",\n  \"about\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "803632e2-ce24-49bc-9d95-975b8afe41e3",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "760a522e-df58-456a-831b-b723bdd911be",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "92418b57-79d5-4b66-b2b9-c92298578f71",
+          "name": "UploadAvatar",
+          "request": {
+            "name": "UploadAvatar",
+            "description": {
+              "content": "Upload New Avatar",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "user",
+                "uploadAvatar"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "type",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "token",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b422bad7-e44d-4450-a4a5-820d961eb9a2",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "uploadAvatar"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "(binary)",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "file",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "token",
+                      "value": "****",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"filepath\": \"/uploads/users/avatars/df9d28dc86881e76006be92ddcf67b63.png\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5c478141-404b-4250-9714-718770d1218e",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "uploadAvatar"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "(binary)",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "file",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "token",
+                      "value": "****",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2ca1145e-6cba-479b-afa2-b475a043b4a4",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "user",
+                    "uploadAvatar"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "(binary)",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "file",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "token",
+                      "value": "****",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e7f81fb3-4bec-461b-987c-7fcae7d4cfd7",
+    "name": "Inthegame admin user API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

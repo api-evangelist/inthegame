@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin moderationData API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "moderationData",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GetByUserIdOrCreate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/moderatorData/getModeratorDataByUserIdOrCreate/:user_id",
+            "params": [
+              {
+                "name": "user_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Get broadcaster settings moderation data by user id or create it if it doesn't exist in db"
+        },
+        {
+          "info": {
+            "name": "GetByCurrentUser",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-dev.inthegame.io/adminApi/moderatorData/getModeratorDataCurrentUser",
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Return moderation data of current broadcaster"
+        },
+        {
+          "info": {
+            "name": "Update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/adminApi/moderatorData/update/:dataId",
+            "params": [
+              {
+                "name": "dataId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Send moderation data object to update in db with given id and return updated data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

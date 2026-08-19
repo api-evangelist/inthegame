@@ -1,0 +1,38 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin general API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "general",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GetGeneralData",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/general/getGeneralData",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Loads the following general data:\n - translations\n - levels\n - expoints"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

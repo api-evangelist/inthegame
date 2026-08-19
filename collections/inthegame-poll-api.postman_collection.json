@@ -1,0 +1,2016 @@
+{
+  "item": [
+    {
+      "id": "4b7bdbe8-b73a-4f77-8b71-6f7f6fb96f38",
+      "name": "poll",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8c68cb7d-bd5a-4b56-8165-44d2cff0b326",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Send new poll object to save and return it as db object",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "poll",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "viewType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "question",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "hideButtons",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "answers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "expoints",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "questionType",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "5c8512a7-6fd4-419f-b050-f4c00219e26c",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Cinema"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "streamer"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "viewType",
+                      "value": "percentage"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Best Film ever"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hideButtons",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "answers",
+                      "value": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "150"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "questionType",
+                      "value": "poll"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"poll\": {\n    \"name\": \"Cinema\",\n    \"type\": \"streamer\",\n    \"items\": [],\n    \"time_limit\": 0,\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"questionType\": \"poll\",\n    \"viewType\": \"percentage\",\n    \"question\": \"Best Film ever\",\n    \"image\": \"\",\n    \"hideButtons\": 0,\n    \"answers\": [\n      {\n        \"answer\": \"Avatar\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"LOTR\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Inception\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Avengers 4\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Titanic\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Dark Knight\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      }\n    ],\n    \"expoints\": \"150\",\n    \"_id\": {\n      \"$id\": \"5fbd1fc904e3c324c21aed48\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5ea73c20-b1be-43e2-9d3e-10586a7c8937",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Cinema"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "streamer"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "viewType",
+                      "value": "percentage"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Best Film ever"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hideButtons",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "answers",
+                      "value": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "150"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "questionType",
+                      "value": "poll"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bb0ec30f-c5b5-4c8a-999c-5cb71e8e6c94",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Cinema"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "streamer"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "viewType",
+                      "value": "percentage"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Best Film ever"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hideButtons",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "answers",
+                      "value": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "150"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "questionType",
+                      "value": "poll"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5e70abe8-0392-4a7d-abad-532225f0e1fd",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Send poll id to delete it from db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "poll",
+                "delete",
+                ":pollId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "pollId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "bba056a8-89bf-4243-9aaa-25fac8681f5b",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "delete",
+                    ":pollId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pollId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d10a6670-dc21-4b77-b088-9e49fd95f77b",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "delete",
+                    ":pollId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pollId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "309d4ffa-ac3c-422e-b4df-d9ed78c84857",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "delete",
+                    ":pollId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pollId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8f091eef-875f-4a29-a24b-c80093af1f32",
+          "name": "GetAll",
+          "request": {
+            "name": "GetAll",
+            "description": {
+              "content": "Send request to get polls list by filter options",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "poll",
+                "getAll"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "cc2dfd73-8815-41b2-b21e-ca8feb14c61f",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"polls\": [\n    {\n      \"name\": \"New Poll\",\n      \"type\": \"streamer\",\n      \"items\": [\n        {\n          \"id\": \"5fbcee2e636497107a1cbdf4\",\n          \"name\": \"test_channel\"\n        }\n      ],\n      \"time_limit\": 0,\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"questionType\": \"poll\",\n      \"viewType\": \"percentage\",\n      \"question\": \"Test?\",\n      \"image\": \"\",\n      \"hideButtons\": 0,\n      \"answers\": [\n        {\n          \"answer\": \"Test\",\n          \"image\": \"\",\n          \"reward\": 0,\n          \"isRewardSent\": false,\n          \"answerSending\": false\n        },\n        {\n          \"answer\": \"Live\",\n          \"image\": \"\",\n          \"reward\": 0,\n          \"isRewardSent\": false,\n          \"answerSending\": false\n        }\n      ],\n      \"expoints\": \"20\",\n      \"_id\": {\n        \"$id\": \"5fbd07fc48196740b75d323b\"\n      }\n    }\n  ],\n  \"pagination\": {\n    \"total\": 1,\n    \"currentPage\": \"1\",\n    \"totalPages\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c74bf3b6-db96-48a5-80ea-a0fbdda1265c",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "99410309-98c3-45da-a519-3861ea004b55",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "06e670a2-016d-4c61-8ee7-a5a25e6d4ff3",
+          "name": "GetById",
+          "request": {
+            "name": "GetById",
+            "description": {
+              "content": "Return poll object selected by given id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "poll",
+                "getById{{pollId}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "be3b5b10-5d30-4156-a52c-c27b9152e5f2",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "getById{{pollId}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"poll\": {\n    \"name\": \"New Poll\",\n    \"type\": \"streamer\",\n    \"items\": [\n      {\n        \"id\": \"5fbcee2e636497107a1cbdf4\",\n        \"name\": \"test_channel\"\n      }\n    ],\n    \"time_limit\": 0,\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"questionType\": \"poll\",\n    \"viewType\": \"percentage\",\n    \"question\": \"Test?\",\n    \"image\": \"\",\n    \"hideButtons\": 0,\n    \"answers\": [\n      {\n        \"answer\": \"Test\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Live\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      }\n    ],\n    \"expoints\": \"20\",\n    \"_id\": {\n      \"$id\": \"5fbd07fc48196740b75d323b\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "220844ac-34ea-455c-91a0-51d7afdc4f2b",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "getById{{pollId}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f2269e06-342e-42f1-b2e0-056ceb12bb94",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "getById{{pollId}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a68dd53f-58c5-4b55-bc96-02225be6b1c2",
+          "name": "SendWinResult",
+          "request": {
+            "name": "SendWinResult",
+            "description": {
+              "content": "Send request for sending win result of given poll answer to whole users in client",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "poll",
+                "result",
+                ":pollId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "pollId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "answer",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "reward",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "isRewardSent",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "answerSending",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "78d2dd5d-8499-4943-ada5-293eafd5e89f",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "result",
+                    ":pollId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pollId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "answer",
+                      "value": "2050"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "reward",
+                      "value": "500"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "isRewardSent",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "answerSending",
+                      "value": "false"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pollAnswers\": [\n    {\n      \"answer\": \"2050\",\n      \"image\": \"\",\n      \"reward\": \"500\",\n      \"isRewardSent\": true,\n      \"answerSending\": true\n    },\n    {\n      \"answer\": \"2070\",\n      \"image\": \"\",\n      \"reward\": \"900\",\n      \"isRewardSent\": false,\n      \"answerSending\": false\n    },\n    {\n      \"answer\": \"2100\",\n      \"image\": \"\",\n      \"reward\": \"100\",\n      \"isRewardSent\": false,\n      \"answerSending\": false\n    },\n    {\n      \"answer\": \"Never\",\n      \"image\": \"\",\n      \"reward\": \"400\",\n      \"isRewardSent\": false,\n      \"answerSending\": false\n    }\n  ],\n  \"winners\": 0\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dc1ab34f-e29f-4fc5-b53f-77aab6dd5229",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "result",
+                    ":pollId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pollId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "answer",
+                      "value": "2050"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "reward",
+                      "value": "500"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "isRewardSent",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "answerSending",
+                      "value": "false"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0bf84caa-e966-40d8-bc3d-d104aadb84af",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "result",
+                    ":pollId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pollId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "answer",
+                      "value": "2050"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "reward",
+                      "value": "500"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "isRewardSent",
+                      "value": "false"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "answerSending",
+                      "value": "false"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "138cf287-27a2-428f-b64b-7539630fad9d",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Send poll object to update in db with given id and return updated poll",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "poll",
+                "update",
+                ":pollId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "pollId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "items",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "time_limit",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "user_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "questionType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "viewType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "question",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "hideButtons",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "answers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "expoints",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "_id",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "cb8e044a-ea31-4a7f-8563-1e7fa7ba6bdb",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "update",
+                    ":pollId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pollId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Cinema"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "streamer"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "items",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time_limit",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "questionType",
+                      "value": "poll"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "viewType",
+                      "value": "percentage"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Best Film ever"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hideButtons",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "answers",
+                      "value": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "150"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"poll\": {\n    \"name\": \"Cinema\",\n    \"type\": \"streamer\",\n    \"items\": [],\n    \"time_limit\": 0,\n    \"questionType\": \"poll\",\n    \"viewType\": \"percentage\",\n    \"question\": \"Best Film ever\",\n    \"image\": \"\",\n    \"hideButtons\": 0,\n    \"answers\": [\n      {\n        \"answer\": \"Avatar\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"LOTR\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Inception\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Avengers 4\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Titanic\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      },\n      {\n        \"answer\": \"Dark Knight\",\n        \"image\": \"\",\n        \"reward\": 0,\n        \"isRewardSent\": false,\n        \"answerSending\": false\n      }\n    ],\n    \"expoints\": \"150\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1b92552f-045d-4bb8-8138-5937203bb486",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "update",
+                    ":pollId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pollId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Cinema"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "streamer"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "items",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time_limit",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "questionType",
+                      "value": "poll"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "viewType",
+                      "value": "percentage"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Best Film ever"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hideButtons",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "answers",
+                      "value": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "150"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d1fba1ca-00b0-4d66-a487-4d42a0633eba",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "poll",
+                    "update",
+                    ":pollId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pollId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "Cinema"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": "streamer"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "items",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "time_limit",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "questionType",
+                      "value": "poll"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "viewType",
+                      "value": "percentage"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Best Film ever"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "image",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "hideButtons",
+                      "value": "0"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "answers",
+                      "value": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "150"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3539835c-85c9-411e-9f13-b3551adb91c3",
+          "name": "Answer",
+          "request": {
+            "name": "Answer",
+            "description": {
+              "content": "Send user answer data and save it in db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "poll",
+                "answer_new",
+                ":questionId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "questionId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8e5cd6e7-cce7-4a98-953b-d66648e242e7",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "poll",
+                    "answer_new",
+                    ":questionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "questionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"answer\": {\n    \"userId\": \"5fbfbf7b7938293c320ac1dc\",\n    \"questionId\": \"5fbd1fc904e3c324c21aed48\",\n    \"answer\": \"Inception\",\n    \"channelId\": \"test_channel\",\n    \"isAnswered\": true,\n    \"expoints_given\": \"150\",\n    \"userLevel\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d51d2df3-bdd8-40c7-858b-9de310ccce01",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "poll",
+                    "answer_new",
+                    ":questionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "questionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "04aef760-f90b-4eac-b814-249ae79b01ff",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "poll",
+                    "answer_new",
+                    ":questionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "questionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "pollId"
+    }
+  ],
+  "info": {
+    "_postman_id": "10eefec2-7b62-46a9-b0fb-39f4d6a12872",
+    "name": "Inthegame admin poll API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

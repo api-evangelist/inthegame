@@ -1,0 +1,1685 @@
+{
+  "item": [
+    {
+      "id": "8c5a210f-4eba-4247-974c-284312015899",
+      "name": "trivia",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "94af25ea-33c8-47ac-9c70-6c103d51e23b",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Create trivia in db and return new object",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "trivia",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "question",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "correctAnswer",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "incorrectAnswers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pointsGiven",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timePerQuestion",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "expoints",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "delayUntilAnswer",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "19924fda-1d1e-446a-bfbd-b5f4cd301cb9",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "correctAnswer",
+                      "value": "123"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "incorrectAnswers",
+                      "value": "[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsGiven",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timePerQuestion",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "delayUntilAnswer",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"trivia\": {\n    \"question\": \"Test\",\n    \"pointsGiven\": 50,\n    \"timePerQuestion\": 50,\n    \"delayUntilAnswer\": 10,\n    \"category\": \"\",\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"correctAnswer\": \"123\",\n    \"expoints\": \"100\",\n    \"incorrectAnswers\": [\n      \"321\",\n      \"231\",\n      \"132\"\n    ],\n    \"_id\": {\n      \"$id\": \"5fbfad2a7fc1bb4f5411a114\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8e61938a-8638-41eb-b51f-815c901daeac",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "correctAnswer",
+                      "value": "123"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "incorrectAnswers",
+                      "value": "[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsGiven",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timePerQuestion",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "delayUntilAnswer",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9262fd89-12b0-4fee-8fbc-6d88478cfa8f",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "type",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "correctAnswer",
+                      "value": "123"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "incorrectAnswers",
+                      "value": "[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsGiven",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timePerQuestion",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "delayUntilAnswer",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b173b5e5-d217-4349-95e7-092ea58eb114",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Remove selected trivia from db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "trivia",
+                "delete",
+                ":triviaId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "triviaId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "705167ad-cccd-4bcb-ba81-40ecbee265ee",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "delete",
+                    ":triviaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "triviaId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4bf4694a-05c7-4dce-8d71-2271a4bdc4b3",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "delete",
+                    ":triviaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "triviaId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "55408b31-f145-49e5-8a65-0f52b5713ae3",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "delete",
+                    ":triviaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "triviaId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3c90dd63-6215-4ec1-9796-9049197135d9",
+          "name": "GetAll",
+          "request": {
+            "name": "GetAll",
+            "description": {
+              "content": "Return trivia list with filter options",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "trivia",
+                "getAll"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4e5ed55c-400f-4451-a773-067f8467ff74",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"trivias\": [\n    {\n      \"question\": \"What does admin want?\",\n      \"pointsGiven\": 1500,\n      \"timePerQuestion\": 20,\n      \"delayUntilAnswer\": 0,\n      \"category\": \"\",\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"correctAnswer\": \"Tambourine\",\n      \"expoints\": \"1500\",\n      \"incorrectAnswers\": [\n        \"Windows\",\n        \"Cry\",\n        \"Vacation\"\n      ],\n      \"_id\": {\n        \"$id\": \"5fbd096648196740b75d323c\"\n      }\n    }\n  ],\n  \"pagination\": {\n    \"total\": 1,\n    \"currentPage\": \"1\",\n    \"totalPages\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d703e153-4254-4256-9fc1-ec579604b057",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9e0606f5-0248-419c-a815-239f84c123c1",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "getAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7c546afc-e8f6-4989-a1cd-829cff5288ff",
+          "name": "GetById",
+          "request": {
+            "name": "GetById",
+            "description": {
+              "content": "Return trivia by given id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "trivia",
+                "getById",
+                ":triviaId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "triviaId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "94b1b53c-ed26-4b0e-9661-cbf5dc36a909",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "getById",
+                    ":triviaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "triviaId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"trivia\": {\n    \"question\": \"What does admin want?\",\n    \"pointsGiven\": 1500,\n    \"timePerQuestion\": 20,\n    \"delayUntilAnswer\": 0,\n    \"category\": \"\",\n    \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n    \"correctAnswer\": \"Tambourine\",\n    \"expoints\": \"1500\",\n    \"incorrectAnswers\": [\n      {\n        \"answer\": \"Windows\"\n      },\n      {\n        \"answer\": \"Cry\"\n      },\n      {\n        \"answer\": \"Vacation\"\n      }\n    ],\n    \"_id\": {\n      \"$id\": \"5fbd096648196740b75d323c\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "14f077d9-832d-406c-b87c-a3f4f71e3b24",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "getById",
+                    ":triviaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "triviaId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bc4c97f5-1e5f-435b-89f6-eab09037529a",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "getById",
+                    ":triviaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "triviaId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2f4e711c-af07-40c2-9a8c-89d77b570d98",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Update trivia with given id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "adminApi",
+                "trivia",
+                "update",
+                ":triviaId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "triviaId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "question",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pointsGiven",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timePerQuestion",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "delayUntilAnswer",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "user_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "correctAnswer",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "expoints",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "incorrectAnswers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "meta",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9eb55f93-fcc7-487f-aebc-071ced1970a7",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "update",
+                    ":triviaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "triviaId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsGiven",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timePerQuestion",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "delayUntilAnswer",
+                      "value": "10"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "correctAnswer",
+                      "value": "123"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "incorrectAnswers",
+                      "value": "[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "meta",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"trivia\": {\n    \"question\": \"Test\",\n    \"category\": \"\",\n    \"pointsGiven\": 50,\n    \"timePerQuestion\": 50,\n    \"delayUntilAnswer\": 10,\n    \"correctAnswer\": \"123\",\n    \"expoints\": \"100\",\n    \"incorrectAnswers\": [\n      \"321\",\n      \"231\",\n      \"132\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fd354058-7dd1-40ba-8346-1b1e50e2313b",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "update",
+                    ":triviaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "triviaId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsGiven",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timePerQuestion",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "delayUntilAnswer",
+                      "value": "10"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "correctAnswer",
+                      "value": "123"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "incorrectAnswers",
+                      "value": "[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "meta",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "09287071-1276-4d6d-b3bc-da81ba265013",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "adminApi",
+                    "trivia",
+                    "update",
+                    ":triviaId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "triviaId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "question",
+                      "value": "Test"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "pointsGiven",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "timePerQuestion",
+                      "value": "50"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "delayUntilAnswer",
+                      "value": "10"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "disabled": false,
+                      "key": "user_id",
+                      "value": "5fbce6c58703d05e5a73b6f4"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "correctAnswer",
+                      "value": "123"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "expoints",
+                      "value": "100"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "incorrectAnswers",
+                      "value": "[object Object],[object Object],[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "_id",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "meta",
+                      "value": "[object Object]"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "36fd33a0-8fb5-4d09-a1bb-63bd5d31b857",
+          "name": "Answer",
+          "request": {
+            "name": "Answer",
+            "description": {
+              "content": "Sned user answer data and save it in db",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "trivia",
+                "answer",
+                ":questionId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "questionId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3b5adc47-47d6-4d60-832b-b288dcfc5598",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "trivia",
+                    "answer",
+                    ":questionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "questionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"answer\": {\n    \"userId\": \"5fbf866a3ba52a1ded3c0f2e\",\n    \"questionId\": \"5fbd096648196740b75d323c\",\n    \"pointsGiven\": 1500,\n    \"answer\": \"Vacation\",\n    \"correctAnswer\": \"Tambourine\",\n    \"isCorrect\": false,\n    \"expoints_given\": \"1500\",\n    \"points\": 1500,\n    \"userLevel\": 3\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f065a985-4ec0-48dd-8498-e33735014b5e",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "trivia",
+                    "answer",
+                    ":questionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "questionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "94496276-6d92-49c6-ba60-1c98b6e3800f",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "trivia",
+                    "answer",
+                    ":questionId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "questionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "47c31aed-dfac-44ee-adb2-59adfe2eb772",
+    "name": "Inthegame admin trivia API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

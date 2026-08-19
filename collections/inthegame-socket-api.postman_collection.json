@@ -1,0 +1,164 @@
+{
+  "item": [
+    {
+      "id": "bdb4c56e-5a81-414e-962d-309b562c9546",
+      "name": "socket",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0fd4ee8d-a66e-48d8-bfd6-369f1776ff29",
+          "name": "Leaderboard",
+          "request": {
+            "name": "Leaderboard",
+            "description": {
+              "content": "Socket message returns winners array with info about won points, current streak",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "leaderboards",
+                "leaderboardEngine_new_2"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/plain"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8b320af6-ada3-4af8-b95c-5784dcfca9a0",
+              "name": "SocketTest",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leaderboards",
+                    "leaderboardEngine_new_2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "{\r\n    \"0\": \"leaderboard\",\r\n    \"1\": {\r\n        \"winners\": [{\r\n            \"amount_of_credits\": \"15\",\r\n            \"amount_of_credits_won\": \"1500\",\r\n            \"amount_of_credits_won_temp\": \"1500\",\r\n            \"available_points\": \"1500\",\r\n            \"available_shouts\": \"0\",\r\n            \"broadcaster_id\": \"api_tester\",\r\n            \"email\": \"\",\r\n            \"expirience_points\": \"1500\",\r\n            \"level\": \"3\",\r\n            \"name\": \"Guest_0655shb1078\",\r\n            \"password\": \"3c940a3a0e7a30",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c329414f-88be-4aea-84a1-d5d1662804f2",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leaderboards",
+                    "leaderboardEngine_new_2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3ba135da-40d6-405d-87a9-4d973d7dc68a",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leaderboards",
+                    "leaderboardEngine_new_2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a63c76c7-a774-41ac-b912-54bf132f4f89",
+    "name": "Inthegame admin socket API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

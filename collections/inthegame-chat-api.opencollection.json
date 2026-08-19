@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Inthegame admin chat API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "chat",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "BanUser",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/chat/banChatUser",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Send user data for ban in chat"
+        },
+        {
+          "info": {
+            "name": "Send",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/chat/chatMessage",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Send user message and return verified text to client"
+        },
+        {
+          "info": {
+            "name": "Delete",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-dev.inthegame.io/userApi/chat/deleteChatMessage",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "request",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Delete message from chat with provided id"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,563 @@
+{
+  "item": [
+    {
+      "id": "5d31137e-aa64-4d4f-b682-10e9fd1d230b",
+      "name": "chat",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "306c33fd-7337-4edb-bb81-59d0d192586d",
+          "name": "BanUser",
+          "request": {
+            "name": "BanUser",
+            "description": {
+              "content": "Send user data for ban in chat",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "chat",
+                "banChatUser"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8dbeef77-d4a8-417b-9d46-fcd5ba80544b",
+              "name": "APITest",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "chat",
+                    "banChatUser"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"Test page\",\n  \"useUrl\": false,\n  \"channel_name\": \"test_channel\",\n  \"channel_id\": \"test_channel\",\n  \"broadcaster_id\": \"api_tester\",\n  \"pageUrl\": \"\",\n  \"additionalPageSettings\": \"\",\n  \"stream_url\": \"https://api-dev.inthegame.io/uploads/videos/streamers/9240e2fbfca8dcf912016b83541a6325.ba46792ede92a2eec53f35d8fd4c49e7.mp4\",\n  \"chat_url\": \"\",\n  \"registration_bonus\": \"\",\n  \"game\": \"Test category\",\n  \"game_id\": \"5fbceda5636497107a1cbdf3\",\n  \"is_permanent\": 1,\n  \"is_featured\": 0,\n  \"status\": 1,\n  \"modules\": {\n    \"logo\": true,\n    \"is_open_menu\": false,\n    \"predictions\": false,\n    \"predictions_menu\": false,\n    \"leaderboard\": true,\n    \"leaderboard_menu\": true,\n    \"leaderboard_icon\": false,\n    \"leaderboard_icon_image\": \"\",\n    \"account\": true,\n    \"account_menu\": true,\n    \"account_icon\": false,\n    \"account_icon_image\": \"\",\n    \"shouts\": false,\n    \"shouts_menu\": false,\n    \"quiz\": true,\n    \"polls\": true,\n    \"polls_menu\": true,\n    \"poll_icon\": false,\n    \"poll_icon_image\": \"\",\n    \"contact\": false,\n    \"contact_menu\": false,\n    \"chat\": true,\n    \"chat_menu\": true,\n    \"wiki\": true,\n    \"rating\": true,\n    \"rating_menu\": true,\n    \"rating_icon\": false,\n    \"rating_icon_image\": \"\",\n    \"retention\": false,\n    \"close\": true,\n    \"shop\": true,\n    \"shop_menu\": true\n  },\n  \"clocks\": [\n    {\n      \"id\": \"5fbd060eaec04b6e6943828b\",\n      \"module\": \"wiki\",\n      \"timeToStay\": \"10\",\n      \"time\": 0,\n      \"simpleModule\": null\n    },\n    {\n      \"id\": \"5fbd096648196740b75d323c\",\n      \"simpleModule\": null,\n      \"timeToStay\": \"10\",\n      \"module\": \"quiz\",\n      \"time\": 15\n    },\n    {\n      \"id\": \"5fbd07fc48196740b75d323b\",\n      \"module\": \"polls\",\n      \"timeToStay\": \"10\",\n      \"time\": \"25\",\n      \"simpleModule\": null\n    },\n    {\n      \"id\": \"5fbd09ff0174d8346b7cce86\",\n      \"module\": \"wiki\",\n      \"timeToStay\": \"10\",\n      \"time\": \"50\",\n      \"simpleModule\": null\n    }\n  ],\n  \"streamSourceType\": \"file\",\n  \"moderators\": [\n    {\n      \"userId\": \"5fbfbf7b7938293c320ac1dc\",\n      \"name\": \"Cool User\",\n      \"email\": \"\"\n    },\n    {\n      \"userId\": \"5fbf866a3ba52a1ded3c0f2e\",\n      \"name\": \"API Tester\",\n      \"email\": \"\"\n    }\n  ],\n  \"banList\": [\n    {\n      \"userId\": \"5fbff72dda6e9d2d691e0953\",\n      \"name\": \"UserForBan\",\n      \"email\": \"banner@ban.com\"\n    }\n  ],\n  \"offersInterval\": 0,\n  \"direction\": 0,\n  \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n  \"chatDelay\": \"15\",\n  \"profanityList\": [\n    \"\"\n  ],\n  \"useCustomProfanity\": false,\n  \"streamerLogo\": \"\",\n  \"wikiList\": [],\n  \"additionalInfo\": {\n    \"wikiTitle\": \"Wiki\"\n  },\n  \"languagesList\": [],\n  \"customCSS\": \"\",\n  \"hide_on_smartphone_portrait_mode\": true,\n  \"approvalMessageMode\": \"manual\",\n  \"broadcasterUseBlocks\": {\n    \"chat\": {\n      \"customCoords\": {\n        \"x\": 0,\n        \"y\": 0\n      },\n      \"useCustomCoords\": false\n    },\n    \"rating\": {\n      \"customCoords\": {\n        \"x\": 0,\n        \"y\": 0\n      },\n      \"useCustomCoords\": false\n    },\n    \"polls\": {\n      \"customCoords\": {\n        \"x\": 0,\n        \"y\": 0\n      },\n      \"useCustomCoords\": false\n    }\n  },\n  \"position\": 0,\n  \"moderator_data\": [\n    {\n      \"_id\": {\n        \"$oid\": \"5fbcf1b4a759e61e0f7b0bc4\"\n      },\n      \"user_id\": \"5fbce6c58703d05e5a73b6f4\",\n      \"banList\": [],\n      \"profanityList\": [\n        \"\"\n      ],\n      \"useCustomProfanity\": true,\n      \"customCSS\": \"\",\n      \"levelsDefinition\": [\n        {\n          \"level\": 1,\n          \"name\": \"novice\",\n          \"expoints\": 50\n        },\n        {\n          \"level\": 2,\n          \"name\": \"advanced\",\n          \"expoints\": 300\n        },\n        {\n          \"level\": 3,\n          \"name\": \"pro\",\n          \"expoints\": 1000\n        },\n        {\n          \"level\": 4,\n          \"name\": \"legendary\",\n          \"expoints\": 5000\n        }\n      ],\n      \"streamer\": {\n        \"chat_url\": \"\",\n        \"stream_url\": \"\",\n        \"registration_bonus\": 0,\n        \"streamSourceType\": \"\",\n        \"game\": \"\",\n        \"game_id\": null,\n        \"position\": 0,\n        \"modules\": {\n          \"logo\": true,\n          \"predictions\": true,\n          \"predictions_menu\": true,\n          \"leaderboard\": true,\n          \"leaderboard_menu\": true,\n          \"account\": true,\n          \"account_menu\": true,\n          \"shouts\": true,\n          \"shouts_menu\": true,\n          \"quiz\": true,\n          \"quiz_menu\": true,\n          \"polls\": true,\n          \"polls_menu\": true,\n          \"contact\": true,\n          \"contact_menu\": true,\n          \"chat\": true,\n          \"chat_menu\": true,\n          \"wiki\": false,\n          \"wiki_menu\": false,\n          \"rating\": false,\n          \"rating_menu\": false,\n          \"retention\": false,\n          \"close\": false,\n          \"shop\": true,\n          \"shop_menu\": true\n        },\n        \"clocks\": [],\n        \"offersInterval\": 0,\n        \"chatDelay\": 0,\n        \"streamerLogo\": \"\",\n        \"wikiList\": [],\n        \"additionalInfo\": {\n          \"wikiTitle\": \"Wiki\"\n        }\n      },\n      \"broadcaster_name\": \"api_tester\"\n    }\n  ],\n  \"_id\": {\n    \"$id\": \"5fbcee2e636497107a1cbdf4\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ef7d08c0-a7d9-43d3-b533-7ae58ee76aac",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "chat",
+                    "banChatUser"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "145d47c7-1491-4f9c-ab3c-a83a14a7d161",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "chat",
+                    "banChatUser"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "02aaac9f-0dd7-4fc0-a802-f2f126f05345",
+          "name": "Send",
+          "request": {
+            "name": "Send",
+            "description": {
+              "content": "Send user message and return verified text to client",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "chat",
+                "chatMessage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "305a1c0b-7dd0-4c52-9cee-eecb450e169b",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "chat",
+                    "chatMessage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": {\n    \"message\": \"Hello Bro!Q!!\",\n    \"username\": \"Cool User\",\n    \"userId\": \"5fbfbf7b7938293c320ac1dc\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "49da27e0-2434-4dea-aa3e-e9439f449916",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "chat",
+                    "chatMessage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "fb679513-e8c0-4dc6-a512-9254668ff0a3",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "chat",
+                    "chatMessage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f426b3ed-9e41-4279-a0d6-4ff68036a1fb",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Delete message from chat with provided id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "chat",
+                "deleteChatMessage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "38bfd222-3150-4f72-9006-1754c4a7fa8c",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "chat",
+                    "deleteChatMessage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"success\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "474f0366-6ec0-4640-bcbd-f931a0255a72",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "chat",
+                    "deleteChatMessage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5fcfdd17-b356-4f11-be29-008df3941eb0",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "chat",
+                    "deleteChatMessage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "53501357-9609-478d-95bd-995d44be1514",
+    "name": "Inthegame admin chat API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}

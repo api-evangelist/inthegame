@@ -1,0 +1,209 @@
+{
+  "item": [
+    {
+      "id": "a469a4fe-5e75-467d-baae-f933f9651950",
+      "name": "general",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c197fed1-f74d-48bd-aa0f-bc03d6fb208d",
+          "name": "GetGeneralData",
+          "request": {
+            "name": "GetGeneralData",
+            "description": {
+              "content": "Loads the following general data:\n - translations\n - levels\n - expoints",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "userApi",
+                "general",
+                "getGeneralData"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "request",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "33ea0df1-1d0b-4f15-b881-8383764cfe51",
+              "name": "API Test",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "general",
+                    "getGeneralData"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"translations\": {\n    \"language\": \"en\",\n    \"countryCode\": \"US\",\n    \"userIp\": \"172.31.248.118\"\n  },\n  \"extendedData\": {\n    \"levels\": [\n      {\n        \"id\": \"1\",\n        \"name\": \"1\",\n        \"points\": \"700\",\n        \"nickname\": \"Apprentice\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"7\",\n        \"static_bet_limit\": \"500\"\n      },\n      {\n        \"id\": \"2\",\n        \"name\": \"2\",\n        \"points\": \"1000\",\n        \"nickname\": \"Scorer\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"7\",\n        \"static_bet_limit\": \"700\"\n      },\n      {\n        \"id\": \"3\",\n        \"name\": \"3\",\n        \"points\": \"2000\",\n        \"nickname\": \"Hawk\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"7\",\n        \"static_bet_limit\": \"900\"\n      },\n      {\n        \"id\": \"4\",\n        \"name\": \"4\",\n        \"points\": \"4000\",\n        \"nickname\": \"Analyzer\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"5\",\n        \"static_bet_limit\": \"1000\"\n      },\n      {\n        \"id\": \"5\",\n        \"name\": \"5\",\n        \"points\": \"7000\",\n        \"nickname\": \"Strategist\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"4\",\n        \"static_bet_limit\": \"1200\"\n      },\n      {\n        \"id\": \"6\",\n        \"name\": \"6\",\n        \"points\": \"10000\",\n        \"nickname\": \"Expert\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"4\",\n        \"static_bet_limit\": \"1500\"\n      },\n      {\n        \"id\": \"7\",\n        \"name\": \"7\",\n        \"points\": \"15000\",\n        \"nickname\": \"Master\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"4\",\n        \"static_bet_limit\": \"3000\"\n      },\n      {\n        \"id\": \"8\",\n        \"name\": \"8\",\n        \"points\": \"20000\",\n        \"nickname\": \"Royal\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"3\",\n        \"static_bet_limit\": \"5000\"\n      },\n      {\n        \"id\": \"9\",\n        \"name\": \"9\",\n        \"points\": \"30000\",\n        \"nickname\": \"Guru\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"1\",\n        \"static_bet_limit\": \"10000\"\n      },\n      {\n        \"id\": \"10\",\n        \"name\": \"10\",\n        \"points\": \"40000\",\n        \"nickname\": \"Oracle\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"2\",\n        \"static_bet_limit\": \"20000\"\n      },\n      {\n        \"id\": \"11\",\n        \"name\": \"11\",\n        \"points\": \"1000000\",\n        \"nickname\": \"The Ninja\",\n        \"open_event_id\": \"0\",\n        \"give_prize_id\": \"0\",\n        \"static_bet_limit\": \"50000\"\n      }\n    ],\n    \"expointsPerActions\": {\n      \"staticBet\": {\n        \"id\": \"4\",\n        \"name\": \"staticBet\",\n        \"points\": \"100\",\n        \"status\": \"active\"\n      },\n      \"staticBet_1\": {\n        \"id\": \"5\",\n        \"name\": \"staticBet_1\",\n        \"points\": \"100\",\n        \"status\": \"active\"\n      },\n      \"dynamicBet\": {\n        \"id\": \"6\",\n        \"name\": \"dynamicBet\",\n        \"points\": \"10\",\n        \"status\": \"active\"\n      },\n      \"dynamicBet_1\": {\n        \"id\": \"7\",\n        \"name\": \"dynamicBet_1\",\n        \"points\": \"1000\",\n        \"status\": \"active\"\n      },\n      \"matchAttendance\": {\n        \"id\": \"8\",\n        \"name\": \"matchAttendance\",\n        \"points\": \"50\",\n        \"status\": \"active\"\n      },\n      \"matchAttendance_2\": {\n        \"id\": \"9\",\n        \"name\": \"matchAttendance_2\",\n        \"points\": \"100\",\n        \"status\": \"active\"\n      },\n      \"openLoot\": {\n        \"id\": \"11\",\n        \"name\": \"openLoot\",\n        \"points\": \"100\",\n        \"status\": \"active\"\n      },\n      \"finishedOnboarding\": {\n        \"id\": \"12\",\n        \"name\": \"finishedOnboarding\",\n        \"points\": \"500\",\n        \"status\": \"active\"\n      },\n      \"creating_shout\": {\n        \"id\": \"13\",\n        \"name\": \"creating_shout\",\n        \"points\": \"100\",\n        \"status\": \"active\"\n      }\n    },\n    \"lootFeatured\": []\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "766ddab9-6eec-4c9b-98ac-89351b477bb4",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "general",
+                    "getGeneralData"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "456f678d-b34e-479a-809c-931e9b78e2d5",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "userApi",
+                    "general",
+                    "getGeneralData"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "request",
+                      "value": "data"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-dev.inthegame.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3dd9ffea-55ca-433d-a27d-4ad949b10d2f",
+    "name": "Inthegame admin general API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection \"Inthegame API Docs\".\n\nContact Support:\n Name: Inthegame Support\n Email: support@inthegame.io",
+      "type": "text/plain"
+    }
+  }
+}
