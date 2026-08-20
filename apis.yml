@@ -41,6 +41,17 @@ tags:
 - Interactive
 - Gamification
 - Sports
+- Real-Time
+tags_raw:
+- Company
+- Streaming
+- CTV
+- OTT
+- Video
+- Engagement
+- Interactive
+- Gamification
+- Sports
 - Real-time
 maintainers:
 - FN: Kin Lane
@@ -54,6 +65,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Admin
+  tags_raw:
   - admin
   properties:
   - type: OpenAPI
@@ -68,6 +81,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Analytics
+  tags_raw:
   - analytics
   properties:
   - type: OpenAPI
@@ -82,6 +97,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Category
+  tags_raw:
   - category
   properties:
   - type: OpenAPI
@@ -96,6 +113,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Chat
+  tags_raw:
   - chat
   properties:
   - type: OpenAPI
@@ -110,6 +129,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Entity
+  tags_raw:
   - entity
   properties:
   - type: OpenAPI
@@ -123,7 +144,8 @@ apis:
   description: The general API from Inthegame — 1 operation(s) for general.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
-  tags:
+  tags: []
+  tags_raw:
   - general
   properties:
   - type: OpenAPI
@@ -138,6 +160,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Item
+  tags_raw:
   - item
   properties:
   - type: OpenAPI
@@ -152,6 +176,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Leaderboard
+  tags_raw:
   - leaderboard
   properties:
   - type: OpenAPI
@@ -165,7 +191,8 @@ apis:
   description: The moderationData API from Inthegame — 3 operation(s) for moderationdata.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
-  tags:
+  tags: []
+  tags_raw:
   - moderationData
   properties:
   - type: OpenAPI
@@ -194,6 +221,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Promotion
+  tags_raw:
   - promotion
   properties:
   - type: OpenAPI
@@ -208,6 +237,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Rating
+  tags_raw:
   - rating
   properties:
   - type: OpenAPI
@@ -222,6 +253,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Shop
+  tags_raw:
   - shop
   properties:
   - type: OpenAPI
@@ -236,6 +269,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Socket
+  tags_raw:
   - socket
   properties:
   - type: OpenAPI
@@ -250,6 +285,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Sponsor
+  tags_raw:
   - sponsor
   properties:
   - type: OpenAPI
@@ -278,6 +315,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Translations
+  tags_raw:
   - translations
   properties:
   - type: OpenAPI
@@ -292,6 +331,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Trivia
+  tags_raw:
   - trivia
   properties:
   - type: OpenAPI
@@ -306,6 +347,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Uploads
+  tags_raw:
   - uploads
   properties:
   - type: OpenAPI
@@ -320,6 +363,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - User
+  tags_raw:
   - user
   properties:
   - type: OpenAPI
@@ -334,6 +379,8 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
+  - Wiki
+  tags_raw:
   - wiki
   properties:
   - type: OpenAPI
