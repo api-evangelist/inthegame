@@ -9,6 +9,18 @@ description: >-
   inject engagements, and a userApi for end-viewers to register, play, answer, chat, buy and
   climb real-time leaderboards, with a Socket.IO channel pushing live engagement events.
 url: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
