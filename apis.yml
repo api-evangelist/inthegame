@@ -141,7 +141,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Entity
+  - entity
   tags_raw:
   - entity
   properties:
@@ -233,7 +233,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Promotion
+  - promotion
   tags_raw:
   - promotion
   properties:
@@ -249,7 +249,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Rating
+  - rating
   tags_raw:
   - rating
   properties:
@@ -281,7 +281,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Socket
+  - socket
   tags_raw:
   - socket
   properties:
@@ -297,7 +297,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Sponsor
+  - sponsor
   tags_raw:
   - sponsor
   properties:
@@ -343,7 +343,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Trivia
+  - trivia
   tags_raw:
   - trivia
   properties:
@@ -359,7 +359,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Uploads
+  - uploads
   tags_raw:
   - uploads
   properties:
@@ -391,7 +391,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Wiki
+  - wiki
   tags_raw:
   - wiki
   properties:
