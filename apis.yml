@@ -190,7 +190,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Leaderboard
+  - Leaderboards
   tags_raw:
   - leaderboard
   properties:
@@ -251,7 +251,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Rating
+  - Ratings
   tags_raw:
   - rating
   properties:
@@ -329,7 +329,7 @@ apis:
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
   tags:
-  - Translations
+  - Translation
   tags_raw:
   - translations
   properties:
