@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin shop API
+  title: Inthegame Shop API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: shop
+- name: Shop
 paths:
   /adminApi/shop/create:
     post:
       operationId: adminapiShopCreate
       summary: Create
       tags:
-      - shop
+      - Shop
       description: Send new shop object to save and return it as db object
       requestBody:
         content:
@@ -66,7 +66,7 @@ paths:
       operationId: adminapiShopDelete
       summary: Delete
       tags:
-      - shop
+      - Shop
       description: Send shop id to delete it from db
       parameters:
       - name: id
@@ -88,7 +88,7 @@ paths:
       operationId: adminapiShopGetall
       summary: GetAll
       tags:
-      - shop
+      - Shop
       description: Send request to get shop items list
       responses:
         '200':
@@ -117,7 +117,7 @@ paths:
       operationId: adminapiShopGetbyid
       summary: GetById
       tags:
-      - shop
+      - Shop
       description: Return shop object selected by given id
       parameters:
       - name: id
@@ -152,7 +152,7 @@ paths:
       operationId: adminapiShopUpdate
       summary: Update
       tags:
-      - shop
+      - Shop
       description: Send shop object to update in db with given id and return updated shop item
       parameters:
       - name: id
@@ -210,7 +210,7 @@ paths:
       operationId: userapiShopBuyitem
       summary: BuyItem
       tags:
-      - shop
+      - Shop
       description: Send item data paid by user
       requestBody:
         content:
@@ -240,7 +240,7 @@ paths:
       operationId: userapiShopGetproducts
       summary: GetProducts
       tags:
-      - shop
+      - Shop
       description: Return list of users purchases for broadcaster
       requestBody:
         content:

@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin item API
+  title: Inthegame Item API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: item
+- name: Item
 paths:
   /adminApi/items/create:
     post:
       operationId: adminapiItemCreate
       summary: Create
       tags:
-      - item
+      - Item
       description: Send new item object to save and return it as db object
       requestBody:
         content:
@@ -89,7 +89,7 @@ paths:
       operationId: adminapiItemDelete
       summary: Delete
       tags:
-      - item
+      - Item
       description: Send item id to delete it from db
       parameters:
       - name: id
@@ -111,7 +111,7 @@ paths:
       operationId: adminapiItemGetall
       summary: GetAll
       tags:
-      - item
+      - Item
       description: Send request to get items list by filter options
       responses:
         '200':
@@ -148,7 +148,7 @@ paths:
       operationId: adminapiItemGetbyid
       summary: GetById
       tags:
-      - item
+      - Item
       description: Return item object selected by given id
       parameters:
       - name: id
@@ -187,7 +187,7 @@ paths:
       operationId: adminapiItemImportdefaultavatars
       summary: ImportDefaultAvatars
       tags:
-      - item
+      - Item
       description: Return status success if default avatrs imported in db
       responses:
         '200':
@@ -209,7 +209,7 @@ paths:
       operationId: adminapiItemUpdate
       summary: Update
       tags:
-      - item
+      - Item
       description: Send item object to update in db with given id and return updated item
       parameters:
       - name: id

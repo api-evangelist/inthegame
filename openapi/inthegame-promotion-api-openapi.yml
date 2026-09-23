@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin promotion API
+  title: Inthegame Promotion API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: promotion
+- name: Promotion
 paths:
   /adminApi/prize/create:
     post:
       operationId: adminapiPromotionCreate
       summary: Create
       tags:
-      - promotion
+      - Promotion
       description: Send new promotion object to save and return it as db object
       requestBody:
         content:
@@ -114,7 +114,7 @@ paths:
       operationId: adminapiPromotionDelete
       summary: Delete
       tags:
-      - promotion
+      - Promotion
       description: Send promotion id to delete it from db
       parameters:
       - name: prizeId
@@ -136,7 +136,7 @@ paths:
       operationId: adminapiPromotionGetall
       summary: GetAll
       tags:
-      - promotion
+      - Promotion
       description: Send request to get promotions list
       responses:
         '200':
@@ -246,7 +246,7 @@ paths:
       operationId: adminapiPromotionGetbyid
       summary: GetById
       tags:
-      - promotion
+      - Promotion
       description: Return promotion object selected by given id
       parameters:
       - name: id
@@ -306,7 +306,7 @@ paths:
       operationId: adminapiPromotionUpdate
       summary: Update
       tags:
-      - promotion
+      - Promotion
       description: Send promotion object to update in db with given id and return updated promotion
       parameters:
       - name: prizeId

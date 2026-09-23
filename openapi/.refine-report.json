@@ -1,27 +1,7 @@
 {
   "provider": "inthegame",
   "sources": [
-    "inthegame-admin-api-openapi.yml",
-    "inthegame-analytics-api-openapi.yml",
-    "inthegame-category-api-openapi.yml",
-    "inthegame-chat-api-openapi.yml",
-    "inthegame-entity-api-openapi.yml",
-    "inthegame-general-api-openapi.yml",
-    "inthegame-item-api-openapi.yml",
-    "inthegame-leaderboard-api-openapi.yml",
-    "inthegame-moderationdata-api-openapi.yml",
-    "inthegame-poll-api-openapi.yml",
-    "inthegame-promotion-api-openapi.yml",
-    "inthegame-rating-api-openapi.yml",
-    "inthegame-shop-api-openapi.yml",
-    "inthegame-socket-api-openapi.yml",
-    "inthegame-sponsor-api-openapi.yml",
-    "inthegame-streamer-api-openapi.yml",
-    "inthegame-translations-api-openapi.yml",
-    "inthegame-trivia-api-openapi.yml",
-    "inthegame-uploads-api-openapi.yml",
-    "inthegame-user-api-openapi.yml",
-    "inthegame-wiki-api-openapi.yml"
+    "_original/inthegame-openapi.yml"
   ],
   "outputs": [
     "inthegame-admin-api-openapi.yml",
@@ -49,6 +29,32 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "inthegame-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "inthegame-admin-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-analytics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-category-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-chat-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-entity-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-general-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-item-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-leaderboard-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-moderationdata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-poll-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-promotion-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-rating-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-shop-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-socket-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-sponsor-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-streamer-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-translations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-trivia-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-uploads-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-user-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "inthegame-wiki-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

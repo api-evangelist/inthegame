@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin entity API
+  title: Inthegame Entity API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: entity
+- name: Entity
 paths:
   /adminApi/entity/create:
     post:
       operationId: adminapiEntityCreate
       summary: Create
       tags:
-      - entity
+      - Entity
       description: Send new entity object to save and return it as db object
       requestBody:
         content:
@@ -58,7 +58,7 @@ paths:
       operationId: adminapiEntityDelete
       summary: Delete
       tags:
-      - entity
+      - Entity
       description: Send entity id to delete it from db
       parameters:
       - name: id
@@ -80,7 +80,7 @@ paths:
       operationId: adminapiEntityGetall
       summary: GetAll
       tags:
-      - entity
+      - Entity
       description: Return entities list to admin panel
       responses:
         '200':
@@ -107,7 +107,7 @@ paths:
       operationId: adminapiEntityGetbyid
       summary: GetById
       tags:
-      - entity
+      - Entity
       description: Return entity object selected by given id
       parameters:
       - name: id
@@ -140,7 +140,7 @@ paths:
       operationId: adminapiEntityUpdate
       summary: Update
       tags:
-      - entity
+      - Entity
       description: Send entity object to update in db with given id and return updated entity
       parameters:
       - name: id
@@ -190,7 +190,7 @@ paths:
       operationId: userapiEntityAdd
       summary: Add
       tags:
-      - entity
+      - Entity
       description: Create entity by user choice
       requestBody:
         content:
@@ -224,7 +224,7 @@ paths:
       operationId: userapiEntityRemove
       summary: Remove
       tags:
-      - entity
+      - Entity
       description: Delete entity from user entities
       requestBody:
         content:

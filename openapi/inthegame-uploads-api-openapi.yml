@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin uploads API
+  title: Inthegame Uploads API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: uploads
+- name: Uploads
 paths:
   /upload/scanDir/streamer:
     post:
       operationId: adminapiUploadsScandir
       summary: ScanDir
       tags:
-      - uploads
+      - Uploads
       description: Load on screen saved image
       responses:
         '200':
@@ -41,7 +41,7 @@ paths:
       operationId: adminapiUploadsUploadimage
       summary: UploadImage
       tags:
-      - uploads
+      - Uploads
       description: 'Upload selected image to relevant directory on the server. Form data: file - file itself; terget: folder to upload'
       requestBody:
         content:
@@ -75,7 +75,7 @@ paths:
       operationId: adminapiUploadsUploadvideo
       summary: UploadVideo
       tags:
-      - uploads
+      - Uploads
       description: 'Upload selected video with form data: file - video format file binary; target - folder to upload'
       requestBody:
         content:

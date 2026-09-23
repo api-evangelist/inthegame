@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin socket API
+  title: Inthegame Socket API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: socket
+- name: Socket
 paths:
   /leaderboards/leaderboardEngine_new_2:
     get:
       operationId: socketLeaderboard
       summary: Leaderboard
       tags:
-      - socket
+      - Socket
       description: Socket message returns winners array with info about won points, current streak
       responses:
         '200':
@@ -27,7 +27,7 @@ paths:
             text/plain:
               schema:
                 type: string
-              example: "{\r\n    \"0\": \"leaderboard\",\r\n    \"1\": {\r\n        \"winners\": [{\r\n            \"amount_of_credits\": \"15\",\r\n            \"amount_of_credits_won\": \"1500\",\r\n            \"amount_of_credits_won_temp\": \"1500\",\r\n            \"available_points\": \"1500\",\r\n            \"available_shouts\": \"0\",\r\n            \"broadcaster_id\": \"api_tester\",\r\n            \"email\": \"\",\r\n            \"expirience_points\": \"1500\",\r\n            \"level\": \"3\",\r\n            \"name\": \"Guest_0655shb1078\",\r\n            \"password\": \"3c940a3a0e7a30"
+              example: "{\n    \"0\": \"leaderboard\",\n    \"1\": {\n        \"winners\": [{\n            \"amount_of_credits\": \"15\",\n            \"amount_of_credits_won\": \"1500\",\n            \"amount_of_credits_won_temp\": \"1500\",\n            \"available_points\": \"1500\",\n            \"available_shouts\": \"0\",\n            \"broadcaster_id\": \"api_tester\",\n            \"email\": \"\",\n            \"expirience_points\": \"1500\",\n            \"level\": \"3\",\n            \"name\": \"Guest_0655shb1078\",\n            \"password\": \"3c940a3a0e7a30"
         '404':
           description: Not found
         '500':

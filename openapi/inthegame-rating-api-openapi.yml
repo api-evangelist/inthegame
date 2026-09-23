@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin rating API
+  title: Inthegame Rating API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: rating
+- name: Rating
 paths:
   /adminApi/rating/create:
     post:
       operationId: adminapiRatingCreate
       summary: Create
       tags:
-      - rating
+      - Rating
       description: Send new rating object to save and return it as db object
       requestBody:
         content:
@@ -74,7 +74,7 @@ paths:
       operationId: adminapiRatingDelete
       summary: Delete
       tags:
-      - rating
+      - Rating
       description: Send rating id to delete it from db
       parameters:
       - name: ratingId
@@ -96,7 +96,7 @@ paths:
       operationId: adminapiRatingGetall
       summary: GetAll
       tags:
-      - rating
+      - Rating
       description: Send request to get ratings list by filter options
       responses:
         '200':
@@ -117,7 +117,7 @@ paths:
       operationId: adminapiRatingGetbyid
       summary: GetById
       tags:
-      - rating
+      - Rating
       description: Return rating object selected by given id
       parameters:
       - name: ratingId
@@ -156,7 +156,7 @@ paths:
       operationId: adminapiRatingUpdate
       summary: Update
       tags:
-      - rating
+      - Rating
       description: Send rating object to update in db with given id and return updated rating
       parameters:
       - name: ratingId
@@ -224,7 +224,7 @@ paths:
       operationId: userapiRatingAnswer
       summary: Answer
       tags:
-      - rating
+      - Rating
       description: Send user answer data and save it in db
       parameters:
       - name: questionId

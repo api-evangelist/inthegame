@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin user API
+  title: Inthegame User API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: user
+- name: User
 paths:
   /adminApi/user/getAll:
     get:
       operationId: adminapiUserGetall
       summary: GetAll
       tags:
-      - user
+      - User
       description: Return channel users list registered in app
       responses:
         '200':
@@ -115,7 +115,7 @@ paths:
       operationId: adminapiUserGetallbybroadcaster
       summary: GetAllByBroadcaster
       tags:
-      - user
+      - User
       description: Return all registered users in current broadcaster
       responses:
         '200':
@@ -242,7 +242,7 @@ paths:
       operationId: adminapiUserLogin
       summary: Login
       tags:
-      - user
+      - User
       description: Request to login in admin system, return token and user id, token will be saved in cookies, all rest requests take it for Authentication header for api permission
       parameters:
       - name: username
@@ -276,7 +276,7 @@ paths:
       operationId: adminapiUserRegister
       summary: Register
       tags:
-      - user
+      - User
       description: Register new user
       parameters:
       - name: username
@@ -319,7 +319,7 @@ paths:
       operationId: userapiUserGetavailableavatars
       summary: GetAvailableAvatars
       tags:
-      - user
+      - User
       description: Load default icons/emojies for account
       requestBody:
         content:
@@ -1019,8 +1019,8 @@ paths:
       operationId: userapiUserLoginbycredentials
       summary: LoginByCredentials
       tags:
-      - user
-      description: 'Request for login by user/password '
+      - User
+      description: Request for login by user/password
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -1043,7 +1043,7 @@ paths:
       operationId: userapiUserLoginbytoken
       summary: LoginByToken
       tags:
-      - user
+      - User
       description: User log in by the token var got in register
       requestBody:
         content:
@@ -1094,7 +1094,7 @@ paths:
       operationId: userapiUserRegister
       summary: Register
       tags:
-      - user
+      - User
       description: User registration - the function creates a random username and token
       requestBody:
         content:
@@ -1146,7 +1146,7 @@ paths:
       operationId: userapiUserSendpasswordtoemail
       summary: SendPasswordToEmail
       tags:
-      - user
+      - User
       description: To recover password generate new password and send to user e-mail
       requestBody:
         content:
@@ -1176,7 +1176,7 @@ paths:
       operationId: userapiUserUpdate
       summary: Update
       tags:
-      - user
+      - User
       description: Update user details
       requestBody:
         content:
@@ -1227,7 +1227,7 @@ paths:
       operationId: userapiUserUploadavatar
       summary: UploadAvatar
       tags:
-      - user
+      - User
       description: Upload New Avatar
       requestBody:
         content:

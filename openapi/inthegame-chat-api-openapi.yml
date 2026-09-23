@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin chat API
+  title: Inthegame Chat API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: chat
+- name: Chat
 paths:
   /userApi/chat/banChatUser:
     post:
       operationId: userapiChatBanuser
       summary: BanUser
       tags:
-      - chat
+      - Chat
       description: Send user data for ban in chat
       requestBody:
         content:
@@ -226,7 +226,7 @@ paths:
       operationId: userapiChatSend
       summary: Send
       tags:
-      - chat
+      - Chat
       description: Send user message and return verified text to client
       requestBody:
         content:
@@ -259,7 +259,7 @@ paths:
       operationId: userapiChatDelete
       summary: Delete
       tags:
-      - chat
+      - Chat
       description: Delete message from chat with provided id
       requestBody:
         content:

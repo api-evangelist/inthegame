@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin general API
+  title: Inthegame General API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,15 +11,21 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: general
+- name: General
 paths:
   /userApi/general/getGeneralData:
     post:
       operationId: userapiGeneralGetgeneraldata
       summary: GetGeneralData
       tags:
-      - general
-      description: "Loads the following general data:\n - translations\n - levels\n - expoints"
+      - General
+      description: 'Loads the following general data:
+
+        - translations
+
+        - levels
+
+        - expoints'
       requestBody:
         content:
           application/x-www-form-urlencoded:

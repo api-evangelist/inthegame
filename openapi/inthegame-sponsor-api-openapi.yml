@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin sponsor API
+  title: Inthegame Sponsor API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: sponsor
+- name: Sponsor
 paths:
   /adminApi/sponsor/create:
     post:
       operationId: adminapiSponsorCreate
       summary: Create
       tags:
-      - sponsor
+      - Sponsor
       description: Send new sponsor object to save and return it as db object
       requestBody:
         content:
@@ -62,7 +62,7 @@ paths:
       operationId: adminapiSponsorDelete
       summary: Delete
       tags:
-      - sponsor
+      - Sponsor
       description: Send sposnor id to delete it from db
       parameters:
       - name: id
@@ -84,7 +84,7 @@ paths:
       operationId: adminapiSponsorGetall
       summary: GetAll
       tags:
-      - sponsor
+      - Sponsor
       description: Send request to get sponsors list by filter options
       responses:
         '200':
@@ -119,7 +119,7 @@ paths:
       operationId: adminapiSponsorGetbyid
       summary: GetById
       tags:
-      - sponsor
+      - Sponsor
       description: Return sponsor object selected by given id
       parameters:
       - name: id
@@ -156,7 +156,7 @@ paths:
       operationId: adminapiSponsorUpdate
       summary: Update
       tags:
-      - sponsor
+      - Sponsor
       description: Send sponsor object to update in db with given id and return updated sponsor
       parameters:
       - name: sponsorId

@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Inthegame admin trivia API
+  title: Inthegame Trivia API
   version: 1.0.0
   description: 'Interactive in-stream overlay and viewer-engagement platform API for OTT/CTV. Two surfaces: adminApi (broadcaster/admin management of streamers, polls, trivia, ratings, wikis, shop, sponsors, prizes, analytics) and userApi (end-viewer play: register/login, answer polls/trivia/ratings, chat, leaderboard, shop). Converted from the provider-published Postman collection "Inthegame API Docs".'
   contact:
@@ -11,14 +11,14 @@ servers:
 - url: https://api-dev.inthegame.io
   description: Published API host (from Postman collection)
 tags:
-- name: trivia
+- name: Trivia
 paths:
   /adminApi/trivia/create:
     post:
       operationId: adminapiTriviaCreate
       summary: Create
       tags:
-      - trivia
+      - Trivia
       description: Create trivia in db and return new object
       requestBody:
         content:
@@ -88,7 +88,7 @@ paths:
       operationId: adminapiTriviaDelete
       summary: Delete
       tags:
-      - trivia
+      - Trivia
       description: Remove selected trivia from db
       parameters:
       - name: triviaId
@@ -110,7 +110,7 @@ paths:
       operationId: adminapiTriviaGetall
       summary: GetAll
       tags:
-      - trivia
+      - Trivia
       description: Return trivia list with filter options
       responses:
         '200':
@@ -150,7 +150,7 @@ paths:
       operationId: adminapiTriviaGetbyid
       summary: GetById
       tags:
-      - trivia
+      - Trivia
       description: Return trivia by given id
       parameters:
       - name: triviaId
@@ -192,7 +192,7 @@ paths:
       operationId: adminapiTriviaUpdate
       summary: Update
       tags:
-      - trivia
+      - Trivia
       description: Update trivia with given id
       parameters:
       - name: triviaId
@@ -271,7 +271,7 @@ paths:
       operationId: userapiTriviaAnswer
       summary: Answer
       tags:
-      - trivia
+      - Trivia
       description: Sned user answer data and save it in db
       parameters:
       - name: questionId
