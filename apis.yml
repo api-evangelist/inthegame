@@ -74,7 +74,7 @@ maintainers:
   email: info@apis.io
 apis:
 - aid: inthegame:inthegame-admin-api
-  name: Inthegame admin API
+  name: Inthegame Admin API
   description: The admin API from Inthegame — 1 operation(s) for admin.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -90,7 +90,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-analytics-api
-  name: Inthegame analytics API
+  name: Inthegame Analytics API
   description: The analytics API from Inthegame — 3 operation(s) for analytics.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -106,7 +106,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-category-api
-  name: Inthegame category API
+  name: Inthegame Category API
   description: The category API from Inthegame — 5 operation(s) for category.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -122,7 +122,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-chat-api
-  name: Inthegame chat API
+  name: Inthegame Chat API
   description: The chat API from Inthegame — 3 operation(s) for chat.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -138,7 +138,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-entity-api
-  name: Inthegame entity API
+  name: Inthegame Entity API
   description: The entity API from Inthegame — 7 operation(s) for entity.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -154,7 +154,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-general-api
-  name: Inthegame general API
+  name: Inthegame General API
   description: The general API from Inthegame — 1 operation(s) for general.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -169,7 +169,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-item-api
-  name: Inthegame item API
+  name: Inthegame Item API
   description: The item API from Inthegame — 6 operation(s) for item.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -185,7 +185,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-leaderboard-api
-  name: Inthegame leaderboard API
+  name: Inthegame Leaderboard API
   description: The leaderboard API from Inthegame — 1 operation(s) for leaderboard.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -201,7 +201,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-moderationdata-api
-  name: Inthegame moderationData API
+  name: Inthegame Moderation Data API
   description: The moderationData API from Inthegame — 3 operation(s) for moderationdata.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -216,7 +216,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-poll-api
-  name: Inthegame poll API
+  name: Inthegame Poll API
   description: The poll API from Inthegame — 7 operation(s) for poll.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -230,7 +230,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-promotion-api
-  name: Inthegame promotion API
+  name: Inthegame Promotion API
   description: The promotion API from Inthegame — 5 operation(s) for promotion.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -246,7 +246,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-rating-api
-  name: Inthegame rating API
+  name: Inthegame Rating API
   description: The rating API from Inthegame — 6 operation(s) for rating.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -262,7 +262,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-shop-api
-  name: Inthegame shop API
+  name: Inthegame Shop API
   description: The shop API from Inthegame — 7 operation(s) for shop.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -278,7 +278,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-socket-api
-  name: Inthegame socket API
+  name: Inthegame Socket API
   description: The socket API from Inthegame — 1 operation(s) for socket.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -294,7 +294,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-sponsor-api
-  name: Inthegame sponsor API
+  name: Inthegame Sponsor API
   description: The sponsor API from Inthegame — 5 operation(s) for sponsor.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -310,7 +310,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-streamer-api
-  name: Inthegame streamer API
+  name: Inthegame Streamer API
   description: The streamer API from Inthegame — 16 operation(s) for streamer.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -324,7 +324,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-translations-api
-  name: Inthegame translations API
+  name: Inthegame Translations API
   description: The translations API from Inthegame — 6 operation(s) for translations.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -340,7 +340,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-trivia-api
-  name: Inthegame trivia API
+  name: Inthegame Trivia API
   description: The trivia API from Inthegame — 6 operation(s) for trivia.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -356,7 +356,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-uploads-api
-  name: Inthegame uploads API
+  name: Inthegame Uploads API
   description: The uploads API from Inthegame — 3 operation(s) for uploads.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -372,7 +372,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-user-api
-  name: Inthegame user API
+  name: Inthegame User API
   description: The user API from Inthegame — 11 operation(s) for user.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
@@ -388,7 +388,7 @@ apis:
   - type: Examples
     url: examples/inthegame-examples.json
 - aid: inthegame:inthegame-wiki-api
-  name: Inthegame wiki API
+  name: Inthegame Wiki API
   description: The wiki API from Inthegame — 5 operation(s) for wiki.
   humanURL: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
   baseURL: https://api-dev.inthegame.io
