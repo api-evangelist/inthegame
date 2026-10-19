@@ -1,0 +1,24 @@
+edges:
+- partner_name: Brightcove (own)
+  partner: brightcove
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.brightcove.com/partners/inthegame
+  mirror_of: brightcove/integrations/brightcove-integration-edges.yml
+  apps:
+  - Inthegame
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Monetization & eCommerce
+generated: '2026-10-18'
+method: searched
+source:
+- https://marketplace.brightcove.com/llms.txt
+checked:
+- https://marketplace.brightcove.com/llms.txt
